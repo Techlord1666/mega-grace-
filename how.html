@@ -52,6 +52,9 @@
             background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
         }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #a2c9ff; border-radius: 10px; }
     </style>
 </head>
 <body class="bg-background text-gray-200">
@@ -76,7 +79,7 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         <div class="flex items-center gap-2">
             <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
-            <span class="font-display font-bold text-xl tracking-tighter uppercase">MEGA GRACE</span>
+            <span class="font-display font-bold text-xl tracking-tighter uppercase text-white">MEGA GRACE</span>
         </div>
         <nav class="hidden md:flex gap-8 font-bold text-[10px] uppercase tracking-widest">
             <a href="#" class="hover:text-primary transition-colors">Home</a>
@@ -103,7 +106,7 @@
                 </p>
                 <div class="flex gap-4">
                     <a href="#types" class="px-8 py-4 bg-primary text-black font-bold rounded-2xl">Explore Costs</a>
-                    <a href="#choosing" class="px-8 py-4 border border-white/10 rounded-2xl hover:bg-white/5">How to Choose</a>
+                    <a href="#choosing" class="px-8 py-4 border border-white/10 rounded-2xl hover:bg-white/5 text-white">How to Choose</a>
                 </div>
             </div>
             <div class="relative">
@@ -114,153 +117,89 @@
 
     <!-- Intro Analysis -->
     <section id="intro" class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-3xl font-display font-bold mb-10 border-l-4 border-primary pl-6">Cost of Website Design in Nigeria: Pricing Guide 2026</h2>
-        <div class="glass p-8 md:p-12 rounded-[2.5rem] space-y-6 text-gray-400 leading-relaxed">
-            <p>
-                The cost of building a website in Nigeria starts from <strong>₦250,000</strong> and can go up to <strong>₦5,000,000+</strong>. This range is quite large because every website differs, and pricing is often based on the scope of the website design project.
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-10 border-l-4 border-primary pl-6">Website Design in Nigeria: 2026 Pricing Guide</h2>
+        <div class="glass p-8 md:p-12 rounded-[2.5rem] space-y-10 text-gray-300 leading-relaxed">
+            
+            <p class="text-lg">
+                The cost of building a website in Nigeria starts from <strong>₦250,000</strong> and can go up to <strong>₦5,000,000+</strong>. This range exists because every business has unique needs. Below is our detailed breakdown of what to expect.
             </p>
-            <p>
-                Knowing what to budget for a website can be tricky because price ranges online are often too wide. In this guide, we will analyze:
 
-                to budget for a website can sometimes be tricky because no one really tells you what to expect, and when you search online, the price ranges are so wide that it does not help. If you are looking to build a website then you are in luck because in this guide, we will cover:
+            <!-- Type 1 -->
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-primary">1. Informational Website</h3>
+                <p>Perfect for SMEs and corporate organizations. Its main purpose is to display details about a business to build trust and visibility. These typically have 1-5 pages.</p>
+                <div class="bg-white/5 p-4 rounded-xl border-l-2 border-primary">
+                    <p class="font-bold mb-2">Key Features:</p>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Home & About</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Service Listings</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Contact Forms</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Responsive UI</li>
+                    </ul>
+                </div>
+                <p><strong>Pricing:</strong> A one-page landing site starts at <strong>₦250,000</strong>, while a standard 5-page business site averages <strong>₦750,000</strong>.</p>
+            </div>
 
-Types of websites and their costs in Nigeria
-Key factors influencing website pricing
-Additional costs to consider
-Tips to save money when building a website
-How to choose a website design agency
-                Types of Websites and Typical Cost Ranges in Nigeria
-Generally, there are three types of websites, and knowing the type of website your business requires will save you from paying a web designer more than you should. We are going to group them into informational, e-commerce, and custom.
-                1. Informational Website
-This type of website is perfect for SMEs. It’s main purpose is to display information or details about a business or organization. This website usually has no advanced functionalities and often has 1-5 pages. Most companies who need a business website to back their online presence go for this. Similarly, small businesses that need visibility often opt for this website. As I mentioned, this type of website has no advanced functionalities, that is, it does not have payment integrations, inventory management, or booking systems.Bex-IT web design portfolio
+            <!-- Type 2 -->
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-primary">2. E-commerce Website</h3>
+                <p>A digital marketplace that allows you to sell products 24/7. This system handles everything from product display to secure payment collection.</p>
+                <div class="bg-white/5 p-4 rounded-xl border-l-2 border-primary">
+                    <p class="font-bold mb-2">Key Features:</p>
+                    <ul class="grid grid-cols-2 gap-2 text-sm">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">payments</span> Paystack/Flutterwave</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">inventory_2</span> Inventory Control</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">shopping_cart</span> Shopping Cart</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">local_shipping</span> Order Tracking</li>
+                    </ul>
+                </div>
+                <p><strong>Pricing:</strong> Professional eCommerce stores in Nigeria start from <strong>₦800,000 to ₦1,200,000+</strong>.</p>
+            </div>
 
-Features of an Informational Website
+            <!-- Type 3 -->
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-primary">3. Custom Web Applications</h3>
+                <p>Built from scratch using modern frameworks (React, Node.js, Python). These are unique systems tailored to specific business logic like school portals or booking engines.</p>
+                <p><strong>Pricing:</strong> Ranges from <strong>₦2,000,000 to ₦15,000,000+</strong> depending on the complexity of the code and logic.</p>
+            </div>
 
-This type of website is built with templates and usually has no advanced features. The sections you would usually find on an informational website are:
+            <hr class="border-white/5">
 
-Home
+            <!-- Influencing Factors -->
+            <div>
+                <h3 class="text-2xl font-display font-bold text-white mb-6">What Drives the Price?</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="font-bold text-primary mb-2">Functionality</p>
+                        <p class="text-sm">Advanced tools like user dashboards, AI chatbots, and complex payment integrations increase development time.</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-primary mb-2">Domain & Hosting</p>
+                        <p class="text-sm">Reliable server space and custom addresses (.com / .ng) are recurring costs ranging from <strong>₦80,000 to ₦120,000/yr</strong>.</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-primary mb-2">Content & SEO</p>
+                        <p class="text-sm">Professional copywriting and Google ranking optimization ensure your site actually brings in customers.</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-primary mb-2">Agency Expertise</p>
+                        <p class="text-sm">Hiring a professional agency like MEGA GRACE guarantees long-term support, security, and elite performance.</p>
+                    </div>
+                </div>
+            </div>
 
-About Us
-
-Services
-
-Contact Us
-
-Depending on the amount of information, the business has, this can either be contained in one page or in multiple pages. This is an example of what a one-page informational website: https://eds-nigeria.com and this is what a five-page informational website looks like: https://www.pugantechnologies.com
-
-Cost of an Informational Website in Nigeria
-
-The cost of building a one-page website in Nigeria starts at ₦250,000 while a five-page website costs around ₦750,000.
-
-                
-            </p>
-            <p>2. E-commerce Website
-An e-commerce website is a website that allows users to buy and sell goods online. It is essentially a digital store. This type of website is suitable for businesses that want to create an online marketplace. E-commerce websites make it possible for businesses to process orders, accept customer payments, and manage product shipping.
-
-Features of an E-commerce Website
-
-An ecommerce website often has more advanced features than an informational website. It can either be built using a web design template or it can be custom with added functionalities. These are the features of an e-commerce website:
-
-Payment Integration: Flutterwave, Paystack, PayPal etc
-Inventory Management
-Shopping cart
-Cost of an E-commerce Website in Nigeria
-
-The cost of an e-commerce website in Nigeria starts at ₦800,000 – 1,200,000+.</p>
-            <p>3. Custom Website
-As the name implies, a custom website is custom built website for a business or organization. This website is created from scratch using code as opposed to a website design template. Its functionalities are customized to the client’s requirements and so it’s essentially one-of-a-kind. This type of website is usually built by organizations that want to customize their website offerings to include more than the average experience. For example, schools wishing to integrate online learning into their website may have to build a custom website.
-
-Features of a Custom Website
-
-A custom website usually has a unique UI design and other functionalities as required by the client. This type of website can have features like booking systems, payment gateways etc.
-
-Cost of a Custom Website in Nigeria
-
-The cost of a custom website in Nigeria often ranges from ₦2,000,000 to ₦15,000,000. Of course, this all depends on the functionalities you require on your website.</p>
-
-            <p>Key Factors Influencing Website Design Costs in Nigeria
-The cost of website design in Nigeria depends on several factors and understanding these will help you plan your budget wisely. Let’s break it down:
-
-1. Type of Website
-The type of website you need plays a significant role in the overall cost. For example:
-
-Informational websites: These are the most affordable because they’re straightforward, as we mentioned.
-E-commerce websites: If you’re planning to sell products or services online, be prepared to invest more due to the need for additional features like secure payment gateways and inventory management.
-Custom websites: These are the most expensive since they’re built from scratch to meet unique needs, such as complex booking systems or integrations with external tools.
-The more complex the website, the higher the cost. Think about your business goals and choose a website that aligns with your needs and budget.</p>
-
-            <p>2. Features and Functionality
-Havind advanced features on your website is a sure way of driving up the costs of website design in Nigeria. Basic sites come with standard functionality, but adding extras like these will increase the price:
-
-Payment integration: For accepting online payments securely (e.g., Paystack, Flutterwave).
-User dashboards: Usually for membership sites or portals where users need personalized access.
-Chatbots: To improve customer service by providing instant responses to inquiries.
-The more features you add, the more time and expertise it takes to implement them, so costs naturally increase.
-
-3. Design Complexity
-A custom-designed website costs significantly more than one built using pre-designed web templates. Why? Custom designs involve creating unique layouts, color schemes, and user interfaces tailored specifically to your brand and audience.
-
-On the other hand, template-based websites are more affordable because the foundational design is already done. You just tweak the colors, fonts, and images. If your budget is tight, starting with a template might be a smart choice.
-
-4. Domain and Hosting
-Your website needs both a domain name and hosting to go live. These are recurring costs you’ll need to consider:
-
-Domain: This is your website’s address (e.g., www.yourbusinessname.com). Domains typically cost between ₦20,000 and ₦22,000 per year.
-Hosting: Hosting ensures your website is accessible online. Costs range from ₦60,000 to ₦90,000 annually, depending on the hosting provider and the level of resources your site requires.
-5. Developer Expertise
-Who you hire to design your website makes a big difference in quality and cost.
-
-Freelancers: They are often more affordable but may lack the capacity to handle complex projects and offer long-term support. We get so many calls from business owners who no longer have access to their websites because they can’t find the web designer. We would hate for that to be you.
-Professional Web Design Agencies: They may cost more but provide a higher level of service, including advanced design capabilities, SEO optimization, support, and most importantly, peace of mind.
-Remember, experienced developers or agencies charge more because they deliver professional websites that align with your goals. It’s often worth the investment.
-
-Additional Costs to Consider
-Website Maintenance: Website maintenance is the process of ensuring your website is performing at optimal speed. This is maintaining your website’s general health. This can be routine updates like making sure the security and page speed of your website are performing at full capacity. It can also be content updates like updating the website content to ensure it is accurate and engaging. This can include updating blog posts, website sections, or images and videos.
-Content Writing: Your website content is one of the most important components in building a website. Content is what tells people what your page is about and guides them through the website until they make a decision. This is an additional cost to consider in building your website as content writing in Nigeria costs around ₦150,000-₦500,000 depending on the number of pages content is required on.
-Cost-Saving Tips for Building a Website in Nigeria
-The cost of building a website in Nigeria may sometimes be overwhelming so here are some tips to save money:
-
-Get services like hosting and maintenance from the same provider
-Most website design companies have domain and hosting packages for their clients and it will save you money to get both of these services at the same place as opposed to getting them separately.
-
-Use website design templates
-Many web design templates can get you a stunning website. Unless you need a custom website then don’t get one. If you’re working with a tight budget then using a web design template will save you lots of money.
-
-Start small and scale up
-The more pages your website has, the more the cost goes up. If you start with a one-page website, you can eventually scale up and add pages as your business grows and expands.
-
-How to Choose the Right Website Designer or Agency in Nigeria
-Let me break down how to pick the right website designer or agency in Nigeria, it’s actually simpler than you might think!
-
-First up, you’ll want to do a bit of homework and check out their previous work. Think of it like looking at an artist’s gallery, you want to make sure their style matches what you’re looking for. A good agency will proudly show off its web design portfolio, so don’t be shy about asking to see it.
-
-Make sure they’re not just about making things look pretty, you want someone who can handle everything from making your site mobile-friendly (because let’s face it, everyone’s on their phones these days!) to getting you found on Google. And speaking of the technical stuff, ask about their maintenance plans, you don’t want them to build your site and then disappear into thin air.
-
-When it comes to money, don’t just go with the cheapest option. Make sure you get a breakdown of what you’re paying for. Remember, an online store will cost more than a simple business website, that’s just how it works.
-
-And about timelines, a decent web design agency should be able to get a simple custom website up and running in about 2-3 weeks.
-
-Think of choosing a web agency like picking a business partner, you want someone reliable, skilled, and who gets what you’re trying to achieve. Take your time, ask questions, and trust your gut.
-
-Conclusion
-The cost of building a website design in Nigeria often depends on the type of website and its features. However, the costs mentioned are quite general and can inform you of what to expect when you reach out to a web design company for your project. Our advice is to invest in a good website design company if you want to take your business to the next level.
-
-If you’ve gotten to the end of this and you want to discuss taking your business online, contact Bex-IT Digital Solutions for a professional and affordable website that meets your business needs.
-
- </p>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-bold text-white">
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">analytics</span> Types of websites and costs</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">payments</span> Key pricing factors</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">add_box</span> Additional hidden costs</li>
-                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">savings</span> Tips to save money</li>
-            </ul>
+            <!-- CTA -->
+            <div class="bg-primary/10 p-8 rounded-3xl border border-primary/20 text-center">
+                <p class="text-white font-bold text-xl mb-4">Want a precise quote for your specific project?</p>
+                <a href="#contact" class="inline-block px-10 py-4 bg-primary text-black font-bold rounded-xl hover:scale-105 transition-transform">Get a Free Consultation</a>
+            </div>
         </div>
     </section>
 
-    <!-- Website Types -->
+    <!-- Website Types (Cards) -->
     <section id="types" class="py-24 px-6 bg-surface/20">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-display font-bold mb-20">Typical Cost Ranges</h2>
+            <h2 class="text-center text-4xl font-display font-bold mb-20">MEGA GRACE 2026 Special Pricing</h2>
             
             <div class="grid md:grid-cols-3 gap-10">
                 <!-- Informational -->
@@ -268,13 +207,13 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
                     <h3 class="text-2xl font-bold mb-4">1. Informational</h3>
                     <p class="text-xs text-gray-500 mb-6 uppercase tracking-widest">For SMEs & Startups</p>
                     <p class="text-sm text-gray-400 mb-8 leading-relaxed">
-                        Main purpose is to display business details. Usually 1-5 pages (Home, About, Services, Contact). No advanced functionalities like inventory or payment.
+                        Main purpose is to display business details. Usually 1-5 pages. No advanced functionalities like inventory or payment.
                     </p>
                     <div class="bg-background/50 p-6 rounded-2xl border border-white/5 mb-8">
-                        <p class="text-xs text-gray-500 mb-1">MEGA GRACE 2026 Special:</p>
+                        <p class="text-xs text-gray-500 mb-1">MEGA GRACE Special:</p>
                         <p class="text-3xl font-display font-bold text-white">₦100,000 / $80</p>
                     </div>
-                    <p class="text-[10px] text-gray-500 italic font-mono">Industry average: ₦250,000 - ₦750,000</p>
+                    <p class="text-[10px] text-gray-500 italic font-mono">Industry average: ₦250k - ₦750k</p>
                 </div>
 
                 <!-- eCommerce -->
@@ -282,13 +221,13 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
                     <h3 class="text-2xl font-bold mb-4">2. E-commerce Store</h3>
                     <p class="text-xs text-secondary mb-6 uppercase tracking-widest font-bold">Digital Marketplace</p>
                     <p class="text-sm text-gray-400 mb-8 leading-relaxed">
-                        Allows users to buy and sell goods. Process orders, accept customer payments (Paystack/Flutterwave), and manage shipping/inventory.
+                        Allows users to buy/sell goods. Includes Paystack/Flutterwave, cart systems, and automated inventory management.
                     </p>
                     <div class="bg-background/50 p-6 rounded-2xl border border-secondary/20 mb-8">
-                        <p class="text-xs text-gray-500 mb-1">MEGA GRACE 2026 Special:</p>
+                        <p class="text-xs text-gray-500 mb-1">MEGA GRACE Special:</p>
                         <p class="text-3xl font-display font-bold text-white">₦250,000 / $200</p>
                     </div>
-                    <p class="text-[10px] text-gray-500 italic font-mono">Industry average: ₦800,000 - ₦1,200,000+</p>
+                    <p class="text-[10px] text-gray-500 italic font-mono">Industry average: ₦800k - ₦1.2m+</p>
                 </div>
 
                 <!-- Custom -->
@@ -296,77 +235,44 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
                     <h3 class="text-2xl font-bold mb-4">3. Custom Website</h3>
                     <p class="text-xs text-gray-500 mb-6 uppercase tracking-widest">Built From Scratch</p>
                     <p class="text-sm text-gray-400 mb-8 leading-relaxed">
-                        Created with pure code (React/Python) as opposed to templates. One-of-a-kind functionalities like booking systems or learning portals.
+                        Created with pure code as opposed to templates. Unique functionalities like booking systems or learning portals.
                     </p>
                     <div class="bg-background/50 p-6 rounded-2xl border border-white/5 mb-8">
-                        <p class="text-xs text-gray-500 mb-1">MEGA GRACE 2026 Special:</p>
+                        <p class="text-xs text-gray-500 mb-1">MEGA GRACE Special:</p>
                         <p class="text-3xl font-display font-bold text-white">Custom Plan</p>
                     </div>
-                    <p class="text-[10px] text-gray-500 italic font-mono">Industry average: ₦2,000,000 - ₦15,000,000+</p>
+                    <p class="text-[10px] text-gray-500 italic font-mono">Industry average: ₦2m - ₦15m+</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Factors -->
+    <!-- Key Factors (Short Version) -->
     <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-display font-bold mb-16 text-center">What Drives the Price?</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <h4 class="text-primary font-bold text-lg">Type & Complexity</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Informational is cheapest; eCommerce requires security and management; Custom requires pure code and logic.</p>
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-display font-bold mb-16">The Value of Quality</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4 p-8 glass rounded-3xl">
+                    <span class="material-symbols-outlined text-primary text-4xl">speed</span>
+                    <h4 class="text-white font-bold text-lg">Performance</h4>
+                    <p class="text-sm text-gray-400">Our sites load in under 2 seconds, ensuring you never lose a customer due to speed.</p>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="text-primary font-bold text-lg">Features & Function</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Dashboards, AI Chatbots, and Payment Integrations take more time and expertise to implement, raising the cost.</p>
+                <div class="space-y-4 p-8 glass rounded-3xl">
+                    <span class="material-symbols-outlined text-primary text-4xl">security</span>
+                    <h4 class="text-white font-bold text-lg">Elite Security</h4>
+                    <p class="text-sm text-gray-400">We integrate SSL and firewalls to keep your data and customer payments safe.</p>
                 </div>
-                <div class="space-y-4">
-                    <h4 class="text-primary font-bold text-lg">Design Complexity</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Templates are faster and cheaper. Custom designs involve unique layouts tailored specifically to your brand audience.</p>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-primary font-bold text-lg">Domain & Hosting</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Domains (₦20k - ₦25k/yr) and Hosting (₦60k - ₦100k/yr) are recurring costs required for your site to live online.</p>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-primary font-bold text-lg">Agency Expertise</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Freelancers are cheaper but risky. Professional Agencies like Mega Grace offer long-term support and peace of mind.</p>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="text-primary font-bold text-lg">Content & SEO</h4>
-                    <p class="text-sm text-gray-400 leading-relaxed">Content Writing in Nigeria costs ₦150k - ₦500k. Professional content guides users to make a buying decision.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Saving Tips -->
-    <section class="py-24 px-6 bg-primary/5">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-display font-bold mb-12 text-center">Cost-Saving Tips for 2026</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 glass rounded-3xl text-center">
-                    <span class="material-symbols-outlined text-3xl mb-4">package_2</span>
-                    <h5 class="font-bold mb-2">Bundle Services</h5>
-                    <p class="text-xs text-gray-500">Get Hosting and Domain from the same agency to save money.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl text-center">
-                    <span class="material-symbols-outlined text-3xl mb-4">view_quilt</span>
-                    <h5 class="font-bold mb-2">Use Templates</h5>
-                    <p class="text-xs text-gray-500">Unless you need high complexity, a template will save you millions.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl text-center">
-                    <span class="material-symbols-outlined text-3xl mb-4">trending_up</span>
-                    <h5 class="font-bold mb-2">Start Small</h5>
-                    <p class="text-xs text-gray-500">Start with a 1-page site and scale as your business expands.</p>
+                <div class="space-y-4 p-8 glass rounded-3xl">
+                    <span class="material-symbols-outlined text-primary text-4xl">smartphone</span>
+                    <h4 class="text-white font-bold text-lg">Mobile First</h4>
+                    <p class="text-sm text-gray-400">Your site will look flawless on iPhones, Androids, and tablets alike.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How to choose -->
-    <section id="choosing" class="py-32 px-6">
+    <section id="choosing" class="py-32 px-6 bg-surface/10">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-4xl font-display font-bold mb-10">How to Choose the Right Agency</h2>
             <div class="space-y-12">
@@ -374,7 +280,7 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
                     <div class="text-3xl font-mono text-primary font-bold">01</div>
                     <div>
                         <h5 class="font-bold text-xl mb-2 text-white">Check the Portfolio</h5>
-                        <p class="text-gray-400">Look at their previous work like a gallery. Does their style match your vision? A good agency is proud to show their web portfolio.</p>
+                        <p class="text-gray-400">Look at their previous work. Does their style match your vision? A good agency is proud to show their web portfolio.</p>
                     </div>
                 </div>
                 <div class="flex gap-6">
@@ -387,7 +293,7 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
                 <div class="flex gap-6">
                     <div class="text-3xl font-mono text-primary font-bold">03</div>
                     <div>
-                        <h5 class="font-bold text-xl mb-2 text-white">Support & Timelines</h5>
+                        <h5 class="font-bold text-xl mb-2 text-white">Support & Maintenance</h5>
                         <p class="text-gray-400">Don't hire someone who will disappear. Ask for maintenance plans. A professional agency should deliver a simple custom site in 2-3 weeks.</p>
                     </div>
                 </div>
@@ -395,36 +301,26 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
         </div>
     </section>
 
-    <!-- Animated Reviews -->
+    <!-- Reviews -->
     <section id="reviews" class="py-32 overflow-hidden border-y border-white/5 bg-surface/30">
-        <h2 class="text-center text-3xl font-display font-bold mb-16 uppercase tracking-widest">Client Intelligence Reports</h2>
+        <h2 class="text-center text-3xl font-display font-bold mb-16 uppercase tracking-widest">Client Testimonials</h2>
         <div class="animate-scroll">
             <div id="reviews-container" class="flex gap-8 px-4"></div>
             <div id="reviews-container-dup" class="flex gap-8 px-4"></div>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=400" class="rounded-3xl h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Tech Studio 1">
-            <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=400" class="rounded-3xl h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Tech Studio 2">
-            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=400" class="rounded-3xl h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Tech Studio 3">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400" class="rounded-3xl h-64 w-full object-cover grayscale hover:grayscale-0 transition-all duration-500" alt="Tech Studio 4">
-        </div>
-    </section>
-
     <!-- Contact Form -->
     <section id="contact" class="py-32 px-6">
         <div class="max-w-4xl mx-auto glass p-10 md:p-20 rounded-[4rem]">
-            <h2 class="text-3xl md:text-5xl font-display font-bold mb-8 text-center uppercase tracking-tighter">Secure Your Digital Asset</h2>
+            <h2 class="text-3xl md:text-5xl font-display font-bold mb-8 text-center uppercase tracking-tighter text-white">Start Your Project</h2>
             <form id="wa-form" class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input type="text" id="wa-name" placeholder="Full Name" required class="bg-background border border-white/10 rounded-2xl p-5 w-full outline-none focus:border-primary">
-                    <input type="text" id="wa-plan" placeholder="Plan Needed (e.g. eCommerce)" required class="bg-background border border-white/10 rounded-2xl p-5 w-full outline-none focus:border-primary">
+                    <input type="text" id="wa-name" placeholder="Full Name" required class="bg-background border border-white/10 rounded-2xl p-5 w-full outline-none focus:border-primary text-white">
+                    <input type="text" id="wa-plan" placeholder="Plan (e.g. eCommerce)" required class="bg-background border border-white/10 rounded-2xl p-5 w-full outline-none focus:border-primary text-white">
                 </div>
-                <textarea id="wa-msg" placeholder="Tell us about your business goals..." rows="4" required class="bg-background border border-white/10 rounded-2xl p-5 w-full outline-none focus:border-primary"></textarea>
-                <button type="submit" class="w-full py-6 bg-primary text-black font-bold rounded-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-sm">Initialize Transmission</button>
+                <textarea id="wa-msg" placeholder="Tell us about your business goals..." rows="4" required class="bg-background border border-white/10 rounded-2xl p-5 w-full outline-none focus:border-primary text-white"></textarea>
+                <button type="submit" class="w-full py-6 bg-primary text-black font-bold rounded-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-sm">Send Message via WhatsApp</button>
             </form>
         </div>
     </section>
@@ -436,7 +332,7 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
         <div class="col-span-1 md:col-span-1">
             <div class="flex items-center gap-2 mb-8">
                 <span class="material-symbols-outlined text-primary text-4xl">terminal</span>
-                <span class="font-display font-bold text-2xl tracking-tighter uppercase">MEGA GRACE</span>
+                <span class="font-display font-bold text-2xl tracking-tighter uppercase text-white">MEGA GRACE</span>
             </div>
             <p class="text-gray-400 text-sm leading-relaxed">
                 Website Developers, Designers, and Marketing Experts. Designing the future of Nigeria's digital economy since 2020.
@@ -483,7 +379,7 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
         </div>
         <div id="chat-messages" class="flex-1 p-6 overflow-y-auto space-y-6 text-sm font-medium bg-background/50 custom-scrollbar"></div>
         <div class="p-6 flex gap-4 glass bg-surface/50">
-            <input type="text" id="user-input" placeholder="Explain the eCommerce plan..." class="flex-1 bg-transparent outline-none text-sm">
+            <input type="text" id="user-input" placeholder="Explain the eCommerce plan..." class="flex-1 bg-transparent outline-none text-sm text-white">
             <button onclick="handleSend()" class="text-primary hover:scale-125 transition-transform"><span class="material-symbols-outlined">send</span></button>
         </div>
     </div>
@@ -497,26 +393,26 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
 
     // Humanized Detailed 20 Reviews
     const revs = [
-        {name: "Chief Okoro", text: "I was hesitant about moving my luxury parts business online, but Mega Grace built an eCommerce hub that now handles ₦3m in sales weekly. The automatic payment gateway integration with Paystack is absolutely flawless. Best investment in 5 years."},
-        {name: "Sarah Adebayo", text: "Finally found a tech firm in Lagos that actually understands branding. They built my fashion portfolio for $80, and the amount of high-end clients I've signed since then is incredible. My site is lighting fast on iPhones and Androids."},
-        {name: "Dr. Tunde", text: "As a medical consultant, I needed a way to book patients without answering 100 WhatsApp calls daily. They built an automated portal that manages my calendar and payments. Professionalism at its peak."},
-        {name: "Ahmed Yusuf", text: "The team delivered my digital store for ₦250k. I was skeptical of the price at first, but the quality of the UI and the inventory system beats agencies that charge millions. They are the best developers in Nigeria."},
-        {name: "Amaka J.", text: "Transitioning to a 2026 digital mindset was hard until I met this team. My real estate agency now has an AI-optimized site that brings in foreign leads from London and NYC daily. Truly world-class marketing expertise."},
-        {name: "Kevin Cole", text: "Speed is everything in tech. My old site took 10 seconds to load; this new architecture from Mega Grace loads in under 1 second. My bounce rate dropped to almost zero, and my sales tripled. Incredible engineering precision."},
-        {name: "Pastor Samuel", text: "We needed a platform for our church media and donations. They built a secure, beautiful site that our community loves. The automated donation receipts saved us hours of manual work. The support team is 24/7 and very helpful."},
-        {name: "Anita George", text: "I ordered the Starter Intel plan for ₦100,000 as a small business owner. It's clean, fast, and highly professional. I finally feel like a legitimate business owner with a strong digital identity. Thank you Mega Grace!"},
-        {name: "Chidi O.", text: "The Paystack integration they did for my boutique is seamless. Customers just click, pay, and I get an alert instantly. No more 'sending receipt' stress on WhatsApp. The website handles everything."},
-        {name: "Mary Slessor", text: "Their graphic design and UI work is top-tier. They handled my logo and website branding with so much grace. Everything looks sophisticated, modern, and high-end. They truly understand luxury visuals."},
-        {name: "Ibrahim Musa", text: "If you want a developer that actually listens to your business goals instead of just coding, hire Mega Grace. They advised me on the best advertising strategy to flood my new site with traffic. Great partners."},
-        {name: "Victoria Adams", text: "I love the AI chatbot support they added to my site. It answers my customers' common questions at 2 AM while I'm sleeping. My business never closes now. The customer care is fully automated."},
-        {name: "James Bond", text: "The security features on my e-commerce site are solid. I have total peace of mind knowing my customers' data is safe. Professional, honest work from start to finish. I'll be back for my next project."},
-        {name: "Funke A.", text: "Best tech decision for my beauty brand. The site looks amazing on mobile devices and the navigation is so smooth. Everyone keeps asking who built my website! Mega Grace is the answer."},
-        {name: "Samuel Etu", text: "They fixed a messy site built by a previous freelancer and turned it into a high-converting business asset. Their reliability and technical expertise is 10/10. Professionalism is their middle name."},
-        {name: "Uche John", text: "Their SEO and advertising strategy actually works. I'm now ranking on page 1 for my services in Lagos and Abuja. My phone hasn't stopped ringing with new inquiries since the launch."},
-        {name: "Esther K.", text: "The entire process was so smooth. I filled the WhatsApp form, paid, and in 7 days my site was live and ready. Simple, fast, and zero stress. No stories, just pure results."},
-        {name: "Michael B.", text: "World-class development on a reasonable budget. They treat ₦100k projects with the same respect as ₦1m projects. That level of integrity is rare in the Nigerian tech space. I'm impressed."},
-        {name: "Janet S.", text: "The $200 eCommerce plan is the best investment I've made for my jewelry business. My shop is now global and running like a clock. I highly recommend Mega Grace for any small business owner."},
-        {name: "Mega Mike", text: "High-performance coding and zero bugs. They handled my complex custom API integrations without a single issue. This is the future of digital solutions in Africa. Precision-driven experts."}
+        {name: "Chief Okoro", text: "I was hesitant about moving my luxury parts business online, but Mega Grace built an eCommerce hub that now handles ₦3m in sales weekly. The automatic payment gateway integration is absolutely flawless."},
+        {name: "Sarah Adebayo", text: "Finally found a tech firm in Lagos that actually understands branding. They built my fashion portfolio for $80, and the amount of high-end clients I've signed since then is incredible."},
+        {name: "Dr. Tunde", text: "As a medical consultant, I needed a way to book patients without answering 100 WhatsApp calls daily. They built an automated portal that manages my calendar and payments."},
+        {name: "Ahmed Yusuf", text: "The team delivered my digital store for ₦250k. I was skeptical of the price at first, but the quality of the UI and the inventory system beats agencies that charge millions."},
+        {name: "Amaka J.", text: "Transitioning to a 2026 digital mindset was hard until I met this team. My real estate agency now has an AI-optimized site that brings in foreign leads daily."},
+        {name: "Kevin Cole", text: "Speed is everything in tech. My old site took 10 seconds to load; this new architecture from Mega Grace loads in under 1 second. My bounce rate dropped to almost zero."},
+        {name: "Pastor Samuel", text: "We needed a platform for our church media and donations. They built a secure, beautiful site that our community loves. The support team is 24/7 and very helpful."},
+        {name: "Anita George", text: "I ordered the Starter Intel plan for ₦100,000 as a small business owner. It's clean, fast, and highly professional. I finally feel like a legitimate business owner."},
+        {name: "Chidi O.", text: "The Paystack integration they did for my boutique is seamless. Customers just click, pay, and I get an alert instantly. No more manual receipt stress."},
+        {name: "Mary Slessor", text: "Their graphic design and UI work is top-tier. They handled my logo and website branding with so much grace. Everything looks sophisticated and modern."},
+        {name: "Ibrahim Musa", text: "If you want a developer that actually listens to your business goals instead of just coding, hire Mega Grace. Great partners for growth."},
+        {name: "Victoria Adams", text: "I love the AI chatbot support they added to my site. It answers my customers' common questions at 2 AM while I'm sleeping. My business never closes now."},
+        {name: "James Bond", text: "The security features on my e-commerce site are solid. I have total peace of mind knowing my customers' data is safe. Professional, honest work."},
+        {name: "Funke A.", text: "Best tech decision for my beauty brand. The site looks amazing on mobile devices and the navigation is so smooth. Everyone keeps asking who built my website!"},
+        {name: "Samuel Etu", text: "They fixed a messy site built by a previous freelancer and turned it into a high-converting business asset. Their technical expertise is 10/10."},
+        {name: "Uche John", text: "Their SEO and advertising strategy actually works. I'm now ranking on page 1 for my services in Lagos and Abuja. My phone hasn't stopped ringing."},
+        {name: "Esther K.", text: "The entire process was so smooth. I filled the WhatsApp form, paid, and in 7 days my site was live and ready. Simple, fast, and zero stress."},
+        {name: "Michael B.", text: "World-class development on a reasonable budget. They treat ₦100k projects with the same respect as ₦1m projects. That level of integrity is rare."},
+        {name: "Janet S.", text: "The $200 eCommerce plan is the best investment I've made for my jewelry business. My shop is now global and running like a clock. Highly recommended."},
+        {name: "Mega Mike", text: "High-performance coding and zero bugs. They handled my complex custom API integrations without a single issue. Precision-driven experts."}
     ];
 
     const container = document.getElementById('reviews-container');
@@ -534,10 +430,10 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
         containerDup.innerHTML += card;
     });
 
-    // AI Logic (Stable v1)
+    // Chatbot Logic
     const KEY = "AIzaSyC7jCxlsl2ersPCP2OiR6T-M5IsZiPuFrI";
     let chatHistory = [
-        { role: "user", parts: [{ text: "Context: You are Grace-AI for Mega Grace Computer Intel. We are Web Developers, Designers, and Marketing Experts. We do not use the title Engineer. Services: Web Dev, Graphic Design, Email Marketing, Ads. Pricing: ₦100k/$80 Starter, ₦250k/$200 eCommerce. We provide AI Customer Care Support for sites. If someone wants to order or pricing, give WhatsApp 08159205235." }] },
+        { role: "user", parts: [{ text: "Context: You are Grace-AI for Mega Grace Computer Intel. We are Web Developers, Designers, and Marketing Experts. Services: Web Dev, Graphic Design, Email Marketing, Ads. Pricing: ₦100k/$80 Starter, ₦250k/$200 eCommerce. If someone wants to order, give WhatsApp 08159205235." }] },
         { role: "model", parts: [{ text: "Understood. I am Grace-AI, your digital consultant for Mega Grace. How can I assist you today?" }] }
     ];
 
@@ -562,7 +458,7 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
             document.getElementById(loadId).innerText = reply;
             chatHistory.push({ role: "model", parts: [{ text: reply }] });
         } catch (e) {
-            document.getElementById(loadId).innerText = "Link is busy. Chat us on WhatsApp directly: 08159205235";
+            document.getElementById(loadId).innerText = "Link is busy. Chat us on WhatsApp: 08159205235";
         }
     }
 
@@ -572,6 +468,16 @@ If you’ve gotten to the end of this and you want to discuss taking your busine
         document.getElementById('chat-messages').scrollTop = 99999;
         return id;
     }
+
+    // WhatsApp Form
+    document.getElementById('wa-form').onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('wa-name').value;
+        const plan = document.getElementById('wa-plan').value;
+        const msg = document.getElementById('wa-msg').value;
+        const text = `Hello Mega Grace, I am ${name}. I am interested in the ${plan} plan. Goal: ${msg}`;
+        window.open(`https://wa.me/2348159205235?text=${encodeURIComponent(text)}`);
+    };
 </script>
 </body>
 </html>
