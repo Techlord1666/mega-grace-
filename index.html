@@ -33,6 +33,7 @@
         }
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #a2c9ff; border-radius: 10px; }
+        .chat-bubble { max-width: 85%; padding: 12px; border-radius: 18px; font-size: 14px; line-height: 1.5; }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md">
@@ -45,138 +46,139 @@
             <span class="font-bold text-xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">MEGA GRACE</span>
         </div>
         <nav class="hidden md:flex items-center gap-8">
-            <a class="text-secondary-container font-bold hover:text-primary transition-colors" href="#">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="#reviews">Reviews</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
 <main class="pt-20">
     <!-- Hero Section -->
-    <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-grid-pattern px-6 md:px-16">
+    <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-grid-pattern px-6 md:px-16">
         <div class="max-w-4xl z-10">
             <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Engineered for <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Precision.</span>
+                Next-Gen <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Digital Intel.</span>
             </h1>
             <p class="text-lg text-on-surface-variant max-w-xl mb-8">
-                Welcome to Mega Grace Computer Intel. We provide world-class tech solutions ranging from high-end web architecture to professional branding.
+                Engineering precision in Web Development, Branding, and Marketing. We turn complex ideas into digital reality.
             </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="https://wa.me/2348159205235" class="px-8 py-4 bg-primary text-background font-bold rounded-lg hover:scale-105 transition-all">Start a Project</a>
-                <a href="#reviews" class="px-8 py-4 border border-primary text-primary font-bold rounded-lg hover:bg-primary/5 transition-all">Success Stories</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 px-6 md:px-16">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">// MISSION_PROFILE</h2>
+                <h3 class="text-4xl font-bold mb-6">Who is Mega Grace?</h3>
+                <p class="text-on-surface-variant mb-6 leading-relaxed">
+                    Mega Grace Computer Intel is a premier technology firm dedicated to pushing the boundaries of digital engineering. We aren't just a service provider; we are your technical partners in the digital age.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-secondary-container">check_circle</span>
+                        <div><b class="text-white">Precision Engineering:</b> Every line of code is optimized for speed.</div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-secondary-container">check_circle</span>
+                        <div><b class="text-white">Global Standards:</b> We use the same tech stacks as Silicon Valley giants.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card p-1 rounded-3xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" class="rounded-3xl opacity-80" alt="Tech Background">
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-6 md:px-16 max-w-[1440px] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="services" class="py-20 px-6 md:px-16 bg-surface-container-lowest/50">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1440px] mx-auto">
             <div class="glass-card p-8 rounded-2xl">
-                <span class="material-symbols-outlined text-primary text-4xl mb-4">terminal</span>
-                <h3 class="text-xl font-bold mb-2">Web Development</h3>
-                <p class="text-on-surface-variant text-sm">Custom-coded e-commerce, portfolios, and corporate websites using React, Next.js, and Python.</p>
+                <h4 class="text-xl font-bold mb-4 text-primary">Web Development</h4>
+                <p class="text-sm text-on-surface-variant italic">High-performance E-commerce, Portfolios, and CRM systems.</p>
             </div>
             <div class="glass-card p-8 rounded-2xl">
-                <span class="material-symbols-outlined text-secondary-container text-4xl mb-4">palette</span>
-                <h3 class="text-xl font-bold mb-2">Graphic Design</h3>
-                <p class="text-on-surface-variant text-sm">Professional logo design, corporate branding, UI/UX for apps, and high-quality marketing visuals.</p>
+                <h4 class="text-xl font-bold mb-4 text-secondary-container">Graphic Design</h4>
+                <p class="text-sm text-on-surface-variant italic">Professional Logos, UI/UX Design, and Corporate Branding.</p>
             </div>
             <div class="glass-card p-8 rounded-2xl">
-                <span class="material-symbols-outlined text-white text-4xl mb-4">rocket_launch</span>
-                <h3 class="text-xl font-bold mb-2">Digital Marketing</h3>
-                <p class="text-on-surface-variant text-sm">SEO optimization, Social Media Management, and lead generation to explode your business growth.</p>
+                <h4 class="text-xl font-bold mb-4 text-white">Digital Marketing</h4>
+                <p class="text-sm text-on-surface-variant italic">SEO, Lead Generation, and Social Media Growth.</p>
             </div>
         </div>
     </section>
 
     <!-- Reviews -->
-    <section id="reviews" class="py-20 bg-surface-container-lowest px-6 md:px-16">
-        <h2 class="text-center text-3xl font-bold mb-12">Trusted by Clients</h2>
+    <section id="reviews" class="py-20 px-6 md:px-16">
+        <h2 class="text-center text-3xl font-bold mb-12">Client Success</h2>
         <div id="reviews-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Reviews will be auto-generated -->
+            <!-- Reviews Generated by JS -->
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="py-20 px-6 md:px-16 max-w-4xl mx-auto">
-        <div class="glass-card p-10 rounded-3xl">
-            <h2 class="text-2xl font-bold mb-6">Quick Contact</h2>
-            <form class="space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Name" class="bg-background border border-white/10 rounded-xl p-4 text-white focus:ring-1 focus:ring-primary outline-none">
-                    <input type="email" placeholder="Email" class="bg-background border border-white/10 rounded-xl p-4 text-white focus:ring-1 focus:ring-primary outline-none">
-                </div>
-                <textarea placeholder="How can we help?" rows="4" class="w-full bg-background border border-white/10 rounded-xl p-4 text-white focus:ring-1 focus:ring-primary outline-none"></textarea>
-                <button class="w-full py-4 bg-primary text-background font-bold rounded-xl transition-all hover:opacity-90">Send Message</button>
-            </form>
-        </div>
-    </section>
 </main>
 
-<!-- AI Chat Interface -->
+<footer class="py-12 border-t border-white/5 text-center text-on-surface-variant text-sm">
+    <p>© 2024 MEGA GRACE COMPUTER INTEL.</p>
+</footer>
+
+<!-- AI CHATGPT INTERFACE -->
 <div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
-    <div id="chat-window" class="hidden w-[380px] max-w-[90vw] mb-4 glass-card rounded-2xl overflow-hidden shadow-2xl flex flex-col h-[550px] border border-primary/20">
+    <div id="chat-window" class="hidden w-[400px] max-w-[95vw] mb-4 glass-card rounded-2xl overflow-hidden shadow-2xl flex flex-col h-[600px] border border-primary/20">
+        <!-- Header -->
         <div class="bg-gradient-to-r from-primary to-secondary-container p-4 flex items-center justify-between text-background">
             <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined font-bold">smart_toy</span>
-                <span class="font-bold uppercase tracking-widest text-sm">Grace-AI Assistant</span>
+                <span class="material-symbols-outlined font-bold">rocket_launch</span>
+                <span class="font-bold uppercase tracking-tighter text-sm">Grace AI Consultant</span>
             </div>
             <button onclick="toggleChat()"><span class="material-symbols-outlined">close</span></button>
         </div>
         
-        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 custom-scrollbar bg-surface-container-lowest/50">
-            <div class="p-3 bg-surface-container rounded-2xl rounded-tl-none text-sm max-w-[85%]">
-                Greetings! I am Grace-AI, your digital consultant from Mega Grace Computer Intel. Are you looking to build a website, design a brand, or grow your business today?
+        <!-- Messages Area -->
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 custom-scrollbar bg-background/80">
+            <div class="chat-bubble bg-surface-container rounded-tl-none">
+                Hello! I am Grace-AI. I am here to help you understand our services at Mega Grace. Whether you need a website, a brand logo, or marketing, I can guide you. What's on your mind?
             </div>
         </div>
 
+        <!-- Input Area -->
         <div class="p-4 border-t border-white/5 bg-surface-container-low flex gap-2">
-            <input type="text" id="user-input" placeholder="Tell me about your project..." class="flex-1 bg-background border border-white/10 rounded-xl px-4 py-2 text-sm text-white focus:border-primary outline-none">
-            <button onclick="sendMessage()" class="bg-primary text-background p-2 rounded-xl"><span class="material-symbols-outlined">send</span></button>
+            <input type="text" id="user-input" placeholder="Ask me anything..." class="flex-1 bg-background border border-white/10 rounded-xl px-4 py-2 text-sm text-white focus:border-primary outline-none">
+            <button onclick="sendMessage()" id="send-btn" class="bg-primary text-background p-2 rounded-xl transition-transform active:scale-90">
+                <span class="material-symbols-outlined">send</span>
+            </button>
         </div>
     </div>
 
-    <button onclick="toggleChat()" class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-background shadow-2xl hover:scale-110 transition-all">
-        <span class="material-symbols-outlined text-3xl">chat</span>
+    <!-- FAB Button -->
+    <button onclick="toggleChat()" class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-background shadow-2xl hover:rotate-12 transition-all">
+        <span class="material-symbols-outlined text-3xl">smart_toy</span>
     </button>
 </div>
 
 <script>
-    // 1. GENERATE 20 REVIEWS
-    const reviews = [
-        "Mega Grace transformed my business website. Simply the best!", "The logo design they did for us is stunning.", "Professional service and very fast delivery.", "Highly recommended for SEO and marketing.", "The best tech company in the region.", "Precision engineering at its peak.", "Their web development team is top-notch.", "Clean, modern designs that work.", "I'm impressed with the marketing ROI.", "They built my e-commerce store in 7 days!", "Great support team and very polite.", "Reliable partners for long-term projects.", "Creative and innovative designers.", "My sales tripled after their campaign.", "Very affordable for the high quality provided.", "The AI they integrated into our site is amazing.", "Fast, reliable, and modern coding.", "Beautiful branding and corporate identity.", "Everything was handled professionally.", "Mega Grace is my number one tech choice."
-    ];
+    // 1. REVIEWS GENERATOR
+    const reviews = ["Amazing web dev!", "Best branding in the game.", "Mega Grace is top tier.", "Transformed my sales.", "Professional and fast.", "Love the UI work.", "Highly recommended.", "Best tech team.", "Five star service.", "Quality results.", "Very reliable.", "Creative designs.", "Exceptional support.", "Smooth process.", "Great marketing ROI.", "Modern and sleek.", "They know their stuff.", "My go-to tech guys.", "100% satisfied.", "Perfect delivery."];
     const grid = document.getElementById('reviews-grid');
     for(let i=0; i<20; i++) {
-        grid.innerHTML += `
-            <div class="glass-card p-6 rounded-2xl">
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="https://i.pravatar.cc/150?u=${i}" class="w-10 h-10 rounded-full">
-                    <div class="text-xs font-bold">Client ${i+1}</div>
-                </div>
-                <p class="text-[11px] text-on-surface-variant italic">"${reviews[i]}"</p>
+        grid.innerHTML += `<div class="glass-card p-4 rounded-xl text-xs">
+            <div class="flex items-center gap-2 mb-2">
+                <img src="https://i.pravatar.cc/150?u=${i}" class="w-8 h-8 rounded-full">
+                <span class="font-bold text-primary">Verified Client</span>
             </div>
-        `;
+            <p class="text-on-surface-variant italic">"${reviews[i]}"</p>
+        </div>`;
     }
 
-    // 2. AI CONVERSATION LOGIC
-    const apiKey = "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";
-    
-    // THE "MEMORY" AND PERSONA
-    let chatHistory = [
-        { 
-            role: "system", 
-            content: `You are Grace-AI, the official Sales and Technical Consultant for "Mega Grace Computer Intel". 
-            ABOUT US: We specialize in Web Development (E-commerce, Portfolios, Custom Apps), Graphic Design (Branding, Logos, UI/UX), and Digital Marketing (SEO, Social Media).
-            TONE: Professional, enthusiastic, helpful, and "Tech-savvy".
-            YOUR GOAL: 
-            1. Explain our services clearly to visitors.
-            2. If someone is interested in a service, ask them questions about their needs.
-            3. Once they are ready to order, or ask for prices, or ask for a human, you MUST tell them to message us on WhatsApp at 08159205235 to finalize the deal.
-            4. Keep the conversation alive—don't give one-word answers.` 
-        }
+    // 2. ChatGPT LOGIC
+    // YOUR KEY
+    const API_KEY = "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";
+
+    let conversation = [
+        { role: "system", content: "You are Grace-AI, a high-level consultant for Mega Grace Computer Intel. Your company does Web Development (Next.js, React, Backend), Graphic Design (Logos, UI/UX), and Digital Marketing. You chat like ChatGPT—smart, detailed, and conversational. Don't give short answers. Explain things. If someone wants to buy or order, you MUST tell them to go to WhatsApp 08159205235. You have memory of this conversation." }
     ];
 
     function toggleChat() { document.getElementById('chat-window').classList.toggle('hidden'); }
@@ -184,68 +186,69 @@
     async function sendMessage() {
         const input = document.getElementById('user-input');
         const text = input.value.trim();
-        if (!text) return;
+        if(!text) return;
 
         appendMsg('user', text);
         input.value = '';
-        chatHistory.push({ role: "user", content: text });
+        conversation.push({ role: "user", content: text });
 
-        const loadingId = appendMsg('bot', 'Analyzing data...');
+        const loadingId = appendMsg('bot', 'Grace-AI is typing...');
 
         try {
             const response = await fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`
+                    'Authorization': `Bearer ${API_KEY}`
                 },
                 body: JSON.stringify({
-                    model: "gpt-3.5-turbo",
-                    messages: chatHistory,
+                    model: "gpt-4o-mini", // Using newest fast model
+                    messages: conversation,
                     temperature: 0.7
                 })
             });
 
             const data = await response.json();
-            const reply = data.choices[0].message.content;
-
-            document.getElementById(loadingId).innerText = reply;
-            chatHistory.push({ role: "assistant", content: reply });
-
-            // Check if AI mentioned the WhatsApp/Ordering
-            if (reply.includes("08159205235") || reply.toLowerCase().includes("whatsapp")) {
-                showWhatsAppBtn();
+            
+            if(data.error) {
+                document.getElementById(loadingId).innerText = "ERROR: " + data.error.message + ". (Check your OpenAI billing/credits)";
+                return;
             }
 
-        } catch (e) {
-            document.getElementById(loadingId).innerText = "I'm having a connection issue. Please chat us directly at 08159205235.";
+            const reply = data.choices[0].message.content;
+            document.getElementById(loadingId).innerText = reply;
+            conversation.push({ role: "assistant", content: reply });
+
+            if(reply.includes("08159205235") || reply.toLowerCase().includes("whatsapp")) {
+                showWA();
+            }
+
+        } catch (err) {
+            document.getElementById(loadingId).innerText = "I can't reach the brain module. Please message 08159205235 on WhatsApp directly.";
         }
     }
 
     function appendMsg(role, text) {
-        const id = 'm-' + Math.random().toString(36).substr(2, 9);
+        const id = 'm-' + Math.random().toString(36).substr(2,9);
         const isBot = role === 'bot';
-        const html = `
+        const msg = `
             <div class="flex ${isBot ? '' : 'justify-end'}">
-                <div id="${id}" class="p-3 rounded-2xl text-sm ${isBot ? 'bg-surface-container rounded-tl-none' : 'bg-primary text-background rounded-tr-none'} max-w-[85%]">
+                <div id="${id}" class="chat-bubble ${isBot ? 'bg-surface-container rounded-tl-none' : 'bg-primary text-background rounded-tr-none'}">
                     ${text}
                 </div>
             </div>`;
-        document.getElementById('chat-messages').insertAdjacentHTML('beforeend', html);
-        const chatBox = document.getElementById('chat-messages');
-        chatBox.scrollTop = chatBox.scrollHeight;
+        document.getElementById('chat-messages').insertAdjacentHTML('beforeend', msg);
+        const box = document.getElementById('chat-messages');
+        box.scrollTop = box.scrollHeight;
         return id;
     }
 
-    function showWhatsAppBtn() {
-        const btn = `
-            <div class="flex justify-center mt-2">
-                <a href="https://wa.me/2348159205235" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full text-xs font-bold animate-bounce">
-                    CLICK TO CHAT ON WHATSAPP
-                </a>
-            </div>`;
+    function showWA() {
+        const btn = `<div class="flex justify-center"><a href="https://wa.me/2348159205235" target="_blank" class="bg-green-500 text-white px-6 py-2 rounded-full text-xs font-bold animate-pulse">START ORDER ON WHATSAPP</a></div>`;
         document.getElementById('chat-messages').insertAdjacentHTML('beforeend', btn);
     }
+
+    document.getElementById('user-input').addEventListener('keypress', (e) => { if(e.key === 'Enter') sendMessage(); });
 </script>
 </body>
 </html>
