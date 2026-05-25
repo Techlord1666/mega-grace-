@@ -40,12 +40,73 @@
             background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
             background-size: 30px 30px;
         }
-        /* Zoom effect on hover - Grayscale REMOVED */
         .gallery-card:hover img { transform: scale(1.1); }
         .gallery-card img { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        /* Modal Animation */
+        #contact-modal.hidden { display: none; }
+        #contact-modal.flex { display: flex; }
     </style>
 </head>
 <body class="bg-background text-gray-200 antialiased">
+
+<!-- Contact Organization Pop-up Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="toggleContactModal()"></div>
+    
+    <!-- Modal Content -->
+    <div class="glass relative z-10 w-full max-w-2xl rounded-[3rem] p-6 md:p-12 overflow-y-auto max-h-[90vh] border border-primary/20">
+        <div class="flex justify-between items-center mb-8">
+            <h3 class="text-2xl font-display font-bold text-white uppercase tracking-tighter">Choose an Expert</h3>
+            <button onclick="toggleContactModal()" class="text-primary hover:rotate-90 transition-transform">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- MR Samuel -->
+            <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                <h5 class="text-lg font-bold text-white mb-1">MR Samuel</h5>
+                <p class="text-[10px] text-primary uppercase mb-4 font-mono tracking-widest">Lead Developer</p>
+                <div class="flex gap-2">
+                    <a href="tel:+2347048375587" class="flex-1 py-3 bg-white/5 rounded-xl text-xs font-bold hover:bg-primary hover:text-black transition-all">CALL</a>
+                    <a href="https://wa.me/2347048375587" class="flex-1 py-3 bg-green-600/20 text-green-400 rounded-xl text-xs font-bold hover:bg-green-600/40 transition-all border border-green-600/20">WHATSAPP</a>
+                </div>
+            </div>
+
+            <!-- MR Samuel KHASIS -->
+            <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                <h5 class="text-lg font-bold text-white mb-1">Samuel KHASIS</h5>
+                <p class="text-[10px] text-primary uppercase mb-4 font-mono tracking-widest">Strategy Expert</p>
+                <div class="flex gap-2">
+                    <a href="tel:+2347088947306" class="flex-1 py-3 bg-white/5 rounded-xl text-xs font-bold hover:bg-primary hover:text-black transition-all">CALL</a>
+                    <a href="https://wa.me/2347088947306" class="flex-1 py-3 bg-green-600/20 text-green-400 rounded-xl text-xs font-bold hover:bg-green-600/40 transition-all border border-green-600/20">WHATSAPP</a>
+                </div>
+            </div>
+
+            <!-- MIS Precious -->
+            <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                <h5 class="text-lg font-bold text-white mb-1">MIS Precious</h5>
+                <p class="text-[10px] text-primary uppercase mb-4 font-mono tracking-widest">Creative Expert</p>
+                <div class="flex gap-2">
+                    <a href="tel:+234702619604" class="flex-1 py-3 bg-white/5 rounded-xl text-xs font-bold hover:bg-primary hover:text-black transition-all">CALL</a>
+                    <a href="https://wa.me/234702619604" class="flex-1 py-3 bg-green-600/20 text-green-400 rounded-xl text-xs font-bold hover:bg-green-600/40 transition-all border border-green-600/20">WHATSAPP</a>
+                </div>
+            </div>
+
+            <!-- MR Daniel -->
+            <div class="p-6 bg-white/5 rounded-3xl border border-white/5 text-center">
+                <h5 class="text-lg font-bold text-white mb-1">MR Daniel</h5>
+                <p class="text-[10px] text-primary uppercase mb-4 font-mono tracking-widest">Intel Operations</p>
+                <div class="flex gap-2">
+                    <a href="tel:+2348159205235" class="flex-1 py-3 bg-white/5 rounded-xl text-xs font-bold hover:bg-primary hover:text-black transition-all">CALL</a>
+                    <a href="https://wa.me/2348159205235" class="flex-1 py-3 bg-green-600/20 text-green-400 rounded-xl text-xs font-bold hover:bg-green-600/40 transition-all border border-green-600/20">WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed inset-0 z-[100] bg-background/98 backdrop-blur-2xl translate-x-full transition-transform duration-500 md:hidden">
@@ -57,7 +118,7 @@
         <a href="index.html" onclick="toggleMenu()">Home</a>
         <a href="index.html#about-us" onclick="toggleMenu()">Web Services</a>
         <a href="#" class="text-primary">Design Portfolio</a>
-        <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+        <button onclick="toggleContactModal(); toggleMenu()" class="text-white">Contact Experts</button>
     </nav>
 </div>
 
@@ -72,7 +133,7 @@
             <a href="index.html" class="hover:text-primary transition-colors">Home</a>
             <a href="index.html#about-us" class="hover:text-primary transition-colors">Services</a>
             <a href="index.html#pricing-guide" class="hover:text-primary transition-colors">Prices</a>
-            <a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a>
+            <button onclick="toggleContactModal()" class="hover:text-primary transition-colors">Contact</button>
         </nav>
         <button onclick="toggleMenu()" class="md:hidden text-primary">
             <span class="material-symbols-outlined text-3xl">menu</span>
@@ -88,7 +149,7 @@
                 Visual <span class="tech-gradient">Excellence.</span>
             </h1>
             <p class="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
-                We define brands through elite graphic design. From high-end logos to complex UI layouts, explore our curated gallery of digital craftsmanship in full color.
+                Explore our curated gallery of digital craftsmanship in full color. Elite branding for businesses that demand the best.
             </p>
             <div class="h-1 w-20 bg-primary mx-auto mb-10"></div>
         </div>
@@ -98,93 +159,73 @@
     <section class="py-12 px-4 md:px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- Work 1 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f.jpg" class="w-full h-full object-cover" alt="Branding">
+                <img src="f.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Brand Identity</span>
-                    <h4 class="text-white font-display font-bold text-xl">Minimalist Corporate</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Brand Identity</h4>
                 </div>
             </div>
 
-            <!-- Work 2 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f1.jpg" class="w-full h-full object-cover" alt="UI Design">
+                <img src="f1.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">UI/UX Layout</span>
-                    <h4 class="text-white font-display font-bold text-xl">Fintech Dashboard</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Digital Layout</h4>
                 </div>
             </div>
 
-            <!-- Work 3 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f11.jpg" class="w-full h-full object-cover" alt="Poster">
+                <img src="f11.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Digital Art</span>
-                    <h4 class="text-white font-display font-bold text-xl">Neon Future Poster</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Modern UI</h4>
                 </div>
             </div>
 
-            <!-- Work 4 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f111.jpg" class="w-full h-full object-cover" alt="Typography">
+                <img src="f111.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Typography</span>
-                    <h4 class="text-white font-display font-bold text-xl">Bold Statement Print</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Print Design</h4>
                 </div>
             </div>
 
-            <!-- Work 5 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f2.jpg" class="w-full h-full object-cover" alt="Mobile UI">
+                <img src="f2.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">App Design</span>
-                    <h4 class="text-white font-display font-bold text-xl">Luxury Real Estate App</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Luxury App UI</h4>
                 </div>
             </div>
 
-            <!-- Work 6 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f21.jpg" class="w-full h-full object-cover" alt="Logo">
+                <img src="f21.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Logo Systems</span>
-                    <h4 class="text-white font-display font-bold text-xl">Abstract Tech Symbol</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Logo Architecture</h4>
                 </div>
             </div>
 
-            <!-- Work 7 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f22.jpg" class="w-full h-full object-cover" alt="Icons">
+                <img src="f22.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Iconography</span>
-                    <h4 class="text-white font-display font-bold text-xl">Custom SaaS Icon Set</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Creative Assets</h4>
                 </div>
             </div>
 
-            <!-- Work 8 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="f3.jpg" class="w-full h-full object-cover" alt="Color Theory">
+                <img src="f3.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Creative Direction</span>
-                    <h4 class="text-white font-display font-bold text-xl">Modern Art Branding</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Color Mastery</h4>
                 </div>
             </div>
 
-            <!-- Work 9 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="ff.jpg" class="w-full h-full object-cover" alt="Web Layout">
+                <img src="ff.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Web Graphics</span>
-                    <h4 class="text-white font-display font-bold text-xl">Landing Page Hero Set</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">Web Graphics</h4>
                 </div>
             </div>
 
-            <!-- Work 10 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="fff.jpg" class="w-full h-full object-cover" alt="Motion">
+                <img src="fff.jpg" class="w-full h-full object-cover" alt="Work">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Marketing Visuals</span>
-                    <h4 class="text-white font-display font-bold text-xl">Social Media Campaigns</h4>
+                    <h4 class="text-white font-display font-bold text-xl uppercase italic">SaaS Marketing</h4>
                 </div>
             </div>
 
@@ -193,10 +234,12 @@
 
     <!-- Call to Action -->
     <section class="py-24 px-4">
-        <div class="max-w-3xl mx-auto glass p-10 md:p-16 rounded-[3rem] text-center">
-            <h2 class="text-3xl font-display font-bold mb-6 text-white uppercase tracking-widest">Need Elite Design?</h2>
+        <div class="max-w-3xl mx-auto glass p-10 md:p-16 rounded-[3rem] text-center border border-primary/10 shadow-[0_0_50px_rgba(162,201,255,0.05)]">
+            <h2 class="text-3xl font-display font-bold mb-6 text-white uppercase tracking-widest">Ready to Build?</h2>
             <p class="text-gray-400 mb-10 text-sm">Transform your business with high-intelligence visuals that actually convert.</p>
-            <a href="https://wa.me/2348159205235" class="px-10 py-5 bg-primary text-black font-bold rounded-2xl hover:scale-105 transition-all inline-block uppercase text-xs tracking-widest">Contact Organization</a>
+            
+            <!-- Button triggers the Modal -->
+            <button onclick="toggleContactModal()" class="px-10 py-5 bg-primary text-black font-bold rounded-2xl hover:scale-105 transition-all inline-block uppercase text-xs tracking-widest">Contact Organization</button>
         </div>
     </section>
 </main>
@@ -216,9 +259,9 @@
         <div>
             <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10">Navigation</h5>
             <ul class="space-y-5 text-sm text-gray-500 font-medium">
-                <li><a href="index.html" class="hover:text-white transition-colors">Home Portal</a></li>
-                <li><a href="index.html#about-us" class="hover:text-white transition-colors">What We Do</a></li>
-                <li><a href="index.html#pricing-guide" class="hover:text-white transition-colors">Pricing Guide</a></li>
+                <li><a href="index.html" class="hover:text-white">Home Portal</a></li>
+                <li><a href="index.html#about-us" class="hover:text-white">What We Do</a></li>
+                <li><a href="index.html#pricing-guide" class="hover:text-white">Pricing Guide</a></li>
             </ul>
         </div>
         <div>
@@ -232,11 +275,9 @@
         <div>
             <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10 font-mono">2026 Strategy</h5>
             <p class="text-[10px] text-gray-500 mb-6 italic font-mono">Stay indexed. Stay relevant. Stay profitable.</p>
-            <div class="flex gap-4">
-                <a href="https://wa.me/2348159205235" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-black transition-all">
-                    <span class="material-symbols-outlined">chat</span>
-                </a>
-            </div>
+            <button onclick="toggleContactModal()" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+                <span class="material-symbols-outlined">chat</span>
+            </button>
         </div>
     </div>
     <div class="max-w-7xl mx-auto pt-10 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-[0.6em] font-bold">
@@ -245,7 +286,22 @@
 </footer>
 
 <script>
-    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('translate-x-full'); }
+    function toggleMenu() { 
+        document.getElementById('mobile-menu').classList.toggle('translate-x-full'); 
+    }
+    
+    function toggleContactModal() {
+        const modal = document.getElementById('contact-modal');
+        if (modal.classList.contains('hidden')) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Stop scrolling when open
+        } else {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto'; // Resume scrolling
+        }
+    }
 </script>
 </body>
 </html>
