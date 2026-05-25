@@ -40,8 +40,9 @@
             background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
             background-size: 30px 30px;
         }
-        .gallery-card:hover img { transform: scale(1.1); filter: grayscale(0); }
-        .gallery-card img { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); filter: grayscale(1); }
+        /* Zoom effect on hover - Grayscale REMOVED */
+        .gallery-card:hover img { transform: scale(1.1); }
+        .gallery-card img { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
 <body class="bg-background text-gray-200 antialiased">
@@ -83,11 +84,11 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-16 px-4 md:px-6 bg-grid">
         <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl lg:text-8xl font-display font-bold leading-tight mb-6 uppercase">
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-display font-bold leading-tight mb-6 uppercase text-white">
                 Visual <span class="tech-gradient">Excellence.</span>
             </h1>
             <p class="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
-                We define brands through elite graphic design. From high-end logos to complex UI layouts, explore our curated gallery of digital craftsmanship.
+                We define brands through elite graphic design. From high-end logos to complex UI layouts, explore our curated gallery of digital craftsmanship in full color.
             </p>
             <div class="h-1 w-20 bg-primary mx-auto mb-10"></div>
         </div>
@@ -99,7 +100,7 @@
             
             <!-- Work 1 -->
             <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
-                <img src="fjpg" class="w-full h-full object-cover" alt="Branding">
+                <img src="f.jpg" class="w-full h-full object-cover" alt="Branding">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
                     <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Brand Identity</span>
                     <h4 class="text-white font-display font-bold text-xl">Minimalist Corporate</h4>
@@ -134,7 +135,7 @@
             </div>
 
             <!-- Work 5 -->
-            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5 lg:scale-110 lg:z-10">
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
                 <img src="f2.jpg" class="w-full h-full object-cover" alt="Mobile UI">
                 <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
                     <span class="text-primary font-mono text-[10px] uppercase tracking-widest">App Design</span>
@@ -202,11 +203,11 @@
 
 <!-- Full Professional Footer -->
 <footer class="bg-surface py-20 px-6 border-t border-white/5">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-20">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-20 text-white">
         <div>
             <div class="flex items-center gap-2 mb-8">
                 <span class="material-symbols-outlined text-primary text-4xl">terminal</span>
-                <span class="font-display font-bold text-2xl tracking-tighter text-white uppercase">MEGA GRACE</span>
+                <span class="font-display font-bold text-2xl tracking-tighter uppercase">MEGA GRACE</span>
             </div>
             <p class="text-gray-400 text-sm leading-relaxed">
                 Expert Website Developers and Marketing Experts. Designing Nigeria's digital future since 2020. Precision in every pixel.
@@ -214,7 +215,7 @@
         </div>
         <div>
             <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10">Navigation</h5>
-            <ul class="space-y-5 text-sm text-gray-500 font-medium font-sans">
+            <ul class="space-y-5 text-sm text-gray-500 font-medium">
                 <li><a href="index.html" class="hover:text-white transition-colors">Home Portal</a></li>
                 <li><a href="index.html#about-us" class="hover:text-white transition-colors">What We Do</a></li>
                 <li><a href="index.html#pricing-guide" class="hover:text-white transition-colors">Pricing Guide</a></li>
