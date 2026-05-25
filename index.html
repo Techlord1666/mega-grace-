@@ -3,11 +3,21 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>MEGA GRACE | Engineered for Precision</title>
+    
+    <!-- SEO KEYWORDS & META TAGS -->
+    <title>MEGA GRACE | Engineered for Precision | Web Dev & Design</title>
+    <meta name="description" content="Mega Grace Computer Intel - High-performance Web Development, Graphic Design, and Digital Marketing Agency in Nigeria. Engineered for Precision." />
+    <meta name="keywords" content="Web Development Nigeria, Graphic Design Lagos, Digital Marketing, SEO Agency, Logo Design, Mega Grace, React Developer, Tech Solutions Africa, Professional Branding" />
+    <meta name="author" content="Mega Grace Computer Intel" />
+    <meta property="og:title" content="MEGA GRACE | Digital Engineering Firm" />
+    <meta property="og:description" content="Innovative tech solutions. From coding to branding." />
+    <meta property="og:type" content="website" />
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
     <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -35,11 +45,12 @@
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #a2c9ff; border-radius: 10px; }
         html { scroll-behavior: smooth; }
+        .chat-text { white-space: pre-wrap; }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md">
 
-<!-- Header -->
+<!-- Navigation -->
 <header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/5">
     <div class="flex justify-between items-center px-6 md:px-16 h-20 w-full max-w-[1440px] mx-auto">
         <div class="flex items-center gap-2">
@@ -47,191 +58,181 @@
             <span class="font-bold text-xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">MEGA GRACE</span>
         </div>
         <nav class="hidden md:flex items-center gap-8">
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#reviews">Reviews</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium" href="#about">About</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium" href="#services">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium" href="#reviews">Success Stories</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium" href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
 <main class="pt-20">
     <!-- Hero -->
-    <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-grid-pattern px-6 md:px-16">
+    <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-grid-pattern px-6 md:px-16">
         <div class="max-w-4xl z-10">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                Engineered for <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Digital Precision.</span>
+            <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1 rounded-full mb-6">
+                <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+                <span class="text-[10px] text-primary tracking-widest uppercase font-bold">Systems Optimized</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-bold leading-tight mb-6">
+                Engineered for <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Performance.</span>
             </h1>
-            <p class="text-lg text-on-surface-variant max-w-xl mb-8 italic">
-                The hub of innovative Web Development, Graphic Design, and Neural Marketing.
+            <p class="text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                Welcome to <span class="text-white font-bold">Mega Grace Computer Intel</span>. We architect high-performance websites, craft elite visual identities, and deploy data-driven marketing funnels.
             </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#contact" class="px-8 py-4 bg-primary text-background font-bold rounded-2xl hover:shadow-[0_0_30px_rgba(162,201,255,0.3)] transition-all">Launch Your Project</a>
+                <a href="https://wa.me/2348159205235" class="px-8 py-4 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/5 transition-all">Direct WhatsApp</a>
+            </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- About Section -->
     <section id="about" class="py-24 px-6 md:px-16 max-w-[1440px] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="text-primary font-bold tracking-widest text-sm mb-4">WHO WE ARE</h2>
-                <h3 class="text-4xl font-bold mb-6">Mega Grace Computer Intel</h3>
-                <p class="text-on-surface-variant leading-relaxed mb-6">
-                    We are a premier technology firm specializing in delivering robust digital solutions for businesses that refuse to settle for average. Our team combines technical "Intel" with creative "Grace" to build websites that perform, designs that speak, and marketing strategies that convert.
+                <h2 class="text-primary font-bold tracking-[0.2em] text-xs mb-4 uppercase">Company Profile</h2>
+                <h3 class="text-4xl font-bold mb-8">Technical Intelligence Meet Creative Grace</h3>
+                <p class="text-on-surface-variant leading-relaxed mb-8 text-lg">
+                    Mega Grace Computer Intel is a multi-disciplinary tech firm based in Nigeria, serving a global clientele. We specialize in transforming complex business problems into elegant, scalable digital solutions. Whether it's a high-traffic e-commerce site or a luxury brand identity, we engineer for <span class="text-primary">Precision</span>.
                 </p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass-card p-4 rounded-xl">
-                        <div class="text-primary font-bold text-xl">High Accuracy</div>
-                        <p class="text-xs text-on-surface-variant">We deliver clean, bug-free code.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-secondary-container">bolt</span>
+                        <div><h5 class="font-bold">Fast Execution</h5><p class="text-xs text-on-surface-variant">Rapid deployment without quality loss.</p></div>
                     </div>
-                    <div class="glass-card p-4 rounded-xl">
-                        <div class="text-secondary-container font-bold text-xl">Modern Tech</div>
-                        <p class="text-xs text-on-surface-variant">Using React, Next.js, and AI.</p>
+                    <div class="flex gap-4 items-start">
+                        <span class="material-symbols-outlined text-secondary-container">shield</span>
+                        <div><h5 class="font-bold">Secure Systems</h5><p class="text-xs text-on-surface-variant">We build with security as a priority.</p></div>
                     </div>
                 </div>
             </div>
-            <div class="relative">
-                <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" class="rounded-3xl relative z-10 opacity-80" alt="Tech Studio">
+            <div class="glass-card p-2 rounded-[40px]">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" class="rounded-[38px] opacity-80" alt="Workstation">
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section id="services" class="py-20 px-6 md:px-16 bg-surface-container-lowest/50">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1440px] mx-auto">
-            <div class="glass-card p-10 rounded-3xl border-l-4 border-primary">
-                <h4 class="text-2xl font-bold mb-4">Web Development</h4>
-                <p class="text-on-surface-variant text-sm italic">Scalable e-commerce, portfolios, and corporate web architectures.</p>
-            </div>
-            <div class="glass-card p-10 rounded-3xl border-l-4 border-secondary-container">
-                <h4 class="text-2xl font-bold mb-4">Graphic Design</h4>
-                <p class="text-on-surface-variant text-sm italic">Brand identity, professional logos, and UI/UX design systems.</p>
-            </div>
-            <div class="glass-card p-10 rounded-3xl border-l-4 border-white/20">
-                <h4 class="text-2xl font-bold mb-4">Marketing</h4>
-                <p class="text-on-surface-variant text-sm italic">SEO, social media growth, and high-conversion lead generation.</p>
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 px-6 md:px-16 bg-surface-container-lowest/30">
+        <div class="max-w-[1440px] mx-auto">
+            <h2 class="text-center text-4xl font-bold mb-16">Global <span class="text-primary">Testimonials</span></h2>
+            <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Injected by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section (20 Long Reviews) -->
-    <section id="reviews" class="py-24 px-6 md:px-16 max-w-[1440px] mx-auto">
-        <h2 class="text-3xl font-bold mb-12">Client Success Stories</h2>
-        <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Reviews will be generated by JavaScript below -->
-        </div>
-    </section>
-
-    <!-- Contact Form (WhatsApp Linked) -->
-    <section id="contact" class="py-24 px-6 md:px-16 max-w-4xl mx-auto">
-        <div class="glass-card p-10 md:p-16 rounded-[40px] border border-primary/20">
-            <h2 class="text-3xl font-bold mb-8 text-center">Inquiry & Orders</h2>
-            <form id="contact-wa-form" class="space-y-6">
-                <input type="text" id="name" placeholder="Full Name" required class="w-full bg-background border border-white/10 rounded-2xl p-4 text-white focus:border-primary outline-none">
-                <select id="service-type" class="w-full bg-background border border-white/10 rounded-2xl p-4 text-white/50 focus:border-primary outline-none">
-                    <option value="Web Development">Web Development</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                </select>
-                <textarea id="msg" placeholder="Tell us about your project requirements..." rows="4" required class="w-full bg-background border border-white/10 rounded-2xl p-4 text-white focus:border-primary outline-none"></textarea>
-                <button type="submit" class="w-full py-5 bg-primary text-background font-bold rounded-2xl hover:scale-[1.02] transition-all flex items-center justify-center gap-3">
-                    <span class="material-symbols-outlined">send</span> Send Inquiry to WhatsApp
+    <!-- Contact Form -->
+    <section id="contact" class="py-24 px-6 md:px-16">
+        <div class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-[48px] border border-primary/10">
+            <h2 class="text-4xl font-bold mb-4 text-center">Ready to Start?</h2>
+            <p class="text-center text-on-surface-variant mb-12">Submit your details to start a conversation with our lead engineers.</p>
+            <form id="main-wa-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" id="client-name" placeholder="Your Name" required class="w-full bg-background border border-white/5 rounded-2xl p-5 text-white focus:border-primary outline-none transition-all">
+                    <input type="text" id="client-service" placeholder="Service (e.g. Web Dev)" required class="w-full bg-background border border-white/5 rounded-2xl p-5 text-white focus:border-primary outline-none transition-all">
+                </div>
+                <textarea id="client-msg" placeholder="Tell us about your project requirements..." rows="5" required class="w-full bg-background border border-white/5 rounded-2xl p-5 text-white focus:border-primary outline-none transition-all"></textarea>
+                <button type="submit" class="w-full py-5 bg-gradient-to-r from-primary to-secondary-container text-background font-black rounded-2xl hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-4">
+                    INITIALIZE TRANSMISSION (WHATSAPP)
                 </button>
             </form>
         </div>
     </section>
 </main>
 
-<!-- Footer -->
-<footer class="py-16 border-t border-white/5 bg-surface-container-lowest px-6 md:px-16">
-    <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+<footer class="py-20 border-t border-white/5 bg-surface-container-lowest px-6 md:px-16">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
         <div>
-            <div class="flex items-center gap-2 text-primary font-bold text-xl mb-6">
+            <div class="flex items-center gap-2 text-primary font-bold text-2xl mb-6">
                 <span class="material-symbols-outlined">terminal</span> MEGA GRACE
             </div>
-            <p class="text-on-surface-variant text-sm leading-relaxed max-w-xs">
-                Engineering the next generation of digital infrastructure. Based in Nigeria, serving the world.
+            <p class="text-on-surface-variant leading-relaxed text-sm">
+                The premier hub for technical intelligence and creative grace. We build the future, one pixel and one line of code at a time.
             </p>
         </div>
         <div>
-            <h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Connect with Us</h5>
-            <div class="text-on-surface-variant text-sm space-y-2">
-                <p>WhatsApp: 08159205235</p>
-                <p>Email: support@megagrace.com</p>
-                <p>Office: Lagos, Nigeria</p>
-            </div>
+            <h5 class="font-bold mb-8 text-sm uppercase tracking-widest text-primary">Office Intel</h5>
+            <ul class="text-on-surface-variant text-sm space-y-4">
+                <li class="flex gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Lagos, Nigeria</li>
+                <li class="flex gap-2"><span class="material-symbols-outlined text-sm">call</span> 08159205235</li>
+                <li class="flex gap-2"><span class="material-symbols-outlined text-sm">mail</span> intel@megagrace.com</li>
+            </ul>
         </div>
         <div>
-            <h5 class="font-bold mb-6 text-sm uppercase tracking-widest">Quick Links</h5>
-            <div class="flex flex-wrap gap-4 text-xs text-on-surface-variant uppercase">
-                <a href="#about" class="hover:text-primary">About</a>
-                <a href="#services" class="hover:text-primary">Services</a>
-                <a href="#reviews" class="hover:text-primary">Reviews</a>
-                <a href="https://wa.me/2348159205235" class="hover:text-primary">Contact Support</a>
+            <h5 class="font-bold mb-8 text-sm uppercase tracking-widest text-primary">Social Channels</h5>
+            <div class="flex gap-4">
+                <a href="https://wa.me/2348159205235" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-background transition-all"><span class="material-symbols-outlined">chat</span></a>
+                <a href="#" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-background transition-all"><span class="material-symbols-outlined">share</span></a>
             </div>
         </div>
     </div>
-    <div class="mt-16 text-center text-[10px] text-on-surface-variant opacity-50">
-        © 2024 MEGA GRACE COMPUTER INTEL. ALL RIGHTS RESERVED.
+    <div class="mt-20 text-center text-[10px] uppercase tracking-[0.3em] text-on-surface-variant opacity-40">
+        © 2024 MEGA GRACE COMPUTER INTEL. ALL CODE SYSTEMS ACTIVE.
     </div>
 </footer>
 
-<!-- AI ChatGPT Assistant (Gemini) -->
+<!-- AI ASSISTANT -->
 <div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
     <!-- Chat Window -->
     <div id="chat-window" class="hidden w-[420px] max-w-[95vw] mb-4 glass-card rounded-[32px] overflow-hidden shadow-2xl flex flex-col h-[600px] border border-primary/20">
         <div class="bg-gradient-to-r from-primary to-secondary-container p-5 flex items-center justify-between text-background">
             <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined font-bold">smart_toy</span>
-                <span class="font-bold text-xs uppercase tracking-tighter">Grace-AI (Consultant)</span>
+                <div class="w-8 h-8 rounded-full bg-background/20 flex items-center justify-center">
+                    <span class="material-symbols-outlined font-bold text-sm">smart_toy</span>
+                </div>
+                <span class="font-bold text-xs uppercase tracking-tighter">Grace-AI (Digital Consultant)</span>
             </div>
-            <button onclick="toggleChat()"><span class="material-symbols-outlined">close</span></button>
+            <button onclick="toggleChat()" class="hover:rotate-90 transition-transform"><span class="material-symbols-outlined">close</span></button>
         </div>
-        <div id="chat-messages" class="flex-1 p-5 overflow-y-auto space-y-4 bg-background/50 custom-scrollbar">
-            <div class="p-3 bg-surface-container rounded-2xl rounded-tl-none text-sm max-w-[85%] leading-relaxed">
-                Greetings! I am Grace-AI, the official digital consultant for Mega Grace Computer Intel. Are you looking to upgrade your web architecture, design a professional brand, or launch a marketing campaign? How can I assist you?
+        <div id="chat-messages" class="flex-1 p-5 overflow-y-auto space-y-4 bg-background/30 custom-scrollbar">
+            <div class="p-4 bg-surface-container rounded-2xl rounded-tl-none text-sm max-w-[90%] leading-relaxed">
+                Greetings! I am <span class="text-primary font-bold">Grace-AI</span>, your strategic consultant for Mega Grace Computer Intel. Are you looking to develop a robust website, design an elite brand, or scale your business via marketing? I'm here to help!
             </div>
         </div>
         <div class="p-4 bg-surface-container-low border-t border-white/5 flex gap-2">
-            <input type="text" id="user-input" placeholder="Ask about our services or pricing..." class="flex-1 bg-background border border-white/10 rounded-2xl px-4 py-2 text-sm text-white focus:border-primary outline-none">
-            <button onclick="handleAISend()" class="bg-primary text-background p-2 rounded-xl active:scale-90 transition-all"><span class="material-symbols-outlined">send</span></button>
+            <input type="text" id="user-input" placeholder="Type your inquiry here..." class="flex-1 bg-background border border-white/10 rounded-2xl px-5 py-3 text-sm text-white focus:border-primary outline-none">
+            <button onclick="handleAISend()" class="bg-primary text-background px-4 rounded-2xl active:scale-90 transition-all">
+                <span class="material-symbols-outlined">send</span>
+            </button>
         </div>
     </div>
     <!-- FAB -->
-    <button onclick="toggleChat()" class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-background shadow-2xl hover:scale-110 active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-3xl">chat</span>
+    <button onclick="toggleChat()" class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-background shadow-[0_0_40px_rgba(162,201,255,0.4)] hover:scale-110 active:scale-95 transition-all">
+        <span class="material-symbols-outlined text-3xl">forum</span>
     </button>
 </div>
 
 <script>
-    // 1. 20 LONG & DETAILED REVIEWS
-    const reviewsData = [
-        { name: "Chibuzor Okeke", img: "https://i.pravatar.cc/150?u=1", text: "Mega Grace built our corporate portal and the performance is incredible. Their technical precision in handling the backend database and API integration was flawless. We saw a 30% increase in workflow efficiency." },
-        { name: "Sarah Adesina", img: "https://i.pravatar.cc/150?u=2", text: "The branding package we received was beyond world-class. From the logo to the UI/UX design of our mobile app, the team demonstrated a deep understanding of modern visual language and brand psychology." },
-        { name: "Tunde Williams", img: "https://i.pravatar.cc/150?u=3", text: "Their digital marketing strategy literally saved our business during the slow season. They didn't just run ads; they built a neural targeting funnel that brought in high-quality leads consistently." },
-        { name: "Amaka Egbo", img: "https://i.pravatar.cc/150?u=4", text: "Working with the web dev team was a breeze. They delivered our e-commerce site 2 days early, and the checkout process is so smooth that our conversion rates have jumped by 20% since launch." },
-        { name: "Ibrahim Yusuf", img: "https://i.pravatar.cc/150?u=5", text: "Reliability is hard to find, but Mega Grace is the gold standard. They've been managing our cloud infrastructure for a year with zero downtime. Truly elite level digital engineering." },
-        { name: "Anita George", img: "https://i.pravatar.cc/150?u=6", text: "The creative direction for our brand launch was stunning. They managed to capture our vision and turn it into a high-end visual experience that clients keep complimenting. Excellent design team!" },
-        { name: "David Chen", img: "https://i.pravatar.cc/150?u=7", text: "Expert consultation from start to finish. They helped us choose the right tech stack (Next.js) which significantly improved our SEO and site speed. Their knowledge is deep and practical." },
-        { name: "Blessing Okafor", img: "https://i.pravatar.cc/150?u=8", text: "Our non-profit website was old and slow until Mega Grace revamped it. Now it's accessible, fast, and donor-friendly. Their social impact focus made them the perfect partners for us." },
-        { name: "Paul Obi", img: "https://i.pravatar.cc/150?u=9", text: "If you need a team that understands database optimization and high-traffic web apps, this is it. They fixed a bottleneck in our system that three other developers couldn't figure out." },
-        { name: "Victoria Smith", img: "https://i.pravatar.cc/150?u=10", text: "Professional, efficient, and innovative. The logo and UI design for our fintech startup helped us secure our first round of funding. Investors were very impressed with the digital presentation." },
-        { name: "Kevin Hart", img: "https://i.pravatar.cc/150?u=11", text: "Their SEO and content marketing strategy worked wonders. We moved from page 5 to the top 3 spots on Google for our primary keywords in less than 4 months. Exceptional ROI!" },
-        { name: "Janet S.", img: "https://i.pravatar.cc/150?u=12", text: "Mega Grace handled our international brand rollout with perfection. The marketing visuals and social media management were consistent across all regions. A truly global-standard firm." },
-        { name: "Michael Obi", img: "https://i.pravatar.cc/150?u=13", text: "The custom CRM they built for us has revolutionized our sales team's productivity. It's fast, intuitive, and the user interface is beautiful. Best tech investment we've made this year." },
-        { name: "Esther K.", img: "https://i.pravatar.cc/150?u=14", text: "High quality work delivered on a reasonable budget. They are very transparent about their process and kept us updated every step of the way. I'll definitely be coming back for more." },
-        { name: "Samuel T.", img: "https://i.pravatar.cc/150?u=15", text: "Their graphic design team has a magical touch. They took our messy ideas and turned them into a clean, sophisticated brand manual. Our corporate identity has never looked better." },
-        { name: "Uche J.", img: "https://i.pravatar.cc/150?u=16", text: "Fastest web load times I've ever seen on a project! They optimized every image and script. My clients keep telling me how fast and smooth the website feels. 5-star service!" },
-        { name: "Maria L.", img: "https://i.pravatar.cc/150?u=17", text: "The digital marketing campaign they ran for our product launch was flawless. We hit our sales targets in the first 48 hours. They really know how to build hype and convert it." },
-        { name: "Ahmed M.", img: "https://i.pravatar.cc/150?u=18", text: "I've worked with many devs, but the precision at Mega Grace is different. No bugs, no excuses, just high-performance results. They are now my long-term technical partners." },
-        { name: "Grace Ani", img: "https://i.pravatar.cc/150?u=19", text: "They turned our complex requirements into a simple, elegant web solution. The user experience is fantastic. They have a rare ability to simplify the complex for the end-user." },
-        { name: "Peter Parker", img: "https://i.pravatar.cc/150?u=20", text: "Stunning graphics, fast website, and incredible marketing support. Mega Grace is the all-in-one powerhouse that every growing business needs in today's digital landscape." }
+    // 1. GENERATE 20 LONG REVIEWS
+    const reviews = [
+        {name: "Chibuzor Okafor", text: "Mega Grace handled our corporate web architecture with absolute precision. The site is incredibly fast, and their integration of modern React components made our user dashboard world-class. If you need serious engineering, hire them.", img: "https://i.pravatar.cc/150?u=1"},
+        {name: "Sarah Adebayo", text: "The graphic design package we received was beyond our expectations. They redesigned our entire brand identity, and since then, our corporate image has gained massive respect in the market. Truly artistic intelligence.", img: "https://i.pravatar.cc/150?u=2"},
+        {name: "Tunde Williams", text: "Best marketing agency we've worked with. They deployed a lead-generation funnel that converted at 15% within the first month. Their data-driven approach to SEO is unmatched in Nigeria.", img: "https://i.pravatar.cc/150?u=3"},
+        {name: "Blessing Egbo", text: "Fast, reliable, and professional. I needed an e-commerce platform for my fashion brand and Mega Grace delivered a seamless experience. My customers love the checkout flow!", img: "https://i.pravatar.cc/150?u=4"},
+        {name: "Ibrahim Lawal", text: "Technical precision at its peak. We had server issues that several developers couldn't fix, but Mega Grace's engineers solved it in under 24 hours. They are our long-term technical partners now.", img: "https://i.pravatar.cc/150?u=5"},
+        {name: "Anita George", text: "The UI/UX design for our mobile app was stunning. They understand the psychology of the user perfectly. Our app retention rate has increased significantly thanks to their work.", img: "https://i.pravatar.cc/150?u=6"},
+        {name: "David Chen", text: "Exceptional service. They built our portfolio site with high-end animations and optimized it for all devices. Their team is very communicative and technically sound.", img: "https://i.pravatar.cc/150?u=7"},
+        {name: "Janet S.", text: "Transformed our local business into a national brand through their social media marketing and branding. The growth we've seen is nothing short of miraculous. Thank you Mega Grace!", img: "https://i.pravatar.cc/150?u=8"},
+        {name: "Samuel Etu", text: "They build sites that actually work for business. No fluff, just pure performance. Our site load time is now under 1.2 seconds, which has helped our Google rankings immensely.", img: "https://i.pravatar.cc/150?u=9"},
+        {name: "Maria L.", text: "Incredible attention to detail. Every logo and social media asset they design is polished and professional. It has given us a massive edge over our competitors.", img: "https://i.pravatar.cc/150?u=10"},
+        {name: "Paul O.", text: "High-level database optimization and backend work. They handled our complex API integrations without a single error. These guys are true engineers.", img: "https://i.pravatar.cc/150?u=11"},
+        {name: "Victoria K.", text: "The best branding agency in Lagos. They took our messy ideas and turned them into a clean, luxury brand manual. We are very proud of our new look.", img: "https://i.pravatar.cc/150?u=12"},
+        {name: "Michael B.", text: "Our sales increased by 200% after they revamped our marketing strategy and website. The return on investment is undeniable. Mega Grace is a powerhouse.", img: "https://i.pravatar.cc/150?u=13"},
+        {name: "Funke A.", text: "Smooth communication throughout the project. They explained all technical aspects clearly and delivered exactly what was promised. A very trustworthy tech firm.", img: "https://i.pravatar.cc/150?u=14"},
+        {name: "Kevin C.", text: "Their SEO strategy is brilliant. We moved from page 10 to page 1 for our main keywords in just 3 months. If you want Google traffic, you need Mega Grace.", img: "https://i.pravatar.cc/150?u=15"},
+        {name: "Uche J.", text: "Stunning graphics for our ad campaigns. The visuals they produce are high-impact and look great on every platform. They really know their colors and layouts.", img: "https://i.pravatar.cc/150?u=16"},
+        {name: "Anita J.", text: "Excellent web support. Whenever we have a question or need an update, they are always available. Their maintenance service is worth every kobo.", img: "https://i.pravatar.cc/150?u=17"},
+        {name: "Peter P.", text: "They built a custom CRM for our internal team that has streamlined our operations completely. It's fast, secure, and very easy to use. Brilliant engineering.", img: "https://i.pravatar.cc/150?u=18"},
+        {name: "Grace A.", text: "Transformative digital branding. Our firm now looks like a multi-million dollar corporation thanks to the work of Mega Grace Computer Intel.", img: "https://i.pravatar.cc/150?u=19"},
+        {name: "Bolaji S.", text: "One of the few tech firms in Nigeria that actually understands global standards. Their work is clean, modern, and highly efficient. Top tier results!", img: "https://i.pravatar.cc/150?u=20"}
     ];
-
     const grid = document.getElementById('reviews-grid');
-    reviewsData.forEach(r => {
+    reviews.forEach(r => {
         grid.innerHTML += `
-            <div class="glass-card p-8 rounded-3xl hover:border-primary/40 transition-all duration-300">
+            <div class="glass-card p-8 rounded-3xl hover:border-primary transition-all duration-300">
                 <div class="flex items-center gap-4 mb-6">
                     <img src="${r.img}" class="w-12 h-12 rounded-full border-2 border-primary/20">
                     <div><div class="font-bold text-white text-sm">${r.name}</div><div class="text-yellow-500 text-[10px]">★★★★★</div></div>
@@ -240,19 +241,21 @@
             </div>`;
     });
 
-    // 2. CONTACT FORM TO WHATSAPP
-    document.getElementById('contact-wa-form').addEventListener('submit', function(e) {
+    // 2. MAIN WHATSAPP FORM
+    document.getElementById('main-wa-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        const n = document.getElementById('name').value;
-        const s = document.getElementById('service-type').value;
-        const m = document.getElementById('msg').value;
-        const fullTxt = `Hello Mega Grace! My name is ${n}. I am interested in ${s}. Details: ${m}`;
+        const n = document.getElementById('client-name').value;
+        const s = document.getElementById('client-service').value;
+        const m = document.getElementById('client-msg').value;
+        const fullTxt = `Hello Mega Grace Computer Intel! My name is ${n}. I am interested in ${s}. Project Details: ${m}`;
         window.open(`https://wa.me/2348159205235?text=${encodeURIComponent(fullTxt)}`, '_blank');
     });
 
-    // 3. GEMINI AI (ChatGPT Persona)
+    // 3. RE-CONFIGURED GEMINI AI
     const GEMINI_KEY = "AIzaSyC7jCxlsl2ersPCP2OiR6T-M5IsZiPuFrI";
-    const systemPrompt = "You are Grace-AI, a smart sales assistant for 'Mega Grace Computer Intel'. Your goal is to secure deals and explain our services: Web Dev, Graphic Design, and Marketing. Chat professionally like ChatGPT. Have memory of the chat. IMPORTANT: If someone wants to order or pay, ask them to click the WhatsApp link or message 08159205235.";
+    
+    // Detailed Prompt for Proper Conversation
+    const systemPrompt = "You are Grace-AI, the elite digital consultant for Mega Grace Computer Intel. Company focus: 1. Web Development (React, Next.js, Python), 2. Graphic Design (Branding, Logo, UI/UX), 3. Digital Marketing (SEO, Social Ads). You are intelligent, professional, and chat exactly like ChatGPT. You have memory of this current conversation. Your goal: Educate the user, then secure a deal. If the user mentions money, hiring, pricing, or ordering, you MUST provide the WhatsApp number 08159205235 and tell them to finalize the deal there.";
     
     let chatHistory = [];
 
@@ -265,9 +268,10 @@
 
         appendMsg('user', text);
         input.value = '';
+        
         chatHistory.push({ role: "user", parts: [{ text: text }] });
 
-        const loadingId = appendMsg('bot', 'Connecting to neural brain...');
+        const loadingId = appendMsg('bot', 'Connecting to neural net...');
 
         try {
             const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`, {
@@ -280,16 +284,22 @@
             });
 
             const data = await response.json();
-            const reply = data.candidates[0].content.parts[0].text;
             
-            document.getElementById(loadingId).innerText = reply;
-            chatHistory.push({ role: "model", parts: [{ text: reply }] });
+            if (data.candidates && data.candidates[0].content) {
+                const reply = data.candidates[0].content.parts[0].text;
+                document.getElementById(loadingId).classList.add('chat-text');
+                document.getElementById(loadingId).innerText = reply;
+                chatHistory.push({ role: "model", parts: [{ text: reply }] });
 
-            if(reply.includes("08159205235") || reply.toLowerCase().includes("whatsapp")) {
-                showOrderBtn();
+                if (reply.includes("08159205235") || reply.toLowerCase().includes("whatsapp")) {
+                    showOrderBtn();
+                }
+            } else {
+                throw new Error("Invalid response");
             }
         } catch (e) {
-            document.getElementById(loadingId).innerText = "The connection is weak. Please reach us at 08159205235 on WhatsApp directly!";
+            console.error(e);
+            document.getElementById(loadingId).innerText = "The neural link is unstable. Please message us on WhatsApp at 08159205235 for an immediate human consultation!";
         }
     }
 
@@ -299,7 +309,7 @@
         const isBot = role === 'bot';
         container.insertAdjacentHTML('beforeend', `
             <div class="flex ${isBot ? '' : 'justify-end'}">
-                <div id="${id}" class="p-3 rounded-2xl text-sm ${isBot ? 'bg-surface-container rounded-tl-none' : 'bg-primary text-background rounded-tr-none'} max-w-[85%] leading-relaxed">
+                <div id="${id}" class="p-4 rounded-2xl text-sm ${isBot ? 'bg-surface-container rounded-tl-none' : 'bg-primary text-background rounded-tr-none'} max-w-[90%] leading-relaxed">
                     ${text}
                 </div>
             </div>`);
@@ -310,7 +320,7 @@
     function showOrderBtn() {
         document.getElementById('chat-messages').insertAdjacentHTML('beforeend', `
             <div class="flex justify-center mt-2">
-                <a href="https://wa.me/2348159205235" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full text-[10px] font-bold animate-pulse">PLACE ORDER ON WHATSAPP</a>
+                <a href="https://wa.me/2348159205235" target="_blank" class="bg-green-600 text-white px-5 py-2 rounded-full text-[10px] font-bold animate-pulse tracking-widest">PLACE ORDER VIA WHATSAPP</a>
             </div>`);
     }
 
