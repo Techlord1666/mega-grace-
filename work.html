@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Our Past Works | MEGA GRACE - 2026 Project Intel</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the portfolio of MEGA GRACE. Expert web development projects in Nigeria including eCommerce, corporate sites, and custom web apps built in 2026." />
+    <meta name="keywords" content="Website developers in Nigeria, best web design portfolio 2026, Lagos web developers, eCommerce website examples, Mega Grace works" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                primary: "#a2c9ff",
+                secondary: "#00f5fc",
+                background: "#0a0a0b",
+                surface: "#161618",
+              },
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                display: ['Sora', 'sans-serif'],
+                mono: ['JetBrains Mono', 'monospace']
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .tech-gradient { background: linear-gradient(to right, #a2c9ff, #00f5fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: #a2c9ff; }
+        .project-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="bg-background text-gray-200 antialiased">
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-background/98 backdrop-blur-2xl translate-x-full transition-transform duration-500 md:hidden">
+    <div class="flex justify-between p-6">
+        <span class="font-display font-bold text-primary text-xl uppercase">MEGA GRACE</span>
+        <button onclick="toggleMenu()" class="text-primary"><span class="material-symbols-outlined text-4xl">close</span></button>
+    </div>
+    <nav class="flex flex-col items-center gap-8 pt-10 text-2xl font-display font-bold text-white">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="index.html#about-us" onclick="toggleMenu()">Services</a>
+        <a href="portfolio.html" onclick="toggleMenu()">Graphic Design</a>
+        <a href="#" class="text-primary">Past Works</a>
+        <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+    </nav>
+</div>
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">language</span>
+            <span class="font-display font-bold text-lg md:text-xl tracking-tighter text-white uppercase">MEGA GRACE</span>
+        </div>
+        <nav class="hidden md:flex gap-8 font-bold text-[10px] uppercase tracking-widest text-white">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+            <a href="portfolio.html" class="hover:text-primary transition-colors">Graphics</a>
+            <a href="#" class="text-secondary">Web Projects</a>
+            <a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <button onclick="toggleMenu()" class="md:hidden text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-16 px-4 md:px-6 bg-grid">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 uppercase text-white">
+                Project <span class="tech-gradient">Intel 2026.</span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
+                Below is a live documentation of high-performance websites and digital assets developed by MEGA GRACE in the 2026 fiscal year.
+            </p>
+            <div class="flex justify-center gap-4">
+                <div class="px-4 py-2 glass rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">8+ Live Deployments</div>
+                <div class="px-4 py-2 glass rounded-full text-[10px] font-bold text-secondary uppercase tracking-widest">100% Success Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE PROJECTS GRID -->
+    <section class="py-12 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1: Harwos Prints -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-white/5">
+                <span class="text-primary font-mono text-[10px] uppercase mb-2">Printing & Branding</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Harwos Prints</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    A professional branding and industrial printing platform. Features clean corporate UI and service showcase modules.
+                </p>
+                <a href="https://harwosprints.ng/" target="_blank" class="w-full py-4 bg-primary text-black font-bold text-center rounded-xl text-xs uppercase hover:scale-105 transition-all">Visit Live Site</a>
+            </div>
+
+            <!-- Project 2: 27668 Grafix -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-white/5">
+                <span class="text-secondary font-mono text-[10px] uppercase mb-2">Graphics Agency</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">27668 Grafix</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    A portfolio-driven website for a creative design agency. Optimized for visual impact and high-resolution asset delivery.
+                </p>
+                <a href="https://27668grafix.com" target="_blank" class="w-full py-4 bg-secondary text-black font-bold text-center rounded-xl text-xs uppercase hover:scale-105 transition-all">Visit Live Site</a>
+            </div>
+
+            <!-- Project 3: Carolive Ventures -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-white/5">
+                <span class="text-white font-mono text-[10px] uppercase mb-2">Corporate Business</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Carolive Ventures</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    Multi-sector business portal built for credibility and trust. Includes custom contact systems and corporate profiles.
+                </p>
+                <a href="https://caroliveventures.com" target="_blank" class="w-full py-4 border border-white/20 text-white font-bold text-center rounded-xl text-xs uppercase hover:bg-white/5 transition-all">Visit Live Site</a>
+            </div>
+
+            <!-- Project 4: Cars Village Global -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-white/5">
+                <span class="text-primary font-mono text-[10px] uppercase mb-2">Automotive eCommerce</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Cars Village Global</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    A global automotive marketplace. Integrated with inventory management for international car sales and logistics.
+                </p>
+                <a href="https://carsvillageglobal.com/" target="_blank" class="w-full py-4 bg-primary text-black font-bold text-center rounded-xl text-xs uppercase hover:scale-105 transition-all">Visit Live Site</a>
+            </div>
+
+            <!-- Project 5: Jeobest -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-white/5">
+                <span class="text-secondary font-mono text-[10px] uppercase mb-2">SME Solutions</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Jeobest</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    Custom-built SME landing page designed for conversion and local search engine visibility in Nigeria.
+                </p>
+                <a href="https://jeobest.site" target="_blank" class="w-full py-4 bg-secondary text-black font-bold text-center rounded-xl text-xs uppercase hover:scale-105 transition-all">Visit Live Site</a>
+            </div>
+
+            <!-- Project 6: Depeace ISV -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-white/5 text-left">
+                <span class="text-white font-mono text-[10px] uppercase mb-2">Security & Tech</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Depeace ISV</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    High-security architecture website for an industrial service provider. Built for elite performance.
+                </p>
+                <a href="https://depeaceisv.com" target="_blank" class="w-full py-4 border border-white/20 text-white font-bold text-center rounded-xl text-xs uppercase hover:bg-white/5 transition-all">Visit Live Site</a>
+            </div>
+
+            <!-- Project 7: Pardon App -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-primary/20">
+                <span class="text-primary font-mono text-[10px] uppercase mb-2">Modern Web App</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Pardon AI</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    A React-based modern landing page for an AI software solution. Clean, fast, and fully responsive.
+                </p>
+                <a href="https://pardon-wcx4.vercel.app/#" target="_blank" class="w-full py-4 bg-primary text-black font-bold text-center rounded-xl text-xs uppercase hover:scale-105 transition-all">Preview Project</a>
+            </div>
+
+            <!-- Project 8: Techton -->
+            <div class="project-card glass p-8 rounded-[2.5rem] flex flex-col h-full border border-secondary/20">
+                <span class="text-secondary font-mono text-[10px] uppercase mb-2">Career & Tech Portal</span>
+                <h3 class="text-2xl font-display font-bold text-white mb-4">Techton Portal</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    A complex career and openings platform designed for tech recruitment. Advanced UI components.
+                </p>
+                <a href="https://techton-i7yr.vercel.app/position.html#openings" target="_blank" class="w-full py-4 bg-secondary text-black font-bold text-center rounded-xl text-xs uppercase hover:scale-105 transition-all">Preview Project</a>
+            </div>
+
+            <!-- Placeholder for Future -->
+            <div class="glass p-8 rounded-[2.5rem] flex flex-col items-center justify-center h-full border border-dashed border-white/10 opacity-50">
+                <span class="material-symbols-outlined text-4xl mb-4">add_circle</span>
+                <p class="text-sm font-bold uppercase tracking-widest">Your Site Next?</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto glass p-10 md:p-16 rounded-[4rem] text-center">
+            <h2 class="text-3xl md:text-5xl font-display font-bold mb-6 text-white uppercase tracking-tighter">Ready for <br><span class="text-primary">Digital Domination?</span></h2>
+            <p class="text-gray-400 mb-10 text-sm max-w-lg mx-auto leading-relaxed">
+                Join our roster of successful businesses. We build assets that don't just look good, they generate revenue.
+            </p>
+            <a href="https://wa.me/2348159205235" class="px-10 py-5 bg-primary text-black font-bold rounded-2xl hover:scale-110 transition-all inline-block uppercase text-xs tracking-widest">Start Your Project</a>
+        </div>
+    </section>
+</main>
+
+<!-- Full Professional Footer -->
+<footer class="bg-surface py-20 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 text-white">
+        <div>
+            <div class="flex items-center gap-2 mb-8 text-primary">
+                <span class="material-symbols-outlined text-4xl">terminal</span>
+                <span class="font-display font-bold text-2xl tracking-tighter uppercase">MEGA GRACE</span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Expert Website Developers and Marketing Experts. Designing Nigeria's digital future since 2020.
+            </p>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10">Internal Hub</h5>
+            <ul class="space-y-5 text-sm text-gray-500 font-medium">
+                <li><a href="index.html" class="hover:text-white transition-colors">Return Home</a></li>
+                <li><a href="portfolio.html" class="hover:text-white transition-colors">Design Portfolio</a></li>
+                <li><a href="index.html#contact" class="hover:text-white transition-colors">Project Booking</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10">Contact Hub</h5>
+            <ul class="space-y-5 text-sm text-gray-500 font-medium font-mono">
+                <li>Lagos, Nigeria</li>
+                <li>08159205235</li>
+                <li>Status: ACTIVE</li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10 font-mono">2026 Strategy</h5>
+            <p class="text-[10px] text-gray-500 mb-6 italic">Stay indexed. Stay relevant. Stay profitable.</p>
+            <div class="flex gap-4">
+                <a href="https://wa.me/2348159205235" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+                    <span class="material-symbols-outlined">chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-10 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-[0.6em] font-bold">
+        © 2024 MEGA GRACE COMPUTER INTEL. ALL SYSTEMS ACTIVE.
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() { 
+        document.getElementById('mobile-menu').classList.toggle('translate-x-full'); 
+    }
+</script>
+</body>
+</html>
