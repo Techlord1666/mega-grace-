@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MEGA GRACE | Engineered for Precision</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#0e0e0f",
+                      "on-background": "#e5e2e3",
+                      "inverse-primary": "#0060a9",
+                      "surface-bright": "#3a393a",
+                      "surface-variant": "#353436",
+                      "on-primary-fixed-variant": "#004881",
+                      "inverse-on-surface": "#313031",
+                      "on-surface-variant": "#c0c7d3",
+                      "tertiary": "#ffb689",
+                      "primary": "#a2c9ff",
+                      "inverse-surface": "#e5e2e3",
+                      "background": "#131314",
+                      "secondary-container": "#00f5fc",
+                      "tertiary-fixed": "#ffdbc8",
+                      "on-tertiary-container": "#fff0ea",
+                      "secondary": "#e5feff",
+                      "primary-fixed-dim": "#a2c9ff",
+                      "on-secondary": "#003739",
+                      "outline-variant": "#414752",
+                      "error-container": "#93000a",
+                      "surface-container": "#201f20",
+                      "on-secondary-fixed-variant": "#004f52",
+                      "secondary-fixed-dim": "#00dce3",
+                      "surface-tint": "#a2c9ff",
+                      "error": "#ffb4ab",
+                      "on-surface": "#e5e2e3",
+                      "primary-fixed": "#d3e4ff",
+                      "surface": "#131314",
+                      "tertiary-container": "#b15502",
+                      "on-primary-container": "#eef3ff",
+                      "tertiary-fixed-dim": "#ffb689",
+                      "on-error": "#690005",
+                      "surface-container-highest": "#353436",
+                      "surface-container-high": "#2a2a2b",
+                      "on-tertiary-fixed-variant": "#743500",
+                      "on-tertiary-fixed": "#321300",
+                      "on-secondary-container": "#006c70",
+                      "on-primary-fixed": "#001c38",
+                      "primary-container": "#0071c5",
+                      "secondary-fixed": "#54f8ff",
+                      "on-primary": "#00315b",
+                      "surface-container-low": "#1c1b1c",
+                      "on-error-container": "#ffdad6",
+                      "surface-dim": "#131314",
+                      "on-tertiary": "#512300",
+                      "on-secondary-fixed": "#002021",
+                      "outline": "#8b919d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "md": "24px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "xl": "80px",
+                      "lg": "48px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "label-md": ["JetBrains Mono"],
+                      "label-sm": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Sora"],
+                      "headline-lg": ["Sora"],
+                      "headline-lg-mobile": ["Sora"],
+                      "display-lg": ["Sora"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .circuit-accent {
+            position: relative;
+        }
+        .circuit-accent::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1px;
+            height: 20%;
+            width: 2px;
+            background: #00f5fc;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 245, 252, 0.2);
+        }
+        .animate-pulse-cyan {
+            animation: pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        .bg-grid-pattern {
+            background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(0,245,252,0.05)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">MEGA GRACE</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-secondary-container font-bold hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<button class="md:hidden text-primary scale-95 active:scale-90 transition-transform" onclick="toggleDrawer()">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- NavigationDrawer (Mobile) -->
+<aside class="fixed inset-y-0 left-0 z-[60] h-full w-80 rounded-r-xl bg-surface-container-lowest/95 dark:bg-surface-container-lowest/95 backdrop-blur-2xl border-r border-primary/20 shadow-2xl -translate-x-full transition-transform duration-300" id="drawer">
+<div class="p-md flex flex-col h-full">
+<div class="flex items-center justify-between mb-xl">
+<span class="font-headline-md text-headline-md text-primary">NAVIGATION</span>
+<button class="text-on-surface-variant" onclick="toggleDrawer()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-xs">
+<a class="bg-primary/10 text-primary border-l-4 border-secondary-container flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#services">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-label-md text-label-md">Services</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-md text-label-md">About</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[751px] flex items-center overflow-hidden bg-grid-pattern">
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+<!-- Animated HUD elements -->
+<div class="absolute top-1/4 left-10 w-64 h-64 border border-primary/10 rounded-full animate-[spin_20s_linear_infinite]"></div>
+<div class="absolute bottom-1/4 right-10 w-96 h-96 border border-secondary-container/10 rounded-full animate-[spin_35s_linear_infinite_reverse]"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-4xl">
+<div class="inline-flex items-center gap-sm bg-primary/10 border border-primary/20 px-md py-xs rounded-full mb-md animate-pulse-cyan">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest">SYSTEM STATUS: OPTIMIZED</span>
+</div>
+<h1 class="font-display-lg text-[40px] md:text-display-lg leading-tight mb-md">
+<span class="block">Engineered for</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">Precision.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-lg">
+                        We design high-performance digital ecosystems for forward-thinking enterprises. Bridging the gap between legacy reliability and futuristic innovation.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<a class="px-xl py-md bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-bold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(0,245,252,0.2)]" href="#services">
+                            View Services
+                        </a>
+<button class="px-xl py-md border border-primary text-primary hover:bg-primary/5 transition-all duration-200 rounded-lg font-bold">
+                            Our Portfolio
+                        </button>
+</div>
+</div>
+</div>
+<!-- Hero Image/Graphic -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block w-1/2">
+<div class="relative w-full aspect-square glass-card rounded-full flex items-center justify-center border-white/10">
+<img alt="Server room with neon lights" class="w-3/4 h-3/4 object-cover rounded-full opacity-60 mix-blend-screen" data-alt="A high-tech server room interior featuring sleek black metallic hardware illuminated by vibrant neon cyan and electric blue lighting. The environment is clean and clinical, with a futuristic architectural style that emphasizes straight lines and glass surfaces. Soft fog drifts across the floor, catching the light from pulsating data towers. The atmosphere is quiet, powerful, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJLP-3kyE4axiK6M2lKmFruEGUUhPmNoVdfByBw7izrZIURaUvqh5v16v07wqDYSzFTxdbl32vaMa07DpVFTWQcIgLcEKmVTMUawnV00N67411VNp5MwsMSrTdfAm71OVAp55IxLYRFgiodVk263kP2kmowmpvs7Hc8xBBLhn30sm8tcc2EEIGIVBgK022L6xwSuwtU5j62q-dPb0HiDPhXAVAjiDcEe4PxL_3hWVnezyZ7fIQpzkIKLzf6fLh-y5ZnTLE6Rh2CC8"/>
+<div class="absolute inset-0 rounded-full border-4 border-dashed border-primary/20 animate-[spin_60s_linear_infinite]"></div>
+</div>
+</div>
+</section>
+<!-- Services Overview -->
+<section class="py-xl relative" id="services">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-md">
+<div>
+<h2 class="font-label-md text-label-md text-secondary-container mb-xs uppercase tracking-[0.2em]">Our Capabilities</h2>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Advanced Computing Solutions</h3>
+</div>
+<p class="text-on-surface-variant max-w-sm font-label-sm text-label-sm">
+                        // INTEGRATING_FUTURE_TECHS<br/>
+                        // HIGH_SPEED_EXECUTION<br/>
+                        // SCALABLE_ARCHITECTURES
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Web Dev Card -->
+<div class="glass-card p-lg rounded-xl circuit-accent group hover:translate-y-[-8px] transition-all duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-md text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-sm">Website Development</h4>
+<p class="text-on-surface-variant mb-lg font-body-md text-body-md">Architecting robust, low-latency web applications using the most advanced reactive frameworks on the market.</p>
+<div class="flex items-center gap-sm text-primary font-label-md text-label-md">
+<span>01 EXPLORE</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Graphic Design Card -->
+<div class="glass-card p-lg rounded-xl circuit-accent group hover:translate-y-[-8px] transition-all duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container/10 rounded-lg mb-md text-secondary-container group-hover:bg-secondary-container group-hover:text-background transition-colors">
+<span class="material-symbols-outlined" data-icon="brush">brush</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-sm">Graphic Design</h4>
+<p class="text-on-surface-variant mb-lg font-body-md text-body-md">Visual identity systems that communicate technical authority and precision through mathematical design principles.</p>
+<div class="flex items-center gap-sm text-secondary-container font-label-md text-label-md">
+<span>02 EXPLORE</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Marketing Card -->
+<div class="glass-card p-lg rounded-xl circuit-accent group hover:translate-y-[-8px] transition-all duration-300">
+<div class="w-12 h-12 flex items-center justify-center bg-tertiary/10 rounded-lg mb-md text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-sm">Marketing</h4>
+<p class="text-on-surface-variant mb-lg font-body-md text-body-md">Data-driven growth strategies that leverage algorithmic precision to target and convert high-value audiences.</p>
+<div class="flex items-center gap-sm text-tertiary font-label-md text-label-md">
+<span>03 EXPLORE</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-xl bg-surface-container-lowest/50">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-lg">
+<div class="text-center">
+<div class="text-display-lg font-headline-lg text-primary mb-xs">500+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Lines Delivered</div>
+</div>
+<div class="text-center">
+<div class="text-display-lg font-headline-lg text-secondary-container mb-xs">99.9%</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Uptime Accuracy</div>
+</div>
+<div class="text-center">
+<div class="text-display-lg font-headline-lg text-tertiary mb-xs">150+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Global Clients</div>
+</div>
+<div class="text-center">
+<div class="text-display-lg font-headline-lg text-primary mb-xs">24/7</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Neural Support</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 relative before:absolute before:top-0 before:left-0 before:w-1/5 before:h-[1px] before:bg-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-lg max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-xs mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md text-on-surface">MEGA GRACE</span>
+</div>
+<p class="text-on-surface-variant text-body-md mb-md">
+                    Engineered for precision. Built for the future.
+                </p>
+</div>
+<div>
+<h5 class="text-on-surface font-bold mb-md font-label-md text-label-md">SERVICES</h5>
+<ul class="flex flex-col gap-sm">
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Website Development</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Graphic Design</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Marketing</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Email Marketing</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-bold mb-md font-label-md text-label-md">COMPANY</h5>
+<ul class="flex flex-col gap-sm">
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Contact Support</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-on-surface font-bold mb-md font-label-md text-label-md">NEWSLETTER</h5>
+<div class="flex">
+<input class="bg-surface-container-low border border-outline-variant px-md py-xs rounded-l text-on-surface w-full focus:outline-none focus:border-secondary-container transition-colors" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-on-primary px-md py-xs rounded-r font-bold hover:bg-primary-container transition-colors">JOIN</button>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop py-md border-t border-white/5 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 MEGA GRACE COMPUTER INTEL. ENGINEERED FOR PRECISION.</p>
+</div>
+</footer>
+<!-- AI Chat Assistant -->
+<div class="fixed bottom-margin-mobile right-margin-mobile z-[100] flex flex-col items-end" id="chat-container">
+<!-- Chat Interface -->
+<div class="hidden w-[350px] max-w-[90vw] mb-sm glass-card rounded-xl overflow-hidden shadow-2xl scale-95 opacity-0 transition-all duration-300 origin-bottom-right" id="chat-window">
+<!-- Chat Header -->
+<div class="bg-gradient-to-r from-primary-container to-secondary-container p-md flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-white">GRACE-AI</div>
+<div class="text-[10px] text-white/80 flex items-center gap-1 uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span> Online
+                        </div>
+</div>
+</div>
+<button class="text-white hover:rotate-90 transition-transform" onclick="toggleChat()">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Chat Body -->
+<div class="p-md h-[300px] overflow-y-auto flex flex-col gap-md bg-surface-container-lowest">
+<div class="flex gap-sm max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]" data-icon="smart_toy">smart_toy</span>
+</div>
+<div class="p-sm bg-surface-container rounded-r-lg rounded-bl-lg text-on-surface-variant font-body-md text-body-md">
+                        Hello! I'm your AI assistant. I can help you place an order via WhatsApp.
+                    </div>
+</div>
+</div>
+<!-- Chat Footer -->
+<div class="p-md border-t border-white/5 bg-surface-container-low">
+<a class="w-full py-md bg-secondary-container text-on-secondary font-bold rounded-lg flex items-center justify-center gap-sm hover:scale-[1.02] active:scale-[0.98] transition-all glow-hover" href="https://wa.me/1234567890" target="_blank">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    Start Chat
+                </a>
+</div>
+</div>
+<!-- FAB Bubble -->
+<button class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_0_30px_rgba(0,113,197,0.3)] hover:scale-110 active:scale-90 transition-all duration-300 relative group overflow-hidden" onclick="toggleChat()">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary-container opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-[32px] relative z-10" data-icon="smart_toy" id="chat-icon">smart_toy</span>
+</button>
+</div>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('-translate-x-full');
+        }
+
+        function toggleChat() {
+            const window = document.getElementById('chat-window');
+            const icon = document.getElementById('chat-icon');
+            
+            if (window.classList.contains('hidden')) {
+                window.classList.remove('hidden');
+                setTimeout(() => {
+                    window.classList.remove('scale-95', 'opacity-0');
+                }, 10);
+                icon.innerText = 'close';
+            } else {
+                window.classList.add('scale-95', 'opacity-0');
+                icon.innerText = 'smart_toy';
+                setTimeout(() => {
+                    window.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
