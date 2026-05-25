@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | MEGA GRACE COMPUTER INTEL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .circuit-line {
+            position: relative;
+        }
+        .circuit-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1px;
+            width: 1px;
+            height: 20%;
+            background: #00f5fc;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 245, 252, 0.15);
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .status-pulse {
+            animation: pulse-cyan 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0f",
+                        "on-background": "#e5e2e3",
+                        "inverse-primary": "#0060a9",
+                        "surface-bright": "#3a393a",
+                        "surface-variant": "#353436",
+                        "on-primary-fixed-variant": "#004881",
+                        "inverse-on-surface": "#313031",
+                        "on-surface-variant": "#c0c7d3",
+                        "tertiary": "#ffb689",
+                        "primary": "#a2c9ff",
+                        "inverse-surface": "#e5e2e3",
+                        "background": "#131314",
+                        "secondary-container": "#00f5fc",
+                        "tertiary-fixed": "#ffdbc8",
+                        "on-tertiary-container": "#fff0ea",
+                        "secondary": "#e5feff",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "on-secondary": "#003739",
+                        "outline-variant": "#414752",
+                        "error-container": "#93000a",
+                        "surface-container": "#201f20",
+                        "on-secondary-fixed-variant": "#004f52",
+                        "secondary-fixed-dim": "#00dce3",
+                        "surface-tint": "#a2c9ff",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e3",
+                        "primary-fixed": "#d3e4ff",
+                        "surface": "#131314",
+                        "tertiary-container": "#b15502",
+                        "on-primary-container": "#eef3ff",
+                        "tertiary-fixed-dim": "#ffb689",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353436",
+                        "surface-container-high": "#2a2a2b",
+                        "on-tertiary-fixed-variant": "#743500",
+                        "on-tertiary-fixed": "#321300",
+                        "on-secondary-container": "#006c70",
+                        "on-primary-fixed": "#001c38",
+                        "primary-container": "#0071c5",
+                        "secondary-fixed": "#54f8ff",
+                        "on-primary": "#00315b",
+                        "surface-container-low": "#1c1b1c",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131314",
+                        "on-tertiary": "#512300",
+                        "on-secondary-fixed": "#002021",
+                        "outline": "#8b919d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "headline-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(0,245,252,0.05)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-container">MEGA GRACE</span>
+</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-secondary-container font-bold transition-colors duration-200" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<button class="material-symbols-outlined md:hidden text-primary scale-95 active:scale-90 transition-transform" data-icon="menu" onclick="toggleDrawer()">menu</button>
+</div>
+</header>
+<!-- Navigation Drawer (Mobile Only) -->
+<aside class="fixed inset-y-0 left-0 z-[60] h-full w-80 rounded-r-xl bg-surface-container-lowest/95 dark:bg-surface-container-lowest/95 backdrop-blur-2xl border-r border-primary/20 shadow-2xl -translate-x-full transition-transform duration-300 ease-out" id="drawer">
+<div class="p-md flex flex-col h-full">
+<div class="flex justify-between items-center mb-lg">
+<span class="font-label-md text-label-md text-primary tracking-widest">NAVIGATION</span>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="close" onclick="toggleDrawer()">close</button>
+</div>
+<div class="flex flex-col gap-xs">
+<a class="text-on-surface-variant flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="bg-primary/10 text-primary border-l-4 border-secondary-container flex items-center gap-4 px-6 py-4" href="#">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-md text-label-md">About</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-label-md text-label-md">Services</span>
+</a>
+<a class="text-on-surface-variant flex items-center gap-4 px-6 py-4 hover:bg-white/5 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-md text-label-md">Contact</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[530px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30" data-alt="A macro photograph of high-tech computer architecture with glowing neon blue circuitry and fiber optic cables illuminated in a deep dark environment. The visual style is futuristic and cinematic, emphasizing technical precision and engineered quality. The lighting is low-key with vibrant cyan accents creating a sophisticated corporate atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr8-_P2mOgP3sI8p3t0GJocT0kYvbYFVBgPpjRfxbYZO3rZzET7sogvZpsCSjUSaelDaY-2_4AgAu8B3zD-wt6QLG-zXeVYXHy1XuAxbGWirybfxAAHfcaHkxwzXNnqgSjJgBgFE2ZIMScAheF03l6TuKYCdH3Pl4Pb5UCIeU-g6sUM-fxx-ywWgwKAjS-BDBeAGuTIbTrMYx5q0pSIfRlRas_bE6g_O_83MAIwUDBNcfW7jWe2eGYWVa-kIfX9TrXPbo2hDOTbk8"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-md">
+<span class="w-2 h-2 rounded-full bg-secondary-container status-pulse"></span>
+<span class="font-label-md text-label-md text-secondary-container tracking-[0.2em] uppercase">Established 2024</span>
+</div>
+<h1 class="font-display-lg text-display-lg mb-md leading-tight">PRECISION <br/><span class="text-primary">ENGINEERED</span> INTELLIGENCE.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Mega Grace Computer Intel stands at the intersection of high-performance computing and avant-garde creative direction. We build the digital infrastructure that fuels modern industry.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Mission & Values -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Mission Card -->
+<div class="md:col-span-7 glass-panel rounded-xl p-lg circuit-line glow-hover transition-all duration-300">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-md" data-icon="rocket_launch">rocket_launch</span>
+<h2 class="font-headline-lg text-headline-lg mb-md">Our Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Empowering businesses through cutting-edge technology and creative design. We don't just solve problems; we engineer growth engines. Our focus is on bridging the gap between legacy limitations and futuristic possibilities.
+                    </p>
+</div>
+<!-- Core Values Sidebar -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="glass-panel rounded-xl p-md flex items-start gap-md border-l-2 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="adjust" style="font-variation-settings: 'FILL' 1;">adjust</span>
+<div>
+<h3 class="font-label-md text-label-md font-bold text-primary mb-1">PRECISION</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Meticulous attention to every line of code and every pixel rendered.</p>
+</div>
+</div>
+<div class="glass-panel rounded-xl p-md flex items-start gap-md border-l-2 border-primary">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<div>
+<h3 class="font-label-md text-label-md font-bold text-primary mb-1">INNOVATION</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Pushing the boundaries of what's possible in the digital ecosystem.</p>
+</div>
+</div>
+<div class="glass-panel rounded-xl p-md flex items-start gap-md border-l-2 border-tertiary">
+<span class="material-symbols-outlined text-tertiary" data-icon="groups" style="font-variation-settings: 'FILL' 1;">groups</span>
+<div>
+<h3 class="font-label-md text-label-md font-bold text-primary mb-1">CLIENT-CENTRICITY</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Your business goals are the blueprint for our technological solutions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Company Intro: Industry Leaders -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary-container/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<img class="rounded-xl relative z-10 glass-panel border-white/10 shadow-2xl" data-alt="A sophisticated clean laboratory environment with a diverse team of engineers in professional tech attire examining high-precision hardware prototypes. The lighting is cool and clinical with hints of cyan neon accents reflecting off glass surfaces. The style is modern corporate, showcasing a high-tech professional workplace with an emphasis on collaboration and engineering excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr7ngLqre-UBiBQc0Chaf9z1yGOOBa0OlXcG0GbIqavB47w7bRTBkMGMwHEo9NyLh1Hs2R-vS87iZ4tRDZZr0STxDHA_CSAGG6wf5SF1GyHnAauN1yj5b6Pv2WzLRVbzT9RMDLwKC7jkS31blJryBojYZJ0RGs7P76cDj24AxUvlpCejpbp_KNyuRMeXvvJCW-Au8j29HP34TyaFyVEJ1ikeDlzAjVNgrjjp1lB4HGjDfRX_Ill-WVl8wc8fK-hmnB8fEZrq7eSMc"/>
+</div>
+<div class="flex flex-col gap-md">
+<h2 class="font-headline-lg text-headline-lg">Industry Leaders in <span class="text-secondary-container">Tech Services</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            At MEGA GRACE, we specialize in high-stakes digital transformations. Our team of elite engineers and designers works at the frontier of technology to provide scalable, secure, and visually stunning solutions. 
+                        </p>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Enterprise-grade Security Protocols</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Advanced UI/UX Engineering</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Next-gen Cloud Architecture</span>
+</div>
+</div>
+<div class="mt-md">
+<button class="bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container px-lg py-md rounded-lg font-label-md text-label-md hover:shadow-[0_0_20px_rgba(0,245,252,0.3)] transition-all duration-300 active:scale-95">
+                                CONNECT WITH US
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col gap-xs">
+<span class="font-display-lg text-headline-lg text-primary">500+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Projects Deployed</span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-display-lg text-headline-lg text-secondary-container">99.9%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">System Uptime</span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-display-lg text-headline-lg text-primary">12+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Global Patents</span>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-display-lg text-headline-lg text-secondary-container">24/7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Precision Support</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 relative before:absolute before:top-0 before:left-0 before:w-1/5 before:h-[1px] before:bg-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-lg max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-md">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">MEGA GRACE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                    Engineered for precision. Designed for the future.
+                </p>
+<div class="flex gap-sm">
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-colors material-symbols-outlined" data-icon="terminal" href="#">terminal</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-colors material-symbols-outlined" data-icon="memory" href="#">memory</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed-dim transition-colors material-symbols-outlined" data-icon="lan" href="#">lan</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-md">SERVICES</h4>
+<ul class="flex flex-col gap-sm">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Website Development</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Graphic Design</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Marketing</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Email Marketing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-md">COMPANY</h4>
+<ul class="flex flex-col gap-sm">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">About Us</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Careers</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Press Kit</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed-dim transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-md">SUBSCRIBE</h4>
+<div class="flex flex-col gap-sm">
+<div class="bg-[#161618] border border-white/10 rounded-lg p-2 flex gap-2">
+<input class="bg-transparent border-none focus:ring-0 text-label-sm text-on-surface placeholder:text-outline w-full" placeholder="Email Address" type="email"/>
+<button class="bg-primary-container p-2 rounded-lg text-on-primary-container material-symbols-outlined" data-icon="arrow_forward">arrow_forward</button>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Get technical updates delivered to your terminal.</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-md text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 MEGA GRACE COMPUTER INTEL. ENGINEERED FOR PRECISION.</p>
+</div>
+</footer>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            const isOpen = drawer.style.transform === 'translateX(0px)';
+            drawer.style.transform = isOpen ? 'translateX(-100%)' : 'translateX(0px)';
+        }
+
+        // Close drawer when clicking outside
+        document.addEventListener('click', (e) => {
+            const drawer = document.getElementById('drawer');
+            const menuBtn = document.querySelector('[data-icon="menu"]');
+            if (drawer.style.transform === 'translateX(0px)' && !drawer.contains(e.target) && !menuBtn.contains(e.target)) {
+                drawer.style.transform = 'translateX(-100%)';
+            }
+        });
+
+        // Simple parallax or glow follow effect could be added here
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.querySelectorAll('.glow-hover');
+            // Interaction logic for subtle depth
+        });
+    </script>
+</body></html>
