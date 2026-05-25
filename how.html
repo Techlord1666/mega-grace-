@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>How It Works | MEGA GRACE Website Developers</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                primary: "#a2c9ff",
+                secondary: "#00f5fc",
+                background: "#0a0a0b",
+                surface: "#161618",
+              },
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                display: ['Sora', 'sans-serif'],
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .bg-grid {
+            background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        html { scroll-behavior: smooth; }
+        body { min-height: 100vh; display: flex; flex-direction: column; }
+    </style>
+</head>
+<body class="bg-background text-gray-200">
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-background translate-x-full transition-transform duration-500 md:hidden">
+    <div class="flex justify-between p-8">
+        <span class="font-display font-bold text-primary">MEGA GRACE</span>
+        <button onclick="toggleMenu()" class="text-primary"><span class="material-symbols-outlined text-4xl">close</span></button>
+    </div>
+    <nav class="flex flex-col items-center gap-10 pt-10 text-3xl font-display font-bold">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">Intel</a>
+        <a href="#process" onclick="toggleMenu()">Process</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </nav>
+</div>
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+            <span class="font-display font-bold text-xl tracking-tighter uppercase">MEGA GRACE</span>
+        </div>
+        <nav class="hidden md:flex gap-10 font-bold text-xs uppercase tracking-widest">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+            <a href="#about" class="hover:text-primary transition-colors">About</a>
+            <a href="#process" class="hover:text-primary transition-colors">How it Works</a>
+            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <button onclick="toggleMenu()" class="md:hidden text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative pt-40 pb-20 px-6 bg-grid">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-display font-bold mb-8">
+                How it <span class="text-primary">Works.</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                A breakdown of digital intelligence. Understand the cost, the process, and why a website is your business's most valuable asset in 2026.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Breakdown -->
+    <section id="process" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- Intro Analysis -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-display font-bold mb-6 text-secondary">The Digital Foundation</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    In 2026, building a website is like building a physical office, but for the entire world to see. Pricing in Nigeria and abroad varies based on the <strong>Scope</strong> and <strong>Functionality</strong>. At Mega Grace, we simplify this complexity into three primary categories.
+                </p>
+            </div>
+
+            <!-- Type 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-4 text-white">1. Informational Websites</h3>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Perfect for SMEs and Service Providers. This is a 1-5 page digital profile that displays your services, about info, and contact details. It is designed for visibility and trust.
+                    </p>
+                    <div class="p-6 glass rounded-2xl">
+                        <p class="text-xs font-bold text-primary mb-2 uppercase tracking-widest">Investment Start:</p>
+                        <p class="text-2xl font-display font-bold text-white">₦100,000 / $80</p>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" class="rounded-3xl order-1 md:order-2 opacity-60" alt="Tech">
+            </div>
+
+            <!-- Type 2 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=600" class="rounded-3xl opacity-60" alt="eCommerce">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">2. eCommerce Digital Stores</h3>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        A full marketplace. It allows you to process orders, accept payments (Naira/Dollars), and manage inventory. This turns your business into a 24/7 revenue machine.
+                    </p>
+                    <div class="p-6 glass rounded-2xl">
+                        <p class="text-xs font-bold text-secondary mb-2 uppercase tracking-widest">Investment Start:</p>
+                        <p class="text-2xl font-display font-bold text-white">₦250,000 / $200</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Type 3 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-32">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-4 text-white">3. Custom Intel Solutions</h3>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Built from scratch with advanced features like booking systems, student portals, or custom dashboards. This is unique to your brand's specific requirements.
+                    </p>
+                    <div class="p-6 glass rounded-2xl">
+                        <p class="text-xs font-bold text-gray-500 mb-2 uppercase tracking-widest">Investment Start:</p>
+                        <p class="text-2xl font-display font-bold text-white">₦1,000,000+ / $800+</p>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" class="rounded-3xl order-1 md:order-2 opacity-60" alt="Custom">
+            </div>
+
+            <!-- Anatomy Section -->
+            <div class="bg-surface/50 p-10 md:p-20 rounded-[3rem] border border-white/5 mb-32">
+                <h2 class="text-3xl font-display font-bold mb-12 text-center">How a Website Actually Works</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-primary text-3xl">language</span>
+                        </div>
+                        <h4 class="font-bold mb-4">The Domain</h4>
+                        <p class="text-xs text-gray-400">This is your digital address (e.g., yourname.com). It costs between ₦20k - ₦25k per year.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-secondary text-3xl">cloud</span>
+                        </div>
+                        <h4 class="font-bold mb-4">The Hosting</h4>
+                        <p class="text-xs text-gray-400">This is the "land" where your files live. Good hosting ensures your site is fast and never goes offline.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-white text-3xl">brush</span>
+                        </div>
+                        <h4 class="font-bold mb-4">Design & UI</h4>
+                        <p class="text-xs text-gray-400">The structure. We use modern layouts to ensure users stay on your page and take action.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Detail -->
+            <div class="grid md:grid-cols-2 gap-16 mb-32">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">What We Provide</h3>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm text-gray-400"><strong>Website Development:</strong> Clean, high-performance code.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm text-gray-400"><strong>Graphic Design:</strong> Elite logos and brand visuals.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm text-gray-400"><strong>Email Marketing:</strong> Automated campaigns to bring customers back.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm text-gray-400"><strong>Advertising:</strong> Targeted ads to flood your business with leads.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border-t-4 border-primary">
+                    <h3 class="text-xl font-bold mb-6">The 2026 AI Add-on</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        We don't just build sites; we add **AI Support for Customer Care**. This means your website will chat with customers, solve their problems, and close deals even when your office is closed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto mb-20">
+        <div class="glass p-10 md:p-20 rounded-[4rem] text-center">
+            <h2 class="text-3xl font-display font-bold mb-6">Ready to Invest?</h2>
+            <p class="text-gray-500 mb-10">Connect with our developers directly on WhatsApp to finalize your business requirements.</p>
+            <a href="https://wa.me/2348159205235" class="inline-block px-12 py-5 bg-primary text-black font-bold rounded-2xl hover:scale-105 transition-all">Secure My Deal Now</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface py-20 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+        <div class="col-span-2">
+            <div class="flex items-center gap-2 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl">terminal</span>
+                <span class="font-display font-bold text-xl">MEGA GRACE</span>
+            </div>
+            <p class="text-gray-400 max-w-sm mb-6">Website Developers, Designers, and Marketing Experts. We craft the future of your business identity.</p>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold mb-6">Company</h5>
+            <ul class="space-y-3 text-sm text-gray-500">
+                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                <li><a href="#about" class="hover:text-white">Why us 2026</a></li>
+                <li><a href="#contact" class="hover:text-white">WhatsApp Intel</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold mb-6">Intel</h5>
+            <p class="text-sm text-gray-500">Lagos, Nigeria<br>WhatsApp: 08159205235</p>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-12 mt-12 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-widest font-bold">
+        © 2024 MEGA GRACE COMPUTER INTEL.
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('translate-x-full');
+    }
+</script>
+</body>
+</html>
