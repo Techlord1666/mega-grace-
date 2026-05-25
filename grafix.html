@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Graphic Design Portfolio | MEGA GRACE - Elite Visuals</title>
+    
+    <meta name="description" content="Explore the MEGA GRACE Graphic Design portfolio. High-end branding, logos, and UI/UX visuals." />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                primary: "#a2c9ff",
+                secondary: "#00f5fc",
+                background: "#0a0a0b",
+                surface: "#161618",
+              },
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                display: ['Sora', 'sans-serif'],
+                mono: ['JetBrains Mono', 'monospace']
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .tech-gradient { background: linear-gradient(to right, #a2c9ff, #00f5fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+        .bg-grid {
+            background-image: linear-gradient(rgba(162, 201, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(162, 201, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .gallery-card:hover img { transform: scale(1.1); filter: grayscale(0); }
+        .gallery-card img { transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); filter: grayscale(1); }
+    </style>
+</head>
+<body class="bg-background text-gray-200 antialiased">
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-background/98 backdrop-blur-2xl translate-x-full transition-transform duration-500 md:hidden">
+    <div class="flex justify-between p-6">
+        <span class="font-display font-bold text-primary text-xl uppercase">MEGA GRACE</span>
+        <button onclick="toggleMenu()" class="text-primary"><span class="material-symbols-outlined text-4xl">close</span></button>
+    </div>
+    <nav class="flex flex-col items-center gap-8 pt-10 text-2xl font-display font-bold">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="index.html#about-us" onclick="toggleMenu()">Web Services</a>
+        <a href="#" class="text-primary">Design Portfolio</a>
+        <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+    </nav>
+</div>
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 glass border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">palette</span>
+            <span class="font-display font-bold text-lg md:text-xl tracking-tighter text-white uppercase">MEGA GRACE</span>
+        </div>
+        <nav class="hidden md:flex gap-8 font-bold text-[10px] uppercase tracking-widest text-white">
+            <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+            <a href="index.html#about-us" class="hover:text-primary transition-colors">Services</a>
+            <a href="index.html#pricing-guide" class="hover:text-primary transition-colors">Prices</a>
+            <a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <button onclick="toggleMenu()" class="md:hidden text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</header>
+
+<main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-16 px-4 md:px-6 bg-grid">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-8xl font-display font-bold leading-tight mb-6 uppercase">
+                Visual <span class="tech-gradient">Excellence.</span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
+                We define brands through elite graphic design. From high-end logos to complex UI layouts, explore our curated gallery of digital craftsmanship.
+            </p>
+            <div class="h-1 w-20 bg-primary mx-auto mb-10"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (10 Images) -->
+    <section class="py-12 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Work 1 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Branding">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Brand Identity</span>
+                    <h4 class="text-white font-display font-bold text-xl">Minimalist Corporate</h4>
+                </div>
+            </div>
+
+            <!-- Work 2 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="UI Design">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">UI/UX Layout</span>
+                    <h4 class="text-white font-display font-bold text-xl">Fintech Dashboard</h4>
+                </div>
+            </div>
+
+            <!-- Work 3 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bde3?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Poster">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Digital Art</span>
+                    <h4 class="text-white font-display font-bold text-xl">Neon Future Poster</h4>
+                </div>
+            </div>
+
+            <!-- Work 4 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Typography">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Typography</span>
+                    <h4 class="text-white font-display font-bold text-xl">Bold Statement Print</h4>
+                </div>
+            </div>
+
+            <!-- Work 5 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5 lg:scale-110 lg:z-10">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Mobile UI">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">App Design</span>
+                    <h4 class="text-white font-display font-bold text-xl">Luxury Real Estate App</h4>
+                </div>
+            </div>
+
+            <!-- Work 6 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Logo">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Logo Systems</span>
+                    <h4 class="text-white font-display font-bold text-xl">Abstract Tech Symbol</h4>
+                </div>
+            </div>
+
+            <!-- Work 7 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Icons">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Iconography</span>
+                    <h4 class="text-white font-display font-bold text-xl">Custom SaaS Icon Set</h4>
+                </div>
+            </div>
+
+            <!-- Work 8 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Color Theory">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Creative Direction</span>
+                    <h4 class="text-white font-display font-bold text-xl">Modern Art Branding</h4>
+                </div>
+            </div>
+
+            <!-- Work 9 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Web Layout">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Web Graphics</span>
+                    <h4 class="text-white font-display font-bold text-xl">Landing Page Hero Set</h4>
+                </div>
+            </div>
+
+            <!-- Work 10 -->
+            <div class="gallery-card relative overflow-hidden rounded-[2rem] glass aspect-square group border border-white/5">
+                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Motion">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span class="text-primary font-mono text-[10px] uppercase tracking-widest">Marketing Visuals</span>
+                    <h4 class="text-white font-display font-bold text-xl">Social Media Campaigns</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 px-4">
+        <div class="max-w-3xl mx-auto glass p-10 md:p-16 rounded-[3rem] text-center">
+            <h2 class="text-3xl font-display font-bold mb-6 text-white uppercase tracking-widest">Need Elite Design?</h2>
+            <p class="text-gray-400 mb-10 text-sm">Transform your business with high-intelligence visuals that actually convert.</p>
+            <a href="https://wa.me/2348159205235" class="px-10 py-5 bg-primary text-black font-bold rounded-2xl hover:scale-105 transition-all inline-block uppercase text-xs tracking-widest">Contact Organization</a>
+        </div>
+    </section>
+</main>
+
+<!-- Full Professional Footer -->
+<footer class="bg-surface py-20 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-16 mb-20">
+        <div>
+            <div class="flex items-center gap-2 mb-8">
+                <span class="material-symbols-outlined text-primary text-4xl">terminal</span>
+                <span class="font-display font-bold text-2xl tracking-tighter text-white uppercase">MEGA GRACE</span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Expert Website Developers and Marketing Experts. Designing Nigeria's digital future since 2020. Precision in every pixel.
+            </p>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10">Navigation</h5>
+            <ul class="space-y-5 text-sm text-gray-500 font-medium font-sans">
+                <li><a href="index.html" class="hover:text-white transition-colors">Home Portal</a></li>
+                <li><a href="index.html#about-us" class="hover:text-white transition-colors">What We Do</a></li>
+                <li><a href="index.html#pricing-guide" class="hover:text-white transition-colors">Pricing Guide</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10">Contact Hub</h5>
+            <ul class="space-y-5 text-sm text-gray-500 font-medium font-mono">
+                <li>Lagos, Nigeria</li>
+                <li>08159205235</li>
+                <li>Status: ACTIVE 24/7</li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-10 font-mono">2026 Strategy</h5>
+            <p class="text-[10px] text-gray-500 mb-6 italic font-mono">Stay indexed. Stay relevant. Stay profitable.</p>
+            <div class="flex gap-4">
+                <a href="https://wa.me/2348159205235" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+                    <span class="material-symbols-outlined">chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-10 border-t border-white/5 text-center text-[10px] text-gray-600 uppercase tracking-[0.6em] font-bold">
+        © 2024 MEGA GRACE COMPUTER INTEL. ALL SYSTEMS ACTIVE.
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('translate-x-full'); }
+</script>
+</body>
+</html>
