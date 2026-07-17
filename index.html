@@ -492,7 +492,7 @@ Meta Description Example
             const reply = data.candidates[0].content.parts[0].text;
             document.getElementById(loadId).innerText = reply;
             chatHistory.push({ role: "model", parts: [{ text: reply }] });
-        } catch (e) { document.getElementById(loadId).innerText = " Your business website and visibility is your first impression make it count, welcome to mega dev, we build all kind of business websites, that convert website visitors into a paying client (we build apps as well) Check Chat us on WhatsApp: 09032473005, 08057740913"; }
+        } catch (e) { document.getElementById(loadId).innerText = " Your business website and visibility is your first impression make it count, welcome to mega dev, we build all kind of business websites, that convert website visitors into a paying client (we build apps as well) Check Chat us on WhatsApp: 09032473005"; }
     }
     function appendMsg(role, text) {
         const id = 'msg-' + Math.random();
