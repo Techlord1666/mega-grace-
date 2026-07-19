@@ -86,7 +86,13 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .tech-gradient { background: linear-gradient(100deg, #E8B94D 0%, #3AAE5A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; background-color: #0A0908; }
+        body {
+            min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden;
+            background: radial-gradient(ellipse 120% 80% at 20% -10%, rgba(232,185,77,0.10), transparent 55%),
+                        radial-gradient(ellipse 120% 80% at 100% 0%, rgba(58,174,90,0.08), transparent 50%),
+                        linear-gradient(180deg, #100D08 0%, #0A0908 35%, #0C0B09 100%);
+            background-attachment: fixed;
+        }
         .bg-grid {
             background-image: linear-gradient(rgba(232, 185, 77, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 185, 77, 0.06) 1px, transparent 1px);
             background-size: 30px 30px;
@@ -99,8 +105,46 @@
         .term-line { opacity: 0; white-space: pre-wrap; }
         .term-cursor { display: inline-block; width: 8px; height: 1em; background: #3AAE5A; vertical-align: text-bottom; animation: blink 1s step-end infinite; margin-left: 2px; }
         @keyframes blink { 50% { opacity: 0; } }
+
+        /* Entrance animations */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes floatSlow { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.in-view { opacity: 1; transform: translateY(0); }
+        .hero-fade-1 { animation: fadeUp 0.8s ease 0.05s both; }
+        .hero-fade-2 { animation: fadeUp 0.8s ease 0.2s both; }
+        .hero-fade-3 { animation: fadeUp 0.8s ease 0.35s both; }
+        .hero-fade-4 { animation: fadeUp 0.8s ease 0.5s both; }
+        .float-el { animation: floatSlow 5s ease-in-out infinite; }
+
+        /* CTA glow / shimmer for View Our Work */
+        .cta-glow {
+            position: relative;
+            box-shadow: 0 0 0 0 rgba(232,185,77,0.55);
+            animation: ctaPulse 2.6s ease-in-out infinite;
+        }
+        @keyframes ctaPulse {
+            0% { box-shadow: 0 0 0 0 rgba(232,185,77,0.45); }
+            70% { box-shadow: 0 0 0 14px rgba(232,185,77,0); }
+            100% { box-shadow: 0 0 0 0 rgba(232,185,77,0); }
+        }
+        .cta-glow::after {
+            content: "";
+            position: absolute; inset: -2px;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(120deg, #E8B94D, #3AAE5A, #E8B94D);
+            background-size: 200% 200%;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            animation: gradientMove 3s linear infinite;
+            opacity: 0.9;
+        }
+        @keyframes gradientMove { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+
         @media (prefers-reduced-motion: reduce) {
-            .term-cursor { animation: none; }
+            .term-cursor, .hero-fade-1, .hero-fade-2, .hero-fade-3, .hero-fade-4, .float-el, .cta-glow, .cta-glow::after { animation: none !important; }
+            .reveal { opacity: 1; transform: none; transition: none; }
         }
     </style>
 </head>
@@ -153,23 +197,23 @@
     <section class="relative pt-28 md:pt-36 pb-14 md:pb-20 px-4 sm:px-6 bg-grid">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-14 items-center text-center lg:text-left">
             <div class="w-full lg:w-1/2">
-                <p class="font-mono text-secondary text-[11px] md:text-xs uppercase tracking-[0.3em] mb-4">Web · E-commerce · Churches · Branding · Marketing</p>
-                <h1 class="text-[2.5rem] leading-[1.05] sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight lg:text-7xl font-display font-bold mb-5 md:mb-6">
+                <p class="font-mono text-secondary text-[11px] md:text-xs uppercase tracking-[0.3em] mb-4 hero-fade-1">Web · E-commerce · Churches · Branding · Marketing</p>
+                <h1 class="text-[2.5rem] leading-[1.05] sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight lg:text-7xl font-display font-bold mb-5 md:mb-6 hero-fade-2">
                     Your business,<br class="hidden sm:block"> <span class="tech-gradient">built to sell online.</span>
                 </h1>
-                <p class="text-sm sm:text-base md:text-lg text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
+                <p class="text-sm sm:text-base md:text-lg text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium hero-fade-3">
                     We design and build websites, online stores, and brand identities for Nigerian businesses and ministries — with an AI assistant that answers customers and takes orders while you sleep.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4">
-                    <a href="work.html" class="w-full sm:w-auto text-center px-7 py-4 bg-primary text-black font-bold rounded-2xl hover:scale-105 transition-all text-xs uppercase tracking-widest">View Our Work</a>
-                    <a href="https://wa.me/2348159205235" class="w-full sm:w-auto text-center px-7 py-4 border border-white/15 rounded-2xl hover:bg-white/5 transition-all text-xs uppercase tracking-widest text-white">Chat On WhatsApp</a>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 hero-fade-4">
+                    <a href="work.html" class="cta-glow w-full sm:w-auto text-center px-8 py-4 bg-primary text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all text-xs uppercase tracking-widest shadow-lg shadow-primary/20">View Our Work</a>
+                    <a href="https://wa.me/2348159205235" class="w-full sm:w-auto text-center px-7 py-4 border border-white/15 rounded-2xl hover:bg-white/5 hover:border-secondary/40 transition-all text-xs uppercase tracking-widest text-white">Chat On WhatsApp</a>
                 </div>
-                <p class="mt-6 text-[11px] font-mono text-gray-500 uppercase tracking-widest">Websites from ₦100,000 &nbsp;•&nbsp; Live in as little as 7 days</p>
+                <p class="mt-6 text-[11px] font-mono text-gray-500 uppercase tracking-widest hero-fade-4">Websites from ₦100,000 &nbsp;•&nbsp; Live in as little as 7 days</p>
             </div>
 
             <!-- Signature element: live "deploy" terminal -->
-            <div class="w-full lg:w-1/2">
-                <div class="rounded-2xl md:rounded-[2rem] border border-white/10 bg-[#0d0c09] shadow-2xl overflow-hidden">
+            <div class="w-full lg:w-1/2 float-el">
+                <div class="rounded-2xl md:rounded-[2rem] border border-white/10 bg-[#0d0c09] shadow-2xl shadow-black/40 overflow-hidden">
                     <div class="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
                         <span class="w-2.5 h-2.5 rounded-full bg-red-400/60"></span>
                         <span class="w-2.5 h-2.5 rounded-full bg-primary/60"></span>
@@ -185,36 +229,36 @@
     <!-- Services -->
     <section id="services" class="py-20 md:py-28 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
-            <p class="font-mono text-secondary text-[11px] uppercase tracking-[0.3em] mb-3">What We Do</p>
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-14 max-w-2xl">Everything your brand needs online, under one roof.</h2>
+            <p class="font-mono text-secondary text-[11px] uppercase tracking-[0.3em] mb-3 reveal">What We Do</p>
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-14 max-w-2xl reveal">Everything your brand needs online, under one roof.</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 glass rounded-3xl">
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <span class="material-symbols-outlined text-primary text-3xl mb-4 block">language</span>
                     <h3 class="font-display font-bold text-white text-lg mb-2">Business Websites</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Fast, mobile-friendly sites that tell people who you are and how to reach you — home, about, services and contact pages done right.</p>
                 </div>
-                <div class="p-8 glass rounded-3xl">
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <span class="material-symbols-outlined text-primary text-3xl mb-4 block">shopping_cart</span>
                     <h3 class="font-display font-bold text-white text-lg mb-2">E-commerce Stores</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Online shops that accept Naira and card payments through Paystack and Flutterwave, with inventory that manages itself.</p>
                 </div>
-                <div class="p-8 glass rounded-3xl">
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <span class="material-symbols-outlined text-primary text-3xl mb-4 block">brush</span>
                     <h3 class="font-display font-bold text-white text-lg mb-2">Branding &amp; Graphic Design</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Logos, flyers, brochures and social media graphics that make your business look as good as it performs.</p>
                 </div>
-                <div class="p-8 glass rounded-3xl">
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <span class="material-symbols-outlined text-primary text-3xl mb-4 block">campaign</span>
                     <h3 class="font-display font-bold text-white text-lg mb-2">Digital Marketing &amp; SEO</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Landing pages built to convert ad clicks into paying customers, plus SEO so people searching for you can find you.</p>
                 </div>
-                <div class="p-8 glass rounded-3xl">
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <span class="material-symbols-outlined text-primary text-3xl mb-4 block">code_blocks</span>
                     <h3 class="font-display font-bold text-white text-lg mb-2">Custom Web Apps</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">Hand-coded platforms for needs an off-the-shelf template can't handle — booking systems, portals, marketplaces.</p>
                 </div>
-                <div class="p-8 glass rounded-3xl">
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <span class="material-symbols-outlined text-primary text-3xl mb-4 block">smart_toy</span>
                     <h3 class="font-display font-bold text-white text-lg mb-2">AI Chat &amp; Automation</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">A chat assistant on your site that answers customer questions and hands off warm leads to your team, day or night.</p>
@@ -226,7 +270,7 @@
     <!-- Church & Ministry -->
     <section id="churches" class="py-20 md:py-28 px-4 sm:px-6 bg-surface/40 border-y border-white/5">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
-            <div class="lg:w-1/2 text-left">
+            <div class="lg:w-1/2 text-left reveal">
                 <p class="font-mono text-secondary text-[11px] uppercase tracking-[0.3em] mb-3">A Niche We Know Well</p>
                 <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">Websites for churches and ministries.</h2>
                 <p class="text-gray-400 leading-relaxed text-base md:text-lg mb-6">
@@ -239,7 +283,7 @@
                     <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Event calendars and live-stream embeds</li>
                 </ul>
             </div>
-            <div class="lg:w-1/2 w-full">
+            <div class="lg:w-1/2 w-full reveal">
                 <img src="g.jpg" class="rounded-3xl border border-white/10 shadow-2xl w-full" alt="Church website design example by Mega Grace">
             </div>
         </div>
@@ -248,15 +292,15 @@
     <!-- Why 2026 -->
     <section id="why-2026" class="py-20 md:py-28 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-3xl md:text-5xl font-display font-bold mb-14 text-white">Why your business needs a website in 2026</h2>
+            <h2 class="text-center text-3xl md:text-5xl font-display font-bold mb-14 text-white reveal">Why your business needs a website in 2026</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 glass rounded-3xl"><h5 class="text-primary font-bold mb-3">01. AI Visibility</h5><p class="text-xs text-gray-400 leading-relaxed">AI search tools recommend businesses based on verified web data. No website means they won't find you.</p></div>
-                <div class="p-8 glass rounded-3xl"><h5 class="text-primary font-bold mb-3">02. 24/7 Coverage</h5><p class="text-xs text-gray-400 leading-relaxed">An AI assistant answers customer questions and captures leads while your team is offline.</p></div>
-                <div class="p-8 glass rounded-3xl"><h5 class="text-primary font-bold mb-3">03. Ownership</h5><p class="text-xs text-gray-400 leading-relaxed">Social platforms can restrict your account anytime. Your website is property you actually control.</p></div>
-                <div class="p-8 glass rounded-3xl"><h5 class="text-primary font-bold mb-3">04. Global Trust</h5><p class="text-xs text-gray-400 leading-relaxed">A professional website signals legitimacy to customers and partners outside Nigeria too.</p></div>
-                <div class="p-8 glass rounded-3xl"><h5 class="text-primary font-bold mb-3">05. Automated Sales</h5><p class="text-xs text-gray-400 leading-relaxed">Accept Naira and card payments instantly, with stock and orders tracked automatically.</p></div>
-                <div class="p-8 glass rounded-3xl"><h5 class="text-primary font-bold mb-3">06. Ad Precision</h5><p class="text-xs text-gray-400 leading-relaxed">Landing pages built specifically to turn paid ad clicks into paying customers.</p></div>
-                <div class="p-8 glass rounded-3xl md:col-span-2 border border-primary/30"><h5 class="text-primary font-bold mb-3">07. Data You Can Use</h5><p class="text-xs text-gray-400 leading-relaxed">See who visits, what they're looking for, and where they came from — so you know what's actually working.</p></div>
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">01. AI Visibility</h5><p class="text-xs text-gray-400 leading-relaxed">AI search tools recommend businesses based on verified web data. No website means they won't find you.</p></div>
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">02. 24/7 Coverage</h5><p class="text-xs text-gray-400 leading-relaxed">An AI assistant answers customer questions and captures leads while your team is offline.</p></div>
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">03. Ownership</h5><p class="text-xs text-gray-400 leading-relaxed">Social platforms can restrict your account anytime. Your website is property you actually control.</p></div>
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">04. Global Trust</h5><p class="text-xs text-gray-400 leading-relaxed">A professional website signals legitimacy to customers and partners outside Nigeria too.</p></div>
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">05. Automated Sales</h5><p class="text-xs text-gray-400 leading-relaxed">Accept Naira and card payments instantly, with stock and orders tracked automatically.</p></div>
+                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">06. Ad Precision</h5><p class="text-xs text-gray-400 leading-relaxed">Landing pages built specifically to turn paid ad clicks into paying customers.</p></div>
+                <div class="p-8 glass rounded-3xl md:col-span-2 border border-primary/30 reveal"><h5 class="text-primary font-bold mb-3">07. Data You Can Use</h5><p class="text-xs text-gray-400 leading-relaxed">See who visits, what they're looking for, and where they came from — so you know what's actually working.</p></div>
             </div>
         </div>
     </section>
@@ -264,24 +308,24 @@
     <!-- Process -->
     <section class="py-20 md:py-28 px-4 sm:px-6 bg-surface/40 border-y border-white/5">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-center text-3xl md:text-5xl font-display font-bold mb-14 text-white">How a project runs</h2>
+            <h2 class="text-center text-3xl md:text-5xl font-display font-bold mb-14 text-white reveal">How a project runs</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-7 glass rounded-3xl relative">
+                <div class="p-7 glass rounded-3xl relative reveal hover:border-primary/30 transition-all duration-300">
                     <span class="font-mono text-primary text-3xl font-bold">01</span>
                     <h5 class="font-display font-bold text-white mt-3 mb-2">Consult</h5>
                     <p class="text-xs text-gray-400 leading-relaxed">Tell us what your business needs, on a call or on WhatsApp. We recommend the right plan.</p>
                 </div>
-                <div class="p-7 glass rounded-3xl">
+                <div class="p-7 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300">
                     <span class="font-mono text-primary text-3xl font-bold">02</span>
                     <h5 class="font-display font-bold text-white mt-3 mb-2">Design</h5>
                     <p class="text-xs text-gray-400 leading-relaxed">We map out pages and send you a look and feel before a single line of code is written.</p>
                 </div>
-                <div class="p-7 glass rounded-3xl">
+                <div class="p-7 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300">
                     <span class="font-mono text-primary text-3xl font-bold">03</span>
                     <h5 class="font-display font-bold text-white mt-3 mb-2">Build</h5>
                     <p class="text-xs text-gray-400 leading-relaxed">Development, payment integration, and testing — with progress updates as we go.</p>
                 </div>
-                <div class="p-7 glass rounded-3xl">
+                <div class="p-7 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300">
                     <span class="font-mono text-primary text-3xl font-bold">04</span>
                     <h5 class="font-display font-bold text-white mt-3 mb-2">Launch</h5>
                     <p class="text-xs text-gray-400 leading-relaxed">Your site goes live, and we stay on for support so it keeps running smoothly.</p>
@@ -292,22 +336,22 @@
 
     <!-- Pricing Guide -->
     <section id="pricing-guide" class="py-20 md:py-28 px-4 sm:px-6">
-        <div class="max-w-6xl mx-auto glass p-7 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem] space-y-10">
+        <div class="max-w-6xl mx-auto glass p-7 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem] space-y-10 reveal">
             <h2 class="text-3xl md:text-5xl font-display font-bold text-white border-l-4 border-primary pl-5 md:pl-6">Pricing Guide</h2>
             <p class="text-base md:text-lg text-gray-400">Website design in Nigeria typically ranges from <strong class="text-white">₦100,000</strong> to <strong class="text-white">₦5,000,000+</strong>, depending on scope. Here's the breakdown:</p>
 
             <div class="space-y-8">
-                <div class="p-6 bg-white/5 rounded-2xl">
+                <div class="p-6 bg-white/5 rounded-2xl hover:bg-white/[0.07] transition-colors">
                     <h4 class="text-xl md:text-2xl font-bold text-primary mb-3">1. Informational Website</h4>
                     <p class="text-sm text-gray-400 mb-4">Perfect for SMEs. Displays your business details across 2–5 pages (Home, About, Services, Contact). No payment processing.</p>
                     <p class="text-white font-mono font-bold text-sm">₦100,000 (2 pages) — ₦750,000 (5 pages)</p>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl">
+                <div class="p-6 bg-white/5 rounded-2xl hover:bg-white/[0.07] transition-colors">
                     <h4 class="text-xl md:text-2xl font-bold text-primary mb-3">2. E-commerce Website</h4>
                     <p class="text-sm text-gray-400 mb-4">A full online store. Processes orders, accepts Paystack/Flutterwave payments, manages shipping and inventory automatically.</p>
                     <p class="text-white font-mono font-bold text-sm">₦200,000 — ₦1,200,000+</p>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl">
+                <div class="p-6 bg-white/5 rounded-2xl hover:bg-white/[0.07] transition-colors">
                     <h4 class="text-xl md:text-2xl font-bold text-primary mb-3">3. Custom Website / Web App</h4>
                     <p class="text-sm text-gray-400 mb-4">Hand-coded (React, Node, etc.) for unique functionality — school portals, booking systems, complex marketplaces.</p>
                     <p class="text-white font-mono font-bold text-sm">₦350,000 — ₦5,000,000+</p>
@@ -318,7 +362,7 @@
 
     <!-- Reviews -->
     <section id="reviews" class="py-20 md:py-24 overflow-hidden border-y border-white/5">
-        <h2 class="text-center text-2xl md:text-3xl font-display font-bold mb-14 text-white uppercase tracking-widest">Client Reports</h2>
+        <h2 class="text-center text-2xl md:text-3xl font-display font-bold mb-14 text-white uppercase tracking-widest reveal">Client Reports</h2>
         <div class="animate-scroll">
             <div id="reviews-container" class="flex gap-6 md:gap-8 px-4"></div>
             <div id="reviews-container-dup" class="flex gap-6 md:gap-8 px-4"></div>
@@ -328,11 +372,11 @@
     <!-- Team -->
     <section id="experts" class="py-20 md:py-28 px-4 sm:px-6 bg-surface/40">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">Talk to the Team</h2>
-            <p class="text-gray-400 mb-14">Reach the right person directly, by call or WhatsApp.</p>
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 reveal">Talk to the Team</h2>
+            <p class="text-gray-400 mb-14 reveal">Reach the right person directly, by call or WhatsApp.</p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                <div class="glass p-6 rounded-[2rem] text-center">
+                <div class="glass p-6 rounded-[2rem] text-center reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
                     <img src="MG2.png" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-primary/20 object-cover" alt="Daniel, founder and full stack developer at Mega Grace">
                     <h5 class="font-bold text-white mb-1">MR Daniel</h5>
                     <p class="text-[9px] text-primary uppercase mb-4 tracking-widest font-mono">Founder &amp; Operations And full stack developer</p>
@@ -341,14 +385,13 @@
                         <a href="https://wa.me/2349032473005" class="py-3 bg-secondary/15 text-secondary rounded-xl text-[10px] uppercase font-bold border border-secondary/20">WhatsApp</a>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Form -->
     <section id="contact" class="py-20 md:py-28 px-4 sm:px-6">
-        <div class="max-w-3xl mx-auto glass p-7 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem]">
+        <div class="max-w-3xl mx-auto glass p-7 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem] reveal">
             <h2 class="text-3xl md:text-5xl font-display font-bold mb-8 text-center text-white">Let's Build Your Asset</h2>
             <form id="wa-form" class="space-y-5">
                 <input type="text" id="wa-name" placeholder="Full Name" required class="bg-background border border-white/10 rounded-xl p-4 w-full outline-none focus:border-primary text-white text-sm">
@@ -498,6 +541,18 @@
         const m = document.getElementById('wa-msg').value;
         window.open(`https://wa.me/2348159205235?text=Hello Mega Grace! I am ${n}. Inquiry: ${m}`);
     }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
 
     /* ============================================================
        GRACE-AI CHAT
