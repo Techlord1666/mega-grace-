@@ -1,626 +1,484 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>MEGA GRACE | Website Design &amp; Digital Marketing Agency in Lagos, Nigeria</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ikezue Chibuike Daniel | Web Developer & Designer — Mega Grace Computer Intel</title>
+<meta name="description" content="Ikezue Chibuike Daniel — website developer, website designer & graphic designer. Founder of Mega Grace Computer Intel, Lagos, Nigeria."/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f7f7fb;
+    --ink:#12131a;
+    --muted:#6b6f7b;
+    --line:#ececf1;
+    --pink:#e5335f;
+    --pink-deep:#b91f47;
+    --gold:#e8b94d;
+    --green:#2fa563;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    overflow-x:hidden;
+    line-height:1.5;
+  }
+  h1,h2,h3,h4,h5{font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:-0.01em;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.25em; text-transform:uppercase; color:var(--pink); font-weight:700;}
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Logo.png">
-    <link rel="apple-touch-icon" href="Logo.png">
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,.85); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height:78px;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk'; font-weight:700; font-size:18px;}
+  .brand .dot{width:10px; height:10px; border-radius:50%; background:var(--pink);}
+  nav.links{display:flex; gap:34px; font-size:13px; font-weight:600;}
+  nav.links a{position:relative; color:var(--ink); opacity:.75; transition:opacity .2s;}
+  nav.links a:hover{opacity:1;}
+  nav.links a::after{content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:var(--pink); transition:width .25s;}
+  nav.links a:hover::after{width:100%;}
+  .cta-btn{
+    background:var(--ink); color:#fff; font-size:12px; font-weight:700; letter-spacing:.03em;
+    padding:12px 22px; border-radius:100px; text-transform:uppercase; transition:transform .2s, background .2s;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .cta-btn:hover{transform:translateY(-2px); background:var(--pink);}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer;}
+  .burger span{width:24px; height:2px; background:var(--ink);}
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Mega Grace Computer Intel builds fast, secure business websites, e-commerce stores, church &amp; ministry platforms, and brand identities in Nigeria. Websites from ₦100,000. Get a free quote on WhatsApp." />
-    <meta name="keywords" content="website design Nigeria, web developer Lagos, affordable website design Nigeria, e-commerce website Nigeria, church website design, ministry website developer, graphic design Lagos, logo design Nigeria, digital marketing agency Nigeria, Paystack Flutterwave website, business website Nigeria, custom web development Nigeria, SEO agency Lagos, brand identity design Nigeria" />
-    <meta name="author" content="Mega Grace Computer Intel" />
-    <meta name="robots" content="index, follow" />
+  /* ---------- HERO ---------- */
+  .hero{padding:150px 0 90px; position:relative;}
+  .hero .wrap{display:flex; align-items:center; gap:60px;}
+  .hero-left{flex:1; min-width:0;}
+  .hero-right{flex:0 0 420px;}
+  .hero h1{font-size:clamp(2.4rem, 4.6vw, 3.6rem); line-height:1.06; margin:18px 0 22px;}
+  .hero h1 .accent{color:var(--pink);}
+  .split-word{display:inline-block; opacity:0; transform:translateY(30px); animation:wordUp .6s cubic-bezier(.2,.8,.2,1) forwards;}
+  @keyframes wordUp{to{opacity:1; transform:translateY(0);}}
+  .hero p.bio{color:var(--muted); font-size:16px; max-width:480px; margin-bottom:32px; opacity:0; animation:fadeUp .7s ease .9s forwards;}
+  @keyframes fadeUp{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);}}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; opacity:0; animation:fadeUp .7s ease 1.05s forwards;}
+  .btn-primary{background:var(--pink); color:#fff; padding:15px 26px; border-radius:100px; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.03em; transition:transform .2s, box-shadow .2s;}
+  .btn-primary:hover{transform:translateY(-3px); box-shadow:0 12px 24px -8px rgba(229,51,95,.5);}
+  .btn-outline{border:1.5px solid var(--line); padding:15px 26px; border-radius:100px; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.03em; transition:border-color .2s, color .2s;}
+  .btn-outline:hover{border-color:var(--ink);}
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="MEGA GRACE | Website Design & Digital Marketing Agency, Lagos" />
-    <meta property="og:description" content="Business websites, e-commerce stores, church platforms and branding — built fast, priced fairly, from ₦100,000." />
-    <meta property="og:image" content="Logo.png" />
-    <meta property="og:url" content="https://yourwebsite.com" />
-    <meta property="og:locale" content="en_NG" />
+  .find-me, .skill-on{margin-top:44px; opacity:0; animation:fadeUp .7s ease 1.2s forwards;}
+  .find-me h5, .skill-on h5{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:12px;}
+  .icon-row{display:flex; gap:10px; flex-wrap:wrap;}
+  .icon-btn{
+    width:42px; height:42px; border-radius:13px; background:var(--bg-alt); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; transition:all .25s;
+  }
+  .icon-btn:hover{background:var(--pink); border-color:var(--pink); transform:translateY(-3px);}
+  .icon-btn:hover svg{stroke:#fff; fill:#fff;}
+  .icon-btn svg{width:18px; height:18px; stroke:var(--ink); fill:var(--ink);}
+  .hero-rows{display:flex; gap:48px; flex-wrap:wrap;}
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MEGA GRACE | Website Design & Digital Marketing, Lagos" />
-    <meta name="twitter:description" content="Business websites, e-commerce stores, church platforms and branding — built fast, priced fairly, from ₦100,000." />
-    <meta name="twitter:image" content="Logo.png" />
+  /* terminal signature (replaces headshot — swap <img> in for a personal photo any time) */
+  .term-card{
+    border-radius:28px; border:1px solid var(--line); background:#0d0d12; overflow:hidden;
+    box-shadow:0 40px 80px -30px rgba(18,19,26,.35);
+    opacity:0; animation:fadeUp .8s ease .5s forwards;
+  }
+  .term-top{display:flex; align-items:center; gap:7px; padding:14px 18px; border-bottom:1px solid rgba(255,255,255,.08);}
+  .term-top span{width:10px; height:10px; border-radius:50%;}
+  .term-top span:nth-child(1){background:#e5335f;} .term-top span:nth-child(2){background:#e8b94d;} .term-top span:nth-child(3){background:#2fa563;}
+  .term-top small{margin-left:8px; color:#7a7c88; font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.15em; text-transform:uppercase;}
+  #terminal{padding:22px 20px; font-family:'JetBrains Mono'; font-size:12.5px; color:#d6d7de; min-height:230px; line-height:1.9;}
+  .term-cursor{display:inline-block; width:7px; height:1em; background:var(--pink); vertical-align:text-bottom; margin-left:2px; animation:blink 1s step-end infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .avatar-badge{
+    position:absolute; right:26px; bottom:-26px; width:64px; height:64px; border-radius:50%;
+    background:linear-gradient(135deg, var(--pink), var(--gold)); display:flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'Space Grotesk'; font-weight:700; font-size:17px; border:4px solid #fff; box-shadow:0 10px 24px -6px rgba(0,0,0,.25);
+  }
+  .term-wrap{position:relative;}
 
-    <!-- Structured Data: LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Mega Grace Computer Intel",
-      "image": "Logo.png",
-      "description": "Web development, e-commerce, graphic design, branding and digital marketing agency serving businesses, SMEs, and ministries across Nigeria.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lagos",
-        "addressCountry": "NG"
-      },
-      "telephone": "+2348159205235",
-      "priceRange": "₦100,000 - ₦5,000,000",
-      "areaServed": "NG",
-      "sameAs": [
-        "https://wa.me/2348159205235"
-      ]
-    }
-    </script>
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in-view{opacity:1; transform:translateY(0);}
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com"></script>
+  /* ---------- SECTIONS ---------- */
+  section{padding:100px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); margin-top:12px;}
+  .alt{background:var(--bg-alt);}
 
-    <script>
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                primary: "#E8B94D",   /* warm gold — signal / CTA */
-                secondary: "#3AAE5A", /* Nigerian green — growth / trust */
-                background: "#0A0908",
-                surface: "#161410",
-                cream: "#F3EFE4"
-              },
-              fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                display: ['Space Grotesk', 'sans-serif'],
-                mono: ['JetBrains Mono', 'monospace']
-              }
-            }
-          }
-        }
-    </script>
-    <style>
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-scroll { display: flex; width: max-content; animation: scroll 60s linear infinite; }
-        .animate-scroll:hover { animation-play-state: paused; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .tech-gradient { background: linear-gradient(100deg, #E8B94D 0%, #3AAE5A 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        body {
-            min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden;
-            background: radial-gradient(ellipse 120% 80% at 20% -10%, rgba(232,185,77,0.10), transparent 55%),
-                        radial-gradient(ellipse 120% 80% at 100% 0%, rgba(58,174,90,0.08), transparent 50%),
-                        linear-gradient(180deg, #100D08 0%, #0A0908 35%, #0C0B09 100%);
-            background-attachment: fixed;
-        }
-        .bg-grid {
-            background-image: linear-gradient(rgba(232, 185, 77, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(232, 185, 77, 0.06) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #E8B94D; border-radius: 10px; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
+  /* services */
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:22px; padding:32px;
+    transition:transform .3s, box-shadow .3s, border-color .3s;
+  }
+  .card:hover{transform:translateY(-6px); box-shadow:0 30px 50px -24px rgba(18,19,26,.15); border-color:transparent;}
+  .card .ic{width:46px; height:46px; border-radius:13px; background:rgba(229,51,95,.08); display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .card .ic svg{width:22px; height:22px; stroke:var(--pink);}
+  .card h3{font-size:17px; margin-bottom:10px;}
+  .card p{color:var(--muted); font-size:13.5px;}
 
-        /* Terminal signature element */
-        .term-line { opacity: 0; white-space: pre-wrap; }
-        .term-cursor { display: inline-block; width: 8px; height: 1em; background: #3AAE5A; vertical-align: text-bottom; animation: blink 1s step-end infinite; margin-left: 2px; }
-        @keyframes blink { 50% { opacity: 0; } }
+  /* portfolio */
+  .port-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .port-card{
+    border-radius:26px; overflow:hidden; position:relative; border:1px solid var(--line);
+    aspect-ratio:16/11; display:flex; align-items:flex-end; padding:28px;
+  }
+  .port-card::before{content:""; position:absolute; inset:0; opacity:.94;}
+  .port-card.p1::before{background:linear-gradient(135deg,#12131a,#2c3040);}
+  .port-card.p2::before{background:linear-gradient(135deg,#1b1440,#4a2f7a);}
+  .port-card.p3::before{background:linear-gradient(135deg,#0e2d22,#1f6e4e);}
+  .port-card.p4::before{background:linear-gradient(135deg,#3a2410,#b9822f);}
+  .port-inner{position:relative; z-index:1; color:#fff;}
+  .port-inner .tag{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.2em; text-transform:uppercase; opacity:.7; margin-bottom:8px; display:block;}
+  .port-inner h4{font-size:20px; margin-bottom:6px;}
+  .port-inner p{font-size:12.5px; opacity:.8; max-width:320px;}
 
-        /* Entrance animations */
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes floatSlow { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal.in-view { opacity: 1; transform: translateY(0); }
-        .hero-fade-1 { animation: fadeUp 0.8s ease 0.05s both; }
-        .hero-fade-2 { animation: fadeUp 0.8s ease 0.2s both; }
-        .hero-fade-3 { animation: fadeUp 0.8s ease 0.35s both; }
-        .hero-fade-4 { animation: fadeUp 0.8s ease 0.5s both; }
-        .float-el { animation: floatSlow 5s ease-in-out infinite; }
+  /* pricing */
+  .price-wrap{background:#fff; border:1px solid var(--line); border-radius:32px; padding:50px; }
+  .price-row{display:flex; justify-content:space-between; align-items:center; gap:20px; padding:26px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;}
+  .price-row:last-child{border-bottom:none;}
+  .price-row h4{font-size:18px; margin-bottom:6px;}
+  .price-row p{color:var(--muted); font-size:13px; max-width:440px;}
+  .price-tag{font-family:'JetBrains Mono'; font-weight:700; color:var(--pink); font-size:14px; white-space:nowrap;}
 
-        /* CTA glow / shimmer for View Our Work */
-        .cta-glow {
-            position: relative;
-            box-shadow: 0 0 0 0 rgba(232,185,77,0.55);
-            animation: ctaPulse 2.6s ease-in-out infinite;
-        }
-        @keyframes ctaPulse {
-            0% { box-shadow: 0 0 0 0 rgba(232,185,77,0.45); }
-            70% { box-shadow: 0 0 0 14px rgba(232,185,77,0); }
-            100% { box-shadow: 0 0 0 0 rgba(232,185,77,0); }
-        }
-        .cta-glow::after {
-            content: "";
-            position: absolute; inset: -2px;
-            border-radius: inherit;
-            padding: 2px;
-            background: linear-gradient(120deg, #E8B94D, #3AAE5A, #E8B94D);
-            background-size: 200% 200%;
-            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor; mask-composite: exclude;
-            animation: gradientMove 3s linear infinite;
-            opacity: 0.9;
-        }
-        @keyframes gradientMove { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+  /* testimonials marquee */
+  .marquee{overflow:hidden; position:relative;}
+  .marquee-track{display:flex; gap:22px; width:max-content; animation:scroll 45s linear infinite;}
+  .marquee-track:hover{animation-play-state:paused;}
+  @keyframes scroll{from{transform:translateX(0);} to{transform:translateX(-50%);}}
+  .t-card{width:320px; background:#fff; border:1px solid var(--line); border-radius:22px; padding:28px; flex-shrink:0;}
+  .t-card p{font-size:13.5px; color:var(--muted); font-style:italic; margin-bottom:16px;}
+  .t-card .who{display:flex; align-items:center; gap:10px;}
+  .t-avatar{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--gold)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:700;}
+  .t-card .who span{font-size:12px; font-weight:700; color:var(--ink);}
 
-        @media (prefers-reduced-motion: reduce) {
-            .term-cursor, .hero-fade-1, .hero-fade-2, .hero-fade-3, .hero-fade-4, .float-el, .cta-glow, .cta-glow::after { animation: none !important; }
-            .reveal { opacity: 1; transform: none; transition: none; }
-        }
-    </style>
+  /* contact */
+  .contact-box{background:var(--ink); border-radius:36px; padding:64px 50px; color:#fff; display:flex; justify-content:space-between; align-items:center; gap:30px; flex-wrap:wrap;}
+  .contact-box h2{color:#fff; font-size:clamp(1.8rem,3vw,2.4rem); max-width:520px;}
+  .contact-box p{color:#a6a8b3; margin-top:12px; max-width:480px; font-size:14px;}
+
+  /* footer */
+  footer{padding:60px 0 30px; border-top:1px solid var(--line);}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; margin-bottom:40px;}
+  .foot-grid h5{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:16px;}
+  .foot-grid ul li{margin-bottom:10px; font-size:13.5px; color:var(--muted);}
+  .foot-grid ul li a:hover{color:var(--pink);}
+  .foot-bottom{text-align:center; font-size:11px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); padding-top:24px; border-top:1px solid var(--line);}
+
+  @media(max-width:900px){
+    nav.links, .hero-rows .find-me + .skill-on{display:none;}
+    .hero .wrap{flex-direction:column;}
+    .hero-right{flex:none; width:100%; max-width:420px;}
+    .grid-3{grid-template-columns:1fr;}
+    .port-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr; gap:26px;}
+    .burger{display:flex;}
+    .contact-box{padding:40px 26px;}
+  }
+</style>
 </head>
-<body class="bg-background text-gray-200 antialiased">
+<body>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed inset-0 z-[100] bg-background/98 backdrop-blur-2xl translate-x-full transition-transform duration-500 md:hidden overflow-y-auto">
-    <div class="flex justify-between p-6">
-        <span class="font-display font-bold text-primary text-xl uppercase tracking-tighter">MEGA GRACE</span>
-        <button onclick="toggleMenu()" class="text-primary"><span class="material-symbols-outlined text-4xl">close</span></button>
-    </div>
-    <nav class="flex flex-col items-center gap-7 pt-6 pb-16 text-xl font-display font-bold">
-        <a href="#" onclick="toggleMenu()">Home</a>
-        <a href="#services" onclick="toggleMenu()">Services</a>
-        <a href="#churches" onclick="toggleMenu()">Church &amp; Ministry</a>
-        <a href="#pricing-guide" onclick="toggleMenu()">Pricing</a>
-        <a href="work.html" onclick="toggleMenu()">Web Portfolio</a>
-        <a href="grafix.html" onclick="toggleMenu()">Graphics Portfolio</a>
-        <a href="#experts" onclick="toggleMenu()">Our Team</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-        <a href="how.html" onclick="toggleMenu()">How It Works</a>
-        <a href="blog.html" onclick="toggleMenu()">Blog</a>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="dot"></span> ICD<span style="opacity:.4">.</span>DEV</div>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
     </nav>
-</div>
-
-<!-- Header -->
-<header class="fixed top-0 w-full z-50 glass border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
-        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-primary/30 shadow-lg shadow-primary/10 flex-shrink-0">
-            <img src="Logo.png" alt="Mega Grace Computer Intel logo" class="w-full h-full object-cover">
-        </div>
-        <nav class="hidden md:flex gap-7 font-bold text-[10px] uppercase tracking-widest text-white">
-            <a href="#" class="hover:text-primary transition-colors">Home</a>
-            <a href="#services" class="hover:text-primary transition-colors">Services</a>
-            <a href="#churches" class="hover:text-primary transition-colors">Churches</a>
-            <a href="#pricing-guide" class="hover:text-primary transition-colors">Prices</a>
-            <a href="work.html" class="hover:text-secondary transition-colors">Web Portfolio</a>
-            <a href="grafix.html" class="hover:text-secondary transition-colors">Graphics Portfolio</a>
-            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-        </nav>
-        <a href="https://wa.me/2348159205235" class="hidden md:inline-block px-5 py-2.5 bg-primary text-black font-bold rounded-xl hover:scale-105 transition-all text-[10px] uppercase tracking-widest">Get a Quote</a>
-        <button onclick="toggleMenu()" class="md:hidden text-primary">
-            <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-    </div>
+    <a href="https://wa.me/2348159205235" class="cta-btn">Hire Me</a>
+    <div class="burger" onclick="document.querySelector('nav.links').classList.toggle('show')"><span></span><span></span><span></span></div>
+  </div>
 </header>
 
-<main class="flex-grow">
-    <!-- Hero Section -->
-    <section class="relative pt-28 md:pt-36 pb-14 md:pb-20 px-4 sm:px-6 bg-grid">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-14 items-center text-center lg:text-left">
-            <div class="w-full lg:w-1/2">
-                <div class="flex flex-col items-center lg:items-start mb-8 hero-fade-1">
-                    <div class="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl shadow-primary/10 mb-5 float-el">
-                        <img src="Dan.png" alt="Ikezue Chibuike Daniel, founder of Mega Grace Computer Intel" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="font-display font-bold text-2xl md:text-3xl text-white tracking-tight">IKEZUE CHIBUIKE DANIEL</h2>
-                    <p class="text-gray-400 text-xs md:text-sm mt-2 max-w-sm leading-relaxed">Website Developer &middot; Website Designer &middot; Graphic Designer &middot; Email Marketing Agent &middot; Social Media Manager &middot; Content Writer &middot; Book Writer</p>
-                </div>
-                <p class="font-mono text-secondary text-[11px] md:text-xs uppercase tracking-[0.3em] mb-4 hero-fade-1">Web · E-commerce · Churches · Branding · Marketing</p>
-                <h1 class="text-[2.5rem] leading-[1.05] sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight lg:text-7xl font-display font-bold mb-5 md:mb-6 hero-fade-2">
-                    Your business,<br class="hidden sm:block"> <span class="tech-gradient">built to sell online.</span>
-                </h1>
-                <p class="text-sm sm:text-base md:text-lg text-gray-400 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium hero-fade-3">
-                    We design and build websites, online stores, and brand identities for Nigerian businesses and ministries — with an AI assistant that answers customers and takes orders while you sleep.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 hero-fade-4">
-                    <a href="work.html" class="cta-glow w-full sm:w-auto text-center px-8 py-4 bg-primary text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all text-xs uppercase tracking-widest shadow-lg shadow-primary/20">View Our Work</a>
-                    <a href="https://wa.me/2348159205235" class="w-full sm:w-auto text-center px-7 py-4 border border-white/15 rounded-2xl hover:bg-white/5 hover:border-secondary/40 transition-all text-xs uppercase tracking-widest text-white">Chat On WhatsApp</a>
-                </div>
-                <p class="mt-6 text-[11px] font-mono text-gray-500 uppercase tracking-widest hero-fade-4">Websites from ₦100,000 &nbsp;•&nbsp; Live in as little as 7 days</p>
-            </div>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-left">
+      <p class="eyebrow">Welcome to my world</p>
+      <h1 id="hero-heading"></h1>
+      <p class="bio">I build fast, secure websites, online stores, and brand identities for businesses, SMEs, churches and ministries — as founder of Mega Grace Computer Intel, Lagos, Nigeria.</p>
+      <div class="hero-ctas">
+        <a href="#portfolio" class="btn-primary">View My Work</a>
+        <a href="https://wa.me/2348159205235" class="btn-outline">Chat on WhatsApp</a>
+      </div>
 
-            <!-- Signature element: live "deploy" terminal -->
-            <div class="w-full lg:w-1/2 float-el">
-                <div class="rounded-2xl md:rounded-[2rem] border border-white/10 bg-[#0d0c09] shadow-2xl shadow-black/40 overflow-hidden">
-                    <div class="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-white/[0.02]">
-                        <span class="w-2.5 h-2.5 rounded-full bg-red-400/60"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-primary/60"></span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-secondary/60"></span>
-                        <span class="ml-3 font-mono text-[10px] text-gray-500 uppercase tracking-widest">deploy.sh — mega-grace</span>
-                    </div>
-                    <div id="terminal" class="p-5 md:p-6 font-mono text-[11px] sm:text-xs md:text-sm leading-relaxed min-h-[220px] sm:min-h-[240px]"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-20 md:py-28 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto">
-            <p class="font-mono text-secondary text-[11px] uppercase tracking-[0.3em] mb-3 reveal">What We Do</p>
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-14 max-w-2xl reveal">Everything your brand needs online, under one roof.</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">language</span>
-                    <h3 class="font-display font-bold text-white text-lg mb-2">Business Websites</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Fast, mobile-friendly sites that tell people who you are and how to reach you — home, about, services and contact pages done right.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">shopping_cart</span>
-                    <h3 class="font-display font-bold text-white text-lg mb-2">E-commerce Stores</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Online shops that accept Naira and card payments through Paystack and Flutterwave, with inventory that manages itself.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">brush</span>
-                    <h3 class="font-display font-bold text-white text-lg mb-2">Branding &amp; Graphic Design</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Logos, flyers, brochures and social media graphics that make your business look as good as it performs.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">campaign</span>
-                    <h3 class="font-display font-bold text-white text-lg mb-2">Digital Marketing &amp; SEO</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Landing pages built to convert ad clicks into paying customers, plus SEO so people searching for you can find you.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">code_blocks</span>
-                    <h3 class="font-display font-bold text-white text-lg mb-2">Custom Web Apps</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Hand-coded platforms for needs an off-the-shelf template can't handle — booking systems, portals, marketplaces.</p>
-                </div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <span class="material-symbols-outlined text-primary text-3xl mb-4 block">smart_toy</span>
-                    <h3 class="font-display font-bold text-white text-lg mb-2">AI Chat &amp; Automation</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">A chat assistant on your site that answers customer questions and hands off warm leads to your team, day or night.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Church & Ministry -->
-    <section id="churches" class="py-20 md:py-28 px-4 sm:px-6 bg-surface/40 border-y border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
-            <div class="lg:w-1/2 text-left reveal">
-                <p class="font-mono text-secondary text-[11px] uppercase tracking-[0.3em] mb-3">A Niche We Know Well</p>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">Websites for churches and ministries.</h2>
-                <p class="text-gray-400 leading-relaxed text-base md:text-lg mb-6">
-                    Congregations have needs a regular business site doesn't: service times across branches, sermon archives, live-stream links, and a giving page members can trust. We build all of it.
-                </p>
-                <ul class="space-y-3 text-sm text-gray-300">
-                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Secure online giving &amp; donation pages</li>
-                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Sermon &amp; media libraries</li>
-                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Multi-branch / multi-parish page structure</li>
-                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-lg">check_circle</span> Event calendars and live-stream embeds</li>
-                </ul>
-            </div>
-            <div class="lg:w-1/2 w-full reveal">
-                <img src="g.jpg" class="rounded-3xl border border-white/10 shadow-2xl w-full" alt="Church website design example by Mega Grace">
-            </div>
-        </div>
-    </section>
-
-    <!-- Why 2026 -->
-    <section id="why-2026" class="py-20 md:py-28 px-4 sm:px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-3xl md:text-5xl font-display font-bold mb-14 text-white reveal">Why your business needs a website in 2026</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">01. AI Visibility</h5><p class="text-xs text-gray-400 leading-relaxed">AI search tools recommend businesses based on verified web data. No website means they won't find you.</p></div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">02. 24/7 Coverage</h5><p class="text-xs text-gray-400 leading-relaxed">An AI assistant answers customer questions and captures leads while your team is offline.</p></div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">03. Ownership</h5><p class="text-xs text-gray-400 leading-relaxed">Social platforms can restrict your account anytime. Your website is property you actually control.</p></div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">04. Global Trust</h5><p class="text-xs text-gray-400 leading-relaxed">A professional website signals legitimacy to customers and partners outside Nigeria too.</p></div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">05. Automated Sales</h5><p class="text-xs text-gray-400 leading-relaxed">Accept Naira and card payments instantly, with stock and orders tracked automatically.</p></div>
-                <div class="p-8 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300"><h5 class="text-primary font-bold mb-3">06. Ad Precision</h5><p class="text-xs text-gray-400 leading-relaxed">Landing pages built specifically to turn paid ad clicks into paying customers.</p></div>
-                <div class="p-8 glass rounded-3xl md:col-span-2 border border-primary/30 reveal"><h5 class="text-primary font-bold mb-3">07. Data You Can Use</h5><p class="text-xs text-gray-400 leading-relaxed">See who visits, what they're looking for, and where they came from — so you know what's actually working.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section class="py-20 md:py-28 px-4 sm:px-6 bg-surface/40 border-y border-white/5">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-center text-3xl md:text-5xl font-display font-bold mb-14 text-white reveal">How a project runs</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-7 glass rounded-3xl relative reveal hover:border-primary/30 transition-all duration-300">
-                    <span class="font-mono text-primary text-3xl font-bold">01</span>
-                    <h5 class="font-display font-bold text-white mt-3 mb-2">Consult</h5>
-                    <p class="text-xs text-gray-400 leading-relaxed">Tell us what your business needs, on a call or on WhatsApp. We recommend the right plan.</p>
-                </div>
-                <div class="p-7 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300">
-                    <span class="font-mono text-primary text-3xl font-bold">02</span>
-                    <h5 class="font-display font-bold text-white mt-3 mb-2">Design</h5>
-                    <p class="text-xs text-gray-400 leading-relaxed">We map out pages and send you a look and feel before a single line of code is written.</p>
-                </div>
-                <div class="p-7 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300">
-                    <span class="font-mono text-primary text-3xl font-bold">03</span>
-                    <h5 class="font-display font-bold text-white mt-3 mb-2">Build</h5>
-                    <p class="text-xs text-gray-400 leading-relaxed">Development, payment integration, and testing — with progress updates as we go.</p>
-                </div>
-                <div class="p-7 glass rounded-3xl reveal hover:border-primary/30 transition-all duration-300">
-                    <span class="font-mono text-primary text-3xl font-bold">04</span>
-                    <h5 class="font-display font-bold text-white mt-3 mb-2">Launch</h5>
-                    <p class="text-xs text-gray-400 leading-relaxed">Your site goes live, and we stay on for support so it keeps running smoothly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Guide -->
-    <section id="pricing-guide" class="py-20 md:py-28 px-4 sm:px-6">
-        <div class="max-w-6xl mx-auto glass p-7 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem] space-y-10 reveal">
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-white border-l-4 border-primary pl-5 md:pl-6">Pricing Guide</h2>
-            <p class="text-base md:text-lg text-gray-400">Website design in Nigeria typically ranges from <strong class="text-white">₦100,000</strong> to <strong class="text-white">₦5,000,000+</strong>, depending on scope. Here's the breakdown:</p>
-
-            <div class="space-y-8">
-                <div class="p-6 bg-white/5 rounded-2xl hover:bg-white/[0.07] transition-colors">
-                    <h4 class="text-xl md:text-2xl font-bold text-primary mb-3">1. Informational Website</h4>
-                    <p class="text-sm text-gray-400 mb-4">Perfect for SMEs. Displays your business details across 2–5 pages (Home, About, Services, Contact). No payment processing.</p>
-                    <p class="text-white font-mono font-bold text-sm">₦100,000 (2 pages) — ₦750,000 (5 pages)</p>
-                </div>
-                <div class="p-6 bg-white/5 rounded-2xl hover:bg-white/[0.07] transition-colors">
-                    <h4 class="text-xl md:text-2xl font-bold text-primary mb-3">2. E-commerce Website</h4>
-                    <p class="text-sm text-gray-400 mb-4">A full online store. Processes orders, accepts Paystack/Flutterwave payments, manages shipping and inventory automatically.</p>
-                    <p class="text-white font-mono font-bold text-sm">₦200,000 — ₦1,200,000+</p>
-                </div>
-                <div class="p-6 bg-white/5 rounded-2xl hover:bg-white/[0.07] transition-colors">
-                    <h4 class="text-xl md:text-2xl font-bold text-primary mb-3">3. Custom Website / Web App</h4>
-                    <p class="text-sm text-gray-400 mb-4">Hand-coded (React, Node, etc.) for unique functionality — school portals, booking systems, complex marketplaces.</p>
-                    <p class="text-white font-mono font-bold text-sm">₦350,000 — ₦5,000,000+</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews -->
-    <section id="reviews" class="py-20 md:py-24 overflow-hidden border-y border-white/5">
-        <h2 class="text-center text-2xl md:text-3xl font-display font-bold mb-14 text-white uppercase tracking-widest reveal">Client Reports</h2>
-        <div class="animate-scroll">
-            <div id="reviews-container" class="flex gap-6 md:gap-8 px-4"></div>
-            <div id="reviews-container-dup" class="flex gap-6 md:gap-8 px-4"></div>
-        </div>
-    </section>
-
-    <!-- Team -->
-    <section id="experts" class="py-20 md:py-28 px-4 sm:px-6 bg-surface/40">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4 reveal">Talk to the Team</h2>
-            <p class="text-gray-400 mb-14 reveal">Reach the right person directly, by call or WhatsApp.</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                <div class="glass p-6 rounded-[2rem] text-center reveal hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
-                    <img src="MG2.png" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-primary/20 object-cover" alt="Daniel, founder and full stack developer at Mega Grace">
-                    <h5 class="font-bold text-white mb-1">MR Daniel</h5>
-                    <p class="text-[9px] text-primary uppercase mb-4 tracking-widest font-mono">Founder &amp; Operations And full stack developer</p>
-                    <div class="flex flex-col gap-2">
-                        <a href="tel:+2348057741110" class="py-3 border border-white/10 rounded-xl text-[10px] text-white uppercase font-bold hover:bg-white/5">Call</a>
-                        <a href="https://wa.me/2349032473005" class="py-3 bg-secondary/15 text-secondary rounded-xl text-[10px] uppercase font-bold border border-secondary/20">WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact" class="py-20 md:py-28 px-4 sm:px-6">
-        <div class="max-w-3xl mx-auto glass p-7 sm:p-12 md:p-16 rounded-[2rem] md:rounded-[3rem] reveal">
-            <h2 class="text-3xl md:text-5xl font-display font-bold mb-8 text-center text-white">Let's Build Your Asset</h2>
-            <form id="wa-form" class="space-y-5">
-                <input type="text" id="wa-name" placeholder="Full Name" required class="bg-background border border-white/10 rounded-xl p-4 w-full outline-none focus:border-primary text-white text-sm">
-                <textarea id="wa-msg" placeholder="Tell us about your project..." rows="4" required class="bg-background border border-white/10 rounded-xl p-4 w-full outline-none focus:border-primary text-white text-sm"></textarea>
-                <button type="submit" class="w-full py-4 bg-primary text-black font-bold rounded-xl hover:scale-105 transition-all uppercase tracking-widest text-sm">Send to WhatsApp</button>
-            </form>
-        </div>
-    </section>
-</main>
-
-<footer class="bg-surface py-16 md:py-20 px-6 border-t border-white/5">
-    <div class="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 mb-16 md:mb-20 text-white">
-        <div class="col-span-2 md:col-span-1">
-            <div class="flex items-center gap-2 mb-6 md:mb-8">
-                <span class="material-symbols-outlined text-primary text-4xl">terminal</span>
-                <span class="font-display font-bold text-2xl tracking-tighter uppercase">MEGA GRACE</span>
-            </div>
-            <p class="text-gray-400 text-sm leading-relaxed">Web developers, designers and marketing specialists building Nigeria's digital businesses since 2020.</p>
-        </div>
-        <div>
-            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8 md:mb-10">Navigation</h5>
-            <ul class="space-y-4 md:space-y-5 text-sm text-gray-500 font-medium">
-                <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                <li><a href="work.html" class="hover:text-white transition-colors">Web Portfolio</a></li>
-                <li><a href="grafix.html" class="hover:text-white transition-colors">Graphics Portfolio</a></li>
-                <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8 md:mb-10 font-mono">Status</h5>
-            <ul class="space-y-4 md:space-y-5 text-sm text-gray-500 font-mono">
-                <li>Lagos, Nigeria</li>
-                <li>0815 920 5235</li>
-                <li>Active 24/7</li>
-            </ul>
-        </div>
-        <div>
-            <h5 class="text-primary font-bold text-[10px] uppercase tracking-[0.3em] mb-8 md:mb-10 font-mono">Strategy</h5>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Stay indexed. Stay relevant. Stay profitable.</p>
-            <a href="https://wa.me/2348159205235" class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-primary hover:text-black transition-all">
-                <span class="material-symbols-outlined">chat</span>
+      <div class="hero-rows">
+        <div class="find-me">
+          <h5>Find With Me</h5>
+          <div class="icon-row">
+            <a class="icon-btn" href="https://www.facebook.com/share/1CkMVAZNnY/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="0"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12"/></svg>
             </a>
+            <a class="icon-btn" href="https://www.instagram.com/meg.agrace?igsh=OWp0bGNybHk0Nnh2&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/daniel-chibuike-99926337b?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="0"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21H9z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.tiktok.com/@best.web.developer?_r=1&_t=ZS-98Xk3sYBSaa" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="0"><path d="M16.6 2h-3.2v13.4a3 3 0 1 1-2.4-2.94v-3.28A6.2 6.2 0 1 0 16.6 15.4V8.9a7.6 7.6 0 0 0 4.4 1.4V7.1a4.4 4.4 0 0 1-4.4-4.4z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://x.com/megagracedev?s=11" target="_blank" rel="noopener" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="0"><path d="M18.9 2H22l-7.7 8.8L23 22h-6.9l-5.4-6.6L4.5 22H1.4l8.2-9.4L1 2h7l4.9 6.1L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.threads.com/@meg.agrace?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener" aria-label="Threads">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2c4 0 7 2.4 7 7.3v5.4c0 4.9-3 7.3-7 7.3s-7-2.4-7-7.3V9.3C6 4.4 9 2 13 2z"/><path d="M9.5 11.5c0-2 1.6-3 3.5-3s3.5 1 3.5 3-1.5 2.6-3.5 3-3.5-1-3.5-3z"/></svg>
+            </a>
+          </div>
         </div>
+        <div class="skill-on">
+          <h5>Hire Me On</h5>
+          <div class="icon-row">
+            <a class="icon-btn" href="https://www.upwork.com/freelancers/~01d69b25daabcc0b5c?mp_source=share" target="_blank" rel="noopener" aria-label="Upwork" title="Upwork">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="0"><path d="M18.6 9.4c-1.9 0-3.4 1.2-4 3-.8-1.2-1.4-2.6-1.7-3.8h-2.6v6c0 1.2-1 2.2-2.2 2.2S5.9 15.8 5.9 14.6V8.6H3.3v6c0 2.7 2.2 4.9 4.9 4.9 2.1 0 3.9-1.3 4.5-3.1.5.6 1.6 1.7 1.6 1.7l1.6-1.1s-1.6-1.7-1.6-3.4c0-1.4 1-2.4 2.3-2.4s2.3 1 2.3 2.4-1 2.4-2.3 2.4c-.3 0-.6-.05-.9-.15l-.7 2.3c.5.2 1.1.3 1.6.3 2.6 0 4.7-2.1 4.7-4.8s-2.1-4.9-4.7-4.9z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.fiverr.com/s/bd18xKW" target="_blank" rel="noopener" aria-label="Fiverr" title="Fiverr">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 9h9M4 9v10h5V13h4v6h5V9h-9M13 9V6a2 2 0 0 1 2-2h1"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="max-w-7xl mx-auto pt-8 md:pt-10 border-t border-white/5 text-center text-[9px] md:text-[10px] text-gray-600 uppercase tracking-[0.4em] md:tracking-[0.8em] font-bold">© 2026 Mega Grace Computer Intel</div>
+
+    <div class="hero-right">
+      <div class="term-wrap">
+        <div class="term-card">
+          <div class="term-top"><span></span><span></span><span></span><small>deploy.sh — ikezue daniel</small></div>
+          <div id="terminal"></div>
+        </div>
+        <div class="avatar-badge">ICD</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What I Do</p>
+      <h2>Everything your brand needs online, built by one dedicated hand.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3>Business Websites</h3>
+        <p>Fast, mobile-friendly sites that tell people who you are and how to reach you — done right, from ₦100,000.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor"><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/><path d="M2 3h2l2.5 12.5A2 2 0 0 0 8.5 17h8a2 2 0 0 0 2-1.6L20.5 7H6"/></svg></div>
+        <h3>E-commerce Stores</h3>
+        <p>Online shops that accept Naira and card payments through Paystack, with inventory that manages itself.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
+        <h3>Branding &amp; Graphic Design</h3>
+        <p>Logos, flyers, brochures and social graphics that make your business look as good as it performs.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.9l1 5.1H8.9l-1.5-4.6"/></svg></div>
+        <h3>Digital Marketing &amp; SEO</h3>
+        <p>Landing pages built to convert clicks into customers, plus SEO so people searching for you find you.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor"><path d="M8 3L4 7l4 4M16 3l4 4-4 4M14 3l-4 18"/></svg></div>
+        <h3>Custom Web Apps</h3>
+        <p>Hand-coded platforms for needs a template can't handle — booking systems, portals, marketplaces.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke="currentColor"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4M9 4h6M9 13h.01M15 13h.01"/></svg></div>
+        <h3>AI Chat &amp; Automation</h3>
+        <p>A chat assistant on your site that answers customer questions and hands off leads, day or night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Recent Work</p>
+      <h2>A few projects from Mega Grace Computer Intel.</h2>
+    </div>
+    <div class="port-grid">
+      <div class="port-card p1 reveal">
+        <div class="port-inner"><span class="tag">Marketplace · Supabase</span><h4>Mega Mart</h4><p>Multi-vendor marketplace with seller dashboards, product approvals and Paystack payouts.</p></div>
+      </div>
+      <div class="port-card p2 reveal">
+        <div class="port-inner"><span class="tag">Corporate</span><h4>DOSB'O Synergy Limited</h4><p>Navy &amp; gold glassmorphic business site for a Lagos multi-sector company.</p></div>
+      </div>
+      <div class="port-card p3 reveal">
+        <div class="port-inner"><span class="tag">Church &amp; Ministry</span><h4>RCCG Winners Assembly Malmö</h4><p>Church platform with online bookstore, giving page and admin dashboard.</p></div>
+      </div>
+      <div class="port-card p4 reveal">
+        <div class="port-inner"><span class="tag">Law Firm</span><h4>H. O. Salihu &amp; Associates</h4><p>Professional redesign for a legal practice, built to win client trust.</p></div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:44px;" class="reveal">
+      <a href="https://mega-grace.vercel.app/" target="_blank" rel="noopener" class="btn-outline">See Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Pricing Guide</p>
+      <h2>Clear pricing, no surprises.</h2>
+    </div>
+    <div class="price-wrap reveal">
+      <div class="price-row">
+        <div><h4>Informational Website</h4><p>2–5 pages (Home, About, Services, Contact). No payment processing.</p></div>
+        <div class="price-tag">₦100,000 – ₦750,000</div>
+      </div>
+      <div class="price-row">
+        <div><h4>E-commerce Website</h4><p>Full online store with Paystack payments, shipping and inventory management.</p></div>
+        <div class="price-tag">₦200,000 – ₦1,200,000+</div>
+      </div>
+      <div class="price-row">
+        <div><h4>Custom Website / Web App</h4><p>Hand-coded for unique functionality — portals, booking systems, marketplaces.</p></div>
+        <div class="price-tag">₦350,000 – ₦5,000,000+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="alt">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:36px;">
+      <p class="eyebrow">Client Reports</p>
+      <h2>What clients say after launch.</h2>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box reveal">
+      <div>
+        <h2>Let's build your next digital asset.</h2>
+        <p>Tell me about your business, church, or idea — I'll recommend the right plan and have you live in as little as 7 days.</p>
+      </div>
+      <a href="https://wa.me/2348159205235" class="btn-primary">Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;"><span class="dot"></span> ICD.DEV</div>
+        <p style="color:var(--muted); font-size:13.5px; max-width:320px;">Ikezue Chibuike Daniel — website developer, website designer &amp; graphic designer. Founder, Mega Grace Computer Intel, Lagos, Nigeria.</p>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Find Me</h5>
+        <ul>
+          <li><a href="https://www.upwork.com/freelancers/~01d69b25daabcc0b5c?mp_source=share" target="_blank" rel="noopener">Upwork</a></li>
+          <li><a href="https://www.fiverr.com/s/bd18xKW" target="_blank" rel="noopener">Fiverr</a></li>
+          <li><a href="https://mega-grace.vercel.app/" target="_blank" rel="noopener">Mega Grace Portfolio</a></li>
+          <li><a href="https://www.linkedin.com/in/daniel-chibuike-99926337b" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/meg.agrace" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Ikezue Chibuike Daniel · Mega Grace Computer Intel</div>
+  </div>
 </footer>
 
-<!-- Grace-AI Chatbot -->
-<div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end">
-    <div id="chat-window" class="hidden w-[320px] md:w-[380px] max-w-[90vw] mb-4 glass rounded-[2.5rem] overflow-hidden flex flex-col h-[500px] max-h-[70vh] border border-primary/20 shadow-2xl">
-        <div class="bg-primary p-4 flex justify-between items-center text-black">
-            <span class="font-bold text-sm flex items-center gap-2 uppercase tracking-tighter"><span class="material-symbols-outlined">smart_toy</span> Grace-AI</span>
-            <button onclick="toggleChat()"><span class="material-symbols-outlined">close</span></button>
-        </div>
-        <div id="chat-messages" class="flex-1 p-5 overflow-y-auto space-y-4 text-xs bg-background/50 custom-scrollbar text-white"></div>
-        <div id="chat-suggestions" class="p-2 flex gap-2 overflow-x-auto bg-surface/50 border-t border-white/5 no-scrollbar">
-            <button onclick="quickAction('How much does a website cost?')" class="whitespace-nowrap px-3 py-1 bg-white/5 rounded-full border border-white/10 text-[10px] hover:bg-primary hover:text-black">💰 Pricing</button>
-            <button onclick="quickAction('I need a website for my church')" class="whitespace-nowrap px-3 py-1 bg-white/5 rounded-full border border-white/10 text-[10px] hover:bg-primary hover:text-black">⛪ Church site</button>
-            <button onclick="quickAction('I want to sell products online')" class="whitespace-nowrap px-3 py-1 bg-white/5 rounded-full border border-white/10 text-[10px] hover:bg-primary hover:text-black">🛒 Online store</button>
-            <button onclick="quickAction('Connect me with your team')" class="whitespace-nowrap px-3 py-1 bg-white/5 rounded-full border border-white/10 text-[10px] hover:bg-primary hover:text-black">📞 Talk to a human</button>
-        </div>
-        <div class="p-4 flex gap-2 glass">
-            <input type="text" id="user-input" placeholder="Ask about your project..." class="flex-1 bg-transparent outline-none text-white text-xs" onkeydown="if(event.key==='Enter') handleSend();">
-            <button onclick="handleSend()" class="text-primary hover:scale-125 transition-transform"><span class="material-symbols-outlined">send</span></button>
-        </div>
-    </div>
-    <button onclick="toggleChat()" class="w-14 h-14 rounded-full bg-primary text-black flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all">
-        <span class="material-symbols-outlined text-2xl">chat</span>
-    </button>
-</div>
-
 <script>
-    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('translate-x-full'); }
+  // ---- Hero word-by-word animation ----
+  const words = ["Hi,", "I'm", "Daniel", "—", "a"];
+  const heroEl = document.getElementById('hero-heading');
+  let html = "";
+  words.forEach((w, i) => {
+    const cls = w === "Daniel" ? "accent" : "";
+    html += `<span class="split-word ${cls}" style="animation-delay:${i*0.09}s">${w}</span> `;
+  });
+  html += `<br><span class="split-word" style="animation-delay:0.55s">Web</span> <span class="split-word accent" style="animation-delay:0.64s">Developer</span> <span class="split-word" style="animation-delay:0.73s">&amp;</span> <span class="split-word" style="animation-delay:0.82s">Designer.</span>`;
+  heroEl.innerHTML = html;
 
-    // Terminal signature animation
-    const termLines = [
-        "$ mega-grace deploy your-business",
-        "> Reading brand brief...            done",
-        "> Designing pages (home/about/shop)  done",
-        "> Connecting Paystack + Flutterwave  done",
-        "> Running mobile + speed checks      done",
-        "> Site live in 7 days. 🚀"
-    ];
-    const termEl = document.getElementById('terminal');
-    let li = 0, ci = 0;
-    function typeTerm() {
-        if (li >= termLines.length) {
-            setTimeout(() => { termEl.innerHTML = ''; li = 0; ci = 0; typeTerm(); }, 2200);
-            return;
-        }
-        const line = termLines[li];
-        if (ci === 0) {
-            const div = document.createElement('div');
-            div.className = 'term-line';
-            div.style.opacity = '1';
-            div.style.color = line.startsWith('$') ? '#E8B94D' : (line.includes('done') ? '#9CA3AF' : '#3AAE5A');
-            div.id = 'line-' + li;
-            termEl.appendChild(div);
-        }
-        const div = document.getElementById('line-' + li);
-        div.innerHTML = line.slice(0, ci) + '<span class="term-cursor"></span>';
-        ci++;
-        if (ci <= line.length) {
-            setTimeout(typeTerm, 18);
-        } else {
-            div.innerHTML = line;
-            li++; ci = 0;
-            setTimeout(typeTerm, 350);
-        }
+  // ---- Terminal typing signature ----
+  const termLines = [
+    "$ daniel deploy your-business",
+    "> Reading brand brief...           done",
+    "> Designing pages (home/services)  done",
+    "> Connecting Paystack              done",
+    "> Running mobile + speed checks    done",
+    "> Site live in 7 days.  🚀"
+  ];
+  const termEl = document.getElementById('terminal');
+  let li = 0, ci = 0;
+  function typeTerm(){
+    if(li >= termLines.length){
+      setTimeout(()=>{ termEl.innerHTML=''; li=0; ci=0; typeTerm(); }, 2200);
+      return;
     }
-    typeTerm();
+    const line = termLines[li];
+    if(ci===0){
+      const div = document.createElement('div');
+      div.id = 'line-'+li;
+      div.style.color = line.startsWith('$') ? '#e5335f' : (line.includes('done') ? '#9a9ba6' : '#2fa563');
+      termEl.appendChild(div);
+    }
+    const div = document.getElementById('line-'+li);
+    div.innerHTML = line.slice(0,ci) + '<span class="term-cursor"></span>';
+    ci++;
+    if(ci <= line.length){ setTimeout(typeTerm, 16); }
+    else { div.innerHTML = line; li++; ci=0; setTimeout(typeTerm, 320); }
+  }
+  typeTerm();
 
-    // Full Reviews
-    const revs = [
-        { name: "Chief Okoro", text: "Mega Grace built our store perfectly. Best investment in 5 years." },
-        { name: "Sarah Adebayo", text: "Signed high-end clients immediately after launch. Incredible work." },
-        { name: "Dr. Tunde", text: "Our booking portal is a game changer. Professional and reliable." },
-        { name: "Ahmed Yusuf", text: "Elite digital store. Better quality than agencies charging millions." },
-        { name: "Amaka J.", text: "SEO work brought in new leads daily. Truly world-class." },
-        { name: "Kevin Cole", text: "Site loads instantly. My bounce rate dropped. Real precision." },
-        { name: "Pastor Samuel", text: "Our giving page is secure and easy for the congregation. Recommend." },
-        { name: "Anita George", text: "The ₦100k starter plan is clean and professional. Legitimate brand now." },
-        { name: "Chidi O.", text: "Paystack integration is seamless. Instant alerts. Zero stress." },
-        { name: "Mary Slessor", text: "The graphic design captured our vision with real sophistication." },
-        { name: "Ibrahim Musa", text: "Listens to business goals. My sales tripled after the update." },
-        { name: "Victoria Adams", text: "The AI chat answers customers at 2 AM. My business never closes." },
-        { name: "James Bond", text: "Secure, honest, and an expert team from start to finish." },
-        { name: "Funke A.", text: "Best tech decision this year. Mobile navigation is exceptionally smooth." },
-        { name: "Samuel Etu", text: "Fixed a messy site from another dev and turned it into a real asset." },
-        { name: "Uche John", text: "SEO strategy works. Ranking on page one in Lagos. Inquiries daily." },
-        { name: "Esther K.", text: "Smooth process. Paid and was live in 7 days. Zero stress." },
-        { name: "Michael B.", text: "Precision coding. Treats every project with respect regardless of budget." },
-        { name: "Janet S.", text: "The e-commerce plan made my shop reach customers abroad." },
-        { name: "Mega Mike", text: "High-performance coding and zero bugs. Solid partner for the long run." }
-    ];
+  // ---- Testimonials marquee ----
+  const reviews = [
+    {n:"Chief Okoro", t:"Daniel built our store perfectly. Best investment in years."},
+    {n:"Sarah Adebayo", t:"Signed high-end clients immediately after launch."},
+    {n:"Dr. Tunde", t:"Our booking portal is a game changer. Professional and reliable."},
+    {n:"Pastor Samuel", t:"Our giving page is secure and easy for the congregation."},
+    {n:"Amaka J.", t:"SEO work brought in new leads daily. Truly world-class."},
+    {n:"Ibrahim Musa", t:"Listens to business goals. My sales tripled after the update."},
+    {n:"Victoria Adams", t:"The AI chat answers customers at 2AM. My business never closes."},
+    {n:"Funke A.", t:"Best tech decision this year. Mobile navigation is exceptionally smooth."}
+  ];
+  const track = document.getElementById('marquee-track');
+  function initials(name){ return name.split(' ').map(w=>w[0]).slice(0,2).join(''); }
+  [...reviews, ...reviews].forEach(r=>{
+    track.innerHTML += `<div class="t-card"><p>"${r.t}"</p><div class="who"><div class="t-avatar">${initials(r.n)}</div><span>${r.n}</span></div></div>`;
+  });
 
-    const container = document.getElementById('reviews-container');
-    const containerDup = document.getElementById('reviews-container-dup');
-    revs.forEach((r, i) => {
-        const card = `<div class="glass p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] w-[280px] md:w-[420px] flex-shrink-0"><div class="flex items-center gap-4 mb-5 md:mb-6"><img src="https://i.pravatar.cc/150?u=${i}" class="w-10 h-10 rounded-full border border-primary/30" alt="${r.name}"><span class="font-bold text-[9px] text-primary uppercase tracking-widest">${r.name}</span></div><p class="text-[11px] text-gray-400 italic leading-relaxed">"${r.text}"</p></div>`;
-        container.innerHTML += card; containerDup.innerHTML += card;
+  // ---- Scroll reveal ----
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); }
     });
-
-    document.getElementById('wa-form').onsubmit = function(e) {
-        e.preventDefault();
-        const n = document.getElementById('wa-name').value;
-        const m = document.getElementById('wa-msg').value;
-        window.open(`https://wa.me/2348159205235?text=Hello Mega Grace! I am ${n}. Inquiry: ${m}`);
-    }
-
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                io.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach(el => io.observe(el));
-
-    /* ============================================================
-       GRACE-AI CHAT
-       IMPORTANT: The Gemini API key must NOT live in this file.
-       Any key placed in client-side JS is visible to every visitor
-       via "View Source" and can be copied and used to run up your
-       bill or get the key suspended. Replace CHAT_ENDPOINT below
-       with a small server route you control (e.g. a Cloudflare
-       Worker / Vercel function / PHP file) that holds the real key
-       server-side and forwards the request to Gemini. This file
-       only calls YOUR endpoint, never Google's directly.
-       ============================================================ */
-    const CHAT_ENDPOINT = "/api/grace-chat"; // <-- point this at your own backend proxy
-
-    const SYSTEM_PROMPT = `You are Grace-AI, the assistant for MEGA GRACE, a Nigerian web development, graphic design, and digital marketing agency.
-
-Services: business websites, e-commerce stores (Paystack/Flutterwave), church & ministry websites, branding/graphic design, SEO & digital marketing, custom web apps, AI chat automation.
-Pricing: informational sites ₦100,000-₦750,000. E-commerce ₦200,000-₦1,200,000+. Custom web apps ₦350,000-₦5,000,000+.
-Team contacts: Daniel (Founder/Ops) +2348159205235, Samuel (Lead Dev) +2347048375587, Khasis (Strategy) +2347088947306, Precious (Marketing) +234702619604.
-
-Have a real, natural conversation — don't just recite a price list. Ask what kind of business or ministry they run and what they're trying to achieve before recommending a plan. If they seem ready to move forward, or ask for a human, give them the most relevant team contact and offer to open WhatsApp. Keep replies short (2-4 sentences), warm, and specific to what they said.`;
-
-    let chatHistory = [];
-
-    function toggleChat() {
-        document.getElementById('chat-window').classList.toggle('hidden');
-        if (document.getElementById('chat-messages').innerHTML === "") {
-            appendMsg('bot', "Hi! I'm Grace-AI 👋 Tell me a bit about your business or ministry, and what you'd like your website to do for you.");
-        }
-    }
-    function quickAction(t) { document.getElementById('user-input').value = t; handleSend(); }
-
-    async function handleSend() {
-        const input = document.getElementById('user-input');
-        const text = input.value.trim(); if (!text) return;
-        appendMsg('user', text); input.value = '';
-        chatHistory.push({ role: "user", content: text });
-        const loadId = appendMsg('bot', '···');
-
-        try {
-            const res = await fetch(CHAT_ENDPOINT, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ system: SYSTEM_PROMPT, messages: chatHistory })
-            });
-            if (!res.ok) throw new Error('bad response');
-            const data = await res.json();
-            const reply = data.reply || "Let's continue this on WhatsApp so our team can help directly: https://wa.me/2348159205235";
-            document.getElementById(loadId).innerText = reply;
-            chatHistory.push({ role: "assistant", content: reply });
-        } catch (e) {
-            document.getElementById(loadId).innerHTML = `Thanks for reaching out! While I get connected, our team can help right away on WhatsApp: <a href="https://wa.me/2348159205235" class="text-primary underline">chat with us here</a>.`;
-        }
-    }
-
-    function appendMsg(role, text) {
-        const id = 'msg-' + Math.random().toString(36).slice(2);
-        document.getElementById('chat-messages').insertAdjacentHTML('beforeend', `<div class="flex ${role === 'user' ? 'justify-end' : ''}"><div id="${id}" class="p-3 rounded-xl ${role === 'user' ? 'bg-primary text-black font-bold' : 'glass border border-primary/10'} max-w-[85%]">${text}</div></div>`);
-        document.getElementById('chat-messages').scrollTop = 999999;
-        return id;
-    }
+  }, {threshold:.12, rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
