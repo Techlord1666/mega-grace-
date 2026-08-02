@@ -16,11 +16,11 @@
   "image": "https://mega-grace.vercel.app/Logo.png",
   "description": "Web development, e-commerce, graphic design, branding and digital marketing agency serving businesses, SMEs, and ministries across Nigeria.",
   "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
-  "telephone": "+2348159205235",
+  "telephone": "+2349032473005",
   "priceRange": "₦100,000 - ₦5,000,000",
   "areaServed": "NG",
   "sameAs": [
-    "https://wa.me/2348159205235",
+    "https://wa.me/2349032473005",
     "https://www.upwork.com/freelancers/~01d69b25daabcc0b5c",
     "https://www.fiverr.com/s/bd18xKW",
     "https://www.facebook.com/share/1CkMVAZNnY/",
@@ -69,11 +69,16 @@
   .hero .wrap{display:flex; align-items:center; gap:60px;}
   .hero-left{flex:1; min-width:0;}
   .hero-right{flex:0 0 420px;}
-  .who-row{display:flex; align-items:center; gap:14px; margin-bottom:22px; opacity:0; animation:fadeUp .7s ease .1s forwards;}
-  .who-photo{width:64px; height:64px; border-radius:50%; overflow:hidden; border:3px solid rgba(229,51,95,.18); flex-shrink:0;}
-  .who-photo img{width:100%; height:100%; object-fit:cover;}
-  .who-text h4{font-size:15px;}
-  .who-text p{font-size:11.5px; color:var(--muted); font-family:'JetBrains Mono'; letter-spacing:.02em; margin-top:2px;}
+  .who-row{display:flex; align-items:center; gap:22px; margin-bottom:28px; opacity:0; animation:fadeUp .7s ease .1s forwards; flex-wrap:wrap;}
+  .who-photo{width:160px; height:160px; border-radius:32px; overflow:hidden; border:4px solid #fff; box-shadow:0 0 0 3px rgba(229,51,95,.25), 0 30px 60px -20px rgba(18,19,26,.35); flex-shrink:0;}
+  .who-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .who-text h4{font-size:19px; letter-spacing:0;}
+  .who-text p{font-size:12.5px; color:var(--muted); font-family:'JetBrains Mono'; letter-spacing:.01em; margin-top:6px; line-height:1.7; max-width:220px;}
+  @media(max-width:520px){
+    .who-row{justify-content:center; text-align:center; flex-direction:column;}
+    .who-photo{width:190px; height:190px;}
+    .who-text p{max-width:none;}
+  }
   .hero h1{font-size:clamp(2.3rem, 4.4vw, 3.4rem); line-height:1.08; margin:14px 0 20px;}
   .hero h1 .accent{color:var(--pink);}
   .split-word{display:inline-block; opacity:0; transform:translateY(30px); animation:wordUp .6s cubic-bezier(.2,.8,.2,1) forwards;}
@@ -259,7 +264,7 @@
       <a href="#experts">Our Team</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="https://wa.me/2348159205235" class="cta-btn">Get A Quote</a>
+    <a href="https://wa.me/2349032473005" class="cta-btn">Get A Quote</a>
     <div class="burger" onclick="document.getElementById('mobile-menu').classList.add('show')"><span></span><span></span><span></span></div>
   </div>
 </header>
@@ -268,7 +273,7 @@
   <div class="wrap">
     <div class="hero-left">
       <div class="who-row">
-        <div class="who-photo"><img src="https://mega-grace.vercel.app/Dan.png" alt="Ikezue Chibuike Daniel" onerror="this.parentElement.innerHTML='ICD'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.parentElement.style.background='linear-gradient(135deg,var(--pink),var(--gold))'; this.parentElement.style.color='#fff'; this.parentElement.style.fontWeight='700';"></div>
+        <div class="who-photo"><img src="https://mega-grace.vercel.app/Dan.png" alt="Ikezue Chibuike Daniel" onerror="this.parentElement.innerHTML='ICD'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.parentElement.style.background='linear-gradient(135deg,var(--pink),var(--gold))'; this.parentElement.style.color='#fff'; this.parentElement.style.fontWeight='700'; this.parentElement.style.fontSize='42px'; this.parentElement.style.fontFamily='Space Grotesk, sans-serif';"></div>
         <div class="who-text">
           <h4>IKEZUE CHIBUIKE DANIEL</h4>
           <p>Web Developer · Designer · Graphic Designer · Founder, Mega Grace</p>
@@ -279,7 +284,7 @@
       <p class="bio">I design and build websites, online stores, and brand identities for Nigerian businesses and ministries — with an AI assistant that answers customers and takes orders while you sleep.</p>
       <div class="hero-ctas">
         <a href="work.html" class="btn-primary">View My Work</a>
-        <a href="https://wa.me/2348159205235" class="btn-outline">Chat on WhatsApp</a>
+        <a href="https://wa.me/2349032473005" class="btn-outline">Chat on WhatsApp</a>
       </div>
 
       <div class="hero-rows">
@@ -479,45 +484,18 @@
 <section id="experts" class="alt">
   <div class="wrap">
     <div class="section-head reveal" style="max-width:700px; margin-left:auto; margin-right:auto; text-align:center;">
-      <p class="eyebrow" style="display:block;">The Team</p>
-      <h2>Talk to the team</h2>
-      <p style="color:var(--muted); font-size:14px; margin-top:10px;">Reach the right person directly, by call or WhatsApp.</p>
+      <p class="eyebrow" style="display:block;">Direct Line</p>
+      <h2>Talk to me directly</h2>
+      <p style="color:var(--muted); font-size:14px; margin-top:10px;">One person, one line — reach me by call or WhatsApp any time.</p>
     </div>
-    <div class="grid-4">
+    <div style="max-width:340px; margin:0 auto;">
       <div class="card team-card reveal">
-        <div class="team-photo"><img src="https://mega-grace.vercel.app/MG2.png" alt="Daniel" onerror="this.parentElement.textContent='ICD';"></div>
-        <h5>Mr Daniel</h5>
+        <div class="team-photo"><img src="https://mega-grace.vercel.app/MG2.png" alt="Ikezue Chibuike Daniel" onerror="this.parentElement.textContent='ICD';"></div>
+        <h5>Ikezue Chibuike Daniel</h5>
         <p class="role">Founder &amp; Full Stack Developer</p>
         <div class="team-actions">
-          <a class="call" href="tel:+2348057741110">Call</a>
-          <a class="wa" href="https://wa.me/2349032473005">WhatsApp</a>
-        </div>
-      </div>
-      <div class="card team-card reveal">
-        <div class="team-photo">S</div>
-        <h5>Samuel</h5>
-        <p class="role">Lead Developer</p>
-        <div class="team-actions">
-          <a class="call" href="tel:+2347048375587">Call</a>
-          <a class="wa" href="https://wa.me/2347048375587">WhatsApp</a>
-        </div>
-      </div>
-      <div class="card team-card reveal">
-        <div class="team-photo">K</div>
-        <h5>Khasis</h5>
-        <p class="role">Strategy</p>
-        <div class="team-actions">
-          <a class="call" href="tel:+2347088947306">Call</a>
-          <a class="wa" href="https://wa.me/2347088947306">WhatsApp</a>
-        </div>
-      </div>
-      <div class="card team-card reveal">
-        <div class="team-photo">P</div>
-        <h5>Precious</h5>
-        <p class="role">Marketing</p>
-        <div class="team-actions">
-          <a class="call" href="tel:+234702619604">Call</a>
-          <a class="wa" href="https://wa.me/234702619604">WhatsApp</a>
+          <a class="call" href="tel:+2348057741110">Call — 0805 774 1110</a>
+          <a class="wa" href="https://wa.me/2349032473005">WhatsApp — 0903 247 3005</a>
         </div>
       </div>
     </div>
@@ -541,10 +519,10 @@
       <div class="contact-box reveal">
         <h3>Mega Grace Computer Intel</h3>
         <p>Web developers, designers and marketing specialists building Nigeria's digital businesses since 2020.</p>
-        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2h-1C9.5 19 5 14.5 5 8V7"/></svg> 0815 920 5235</div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2h-1C9.5 19 5 14.5 5 8V7"/></svg> 0903 247 3005</div>
         <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lagos, Nigeria</div>
         <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Active 24/7</div>
-        <a href="https://wa.me/2348159205235" class="btn-primary" style="margin-top:10px;">Chat on WhatsApp</a>
+        <a href="https://wa.me/2349032473005" class="btn-primary" style="margin-top:10px;">Chat on WhatsApp</a>
       </div>
     </div>
   </div>
@@ -576,7 +554,7 @@
           <li><a href="https://www.upwork.com/freelancers/~01d69b25daabcc0b5c?mp_source=share" target="_blank" rel="noopener">Upwork</a></li>
           <li><a href="https://www.fiverr.com/s/bd18xKW" target="_blank" rel="noopener">Fiverr</a></li>
           <li><a href="https://mega-grace.vercel.app/" target="_blank" rel="noopener">Mega Grace Portfolio</a></li>
-          <li><a href="https://wa.me/2348159205235" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://wa.me/2349032473005" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </div>
       <div>
@@ -688,7 +666,7 @@
     e.preventDefault();
     const n = document.getElementById('wa-name').value;
     const m = document.getElementById('wa-msg').value;
-    window.open(`https://wa.me/2348159205235?text=Hello Daniel! I am ${encodeURIComponent(n)}. Inquiry: ${encodeURIComponent(m)}`);
+    window.open(`https://wa.me/2349032473005?text=Hello Daniel! I am ${encodeURIComponent(n)}. Inquiry: ${encodeURIComponent(m)}`);
   }
 
   // ---- Grace-AI widget (client-side fallback; connect CHAT_ENDPOINT to your own backend to go live) ----
@@ -711,11 +689,11 @@
       const res = await fetch(CHAT_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({messages:chatHistory}) });
       if(!res.ok) throw new Error('no backend');
       const data = await res.json();
-      const reply = data.reply || "Let's continue this on WhatsApp: https://wa.me/2348159205235";
+      const reply = data.reply || "Let's continue this on WhatsApp: https://wa.me/2349032473005";
       document.getElementById(loadId).innerText = reply;
       chatHistory.push({role:'assistant', content:reply});
     }catch(e){
-      document.getElementById(loadId).innerHTML = `Thanks for reaching out! Chat with me directly on <a href="https://wa.me/2348159205235" style="color:var(--pink); font-weight:700;">WhatsApp</a> for a fast reply.`;
+      document.getElementById(loadId).innerHTML = `Thanks for reaching out! Chat with me directly on <a href="https://wa.me/2349032473005" style="color:var(--pink); font-weight:700;">WhatsApp</a> for a fast reply.`;
     }
   }
   function appendMsg(role, text){
