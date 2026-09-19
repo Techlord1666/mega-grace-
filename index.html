@@ -181,6 +181,8 @@
   .t-avatar{width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--gold)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px; font-weight:700; flex-shrink:0;}
   .t-card .who span{font-size:12px; font-weight:700; color:var(--ink);}
 
+  .team-grid{max-width:720px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  @media(max-width:560px){.team-grid{grid-template-columns:1fr; max-width:340px;}}
   .team-card{text-align:center; padding:30px 22px;}
   .team-photo{width:78px; height:78px; border-radius:50%; margin:0 auto 16px; overflow:hidden; border:2px solid rgba(229,51,95,.2); background:linear-gradient(135deg,var(--pink),var(--gold)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:20px;}
   .team-photo img{width:100%; height:100%; object-fit:cover;}
@@ -542,10 +544,10 @@
   <div class="wrap">
     <div class="section-head reveal" style="max-width:700px; margin-left:auto; margin-right:auto; text-align:center;">
       <p class="eyebrow" style="display:block;">Direct Line</p>
-      <h2>Talk to me directly</h2>
-      <p style="color:var(--muted); font-size:14px; margin-top:10px;">One person, one line — reach me by call or WhatsApp any time.</p>
+      <h2>Talk to us directly</h2>
+      <p style="color:var(--muted); font-size:14px; margin-top:10px;">Reach the team by call or WhatsApp any time.</p>
     </div>
-    <div style="max-width:340px; margin:0 auto;">
+    <div class="team-grid">
       <div class="card team-card reveal">
         <div class="team-photo"><img src="https://mega-grace.vercel.app/MG2.png" alt="Ikezue Chibuike Daniel" onerror="this.parentElement.textContent='ICD';"></div>
         <h5>Ikezue Chibuike Daniel</h5>
@@ -553,6 +555,15 @@
         <div class="team-actions">
           <a class="call" href="tel:+2348057741110">Call — 0805 774 1110</a>
           <a class="wa" href="https://wa.me/2349032473005">WhatsApp — 0903 247 3005</a>
+        </div>
+      </div>
+      <div class="card team-card reveal">
+        <div class="team-photo"><img src="images/victory.jpg" alt="Victory Vibrand" onerror="this.parentElement.textContent='VV';"></div>
+        <h5>Victory Vibrand</h5>
+        <p class="role">Client Relations</p>
+        <div class="team-actions">
+          <a class="call" href="tel:+2348057740913">Call — 0805 774 0913</a>
+          <a class="wa" href="https://wa.me/2348142226255">WhatsApp — 0814 222 6255</a>
         </div>
       </div>
     </div>
@@ -576,10 +587,14 @@
       <div class="contact-box reveal">
         <h3>Mega Grace Computer Intel</h3>
         <p>Web developers, designers and marketing specialists building Nigeria's digital businesses since 2020.</p>
-        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2h-1C9.5 19 5 14.5 5 8V7"/></svg> 0903 247 3005</div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2h-1C9.5 19 5 14.5 5 8V7"/></svg> Daniel — 0903 247 3005</div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2h-1C9.5 19 5 14.5 5 8V7"/></svg> Victory — 0814 222 6255</div>
         <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lagos, Nigeria</div>
         <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Active 24/7</div>
-        <a href="https://wa.me/2349032473005" class="btn-primary" style="margin-top:10px;">Chat on WhatsApp</a>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+          <a href="https://wa.me/2349032473005" class="btn-primary">Chat with Daniel</a>
+          <a href="https://wa.me/2348142226255" class="btn-primary" style="background:var(--green);">Chat with Victory</a>
+        </div>
       </div>
     </div>
   </div>
