@@ -157,7 +157,10 @@
   .gallery-img{aspect-ratio:16/10; overflow:hidden; background:var(--bg-alt);}
   .gallery-img img{width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .5s;}
   .gallery-card:hover .gallery-img img{transform:scale(1.05);}
-  .gallery-body{padding:26px 26px 28px;}
+  .gallery-strip{display:flex; gap:7px; padding:12px 26px 0; overflow-x:auto;}
+  .gallery-strip img{width:52px; height:52px; border-radius:10px; object-fit:cover; border:1px solid var(--line); flex-shrink:0; cursor:pointer; transition:transform .2s, border-color .2s;}
+  .gallery-strip img:hover{transform:translateY(-3px); border-color:var(--pink);}
+  .gallery-body{padding:16px 26px 28px;}
   .gallery-body .tag{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--pink); font-weight:700; display:block; margin-bottom:8px;}
   .gallery-body h4{font-size:17.5px; margin-bottom:8px;}
   .gallery-body p{color:var(--muted); font-size:13px; margin-bottom:20px; min-height:52px;}
@@ -482,6 +485,13 @@
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-img"><img src="images/harwosprints.jpg" alt="HARWOSPRINTS.NG homepage screenshot" loading="lazy"></div>
+        <div class="gallery-strip">
+          <img src="images/harwosprints-shop.jpg" alt="Harwosprints shop page" loading="lazy" onclick="window.open('https://www.harwosprints.ng/signin.html','_blank')">
+          <img src="images/harwosprints-about.jpg" alt="Harwosprints about page" loading="lazy" onclick="window.open('https://www.harwosprints.ng/signin.html','_blank')">
+          <img src="images/harwosprints-story.jpg" alt="Harwosprints our story page" loading="lazy" onclick="window.open('https://www.harwosprints.ng/signin.html','_blank')">
+          <img src="images/harwosprints-signup.jpg" alt="Harwosprints signup page" loading="lazy" onclick="window.open('https://www.harwosprints.ng/signin.html','_blank')">
+          <img src="images/harwosprints-login.jpg" alt="Harwosprints login page" loading="lazy" onclick="window.open('https://www.harwosprints.ng/signin.html','_blank')">
+        </div>
         <div class="gallery-body">
           <span class="tag">Print &amp; Branding E-commerce</span>
           <h4>Harwosprints.ng</h4>
@@ -491,6 +501,12 @@
       </div>
       <div class="gallery-card reveal">
         <div class="gallery-img"><img src="images/megamart.jpg" alt="Mega Mart marketplace screenshot" loading="lazy"></div>
+        <div class="gallery-strip">
+          <img src="images/megamart-sell.jpg" alt="Mega Mart sell any kind of product page" loading="lazy" onclick="window.open('https://mega-mart-fk1w.vercel.app/sel.html','_blank')">
+          <img src="images/megamart-dashboard.jpg" alt="Mega Mart seller dashboard" loading="lazy" onclick="window.open('https://mega-mart-fk1w.vercel.app/sel.html','_blank')">
+          <img src="images/megamart-sellerhub.jpg" alt="Mega Mart seller hub sidebar" loading="lazy" onclick="window.open('https://mega-mart-fk1w.vercel.app/sel.html','_blank')">
+          <img src="images/megamart-storefront-login.jpg" alt="Mega Mart storefront login" loading="lazy" onclick="window.open('https://mega-mart-fk1w.vercel.app/sel.html','_blank')">
+        </div>
         <div class="gallery-body">
           <span class="tag">Multi-Vendor Marketplace</span>
           <h4>Mega Mart</h4>
