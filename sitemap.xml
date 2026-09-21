@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://depeaceisv.com/</loc>
-    <priority>1.0</priority>
+    <loc>https://www.megagrace.site/</loc>
   </url>
   <url>
-    <loc>https://depeaceisv.com/works.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.megagrace.site/work.html</loc>
   </url>
-   <url>
-    <loc>https://depeaceisv.com/grafix.html</loc>
-    <priority>0.8</priority>
+  <url>
+    <loc>https://www.megagrace.site/grafix.html</loc>
   </url>
-   <url>
-    <loc>https://depeaceisv.com/how.html</loc>
-    <priority>0.8</priority>
+  <url>
+    <loc>https://www.megagrace.site/how.html</loc>
   </url>
-   <url>
-    <loc>https://depeaceisv.com/about.html</loc>
-    <priority>0.8</priority>
+  <url>
+    <loc>https://www.megagrace.site/blog.html</loc>
   </url>
 </urlset>
