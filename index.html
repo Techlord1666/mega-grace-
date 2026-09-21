@@ -4,9 +4,46 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="theme-color" content="#ffffff"/>
-<title>Ikezue Chibuike Daniel | Web Developer & Designer — Mega Grace Computer Intel</title>
-<meta name="description" content="Ikezue Chibuike Daniel — website developer, website designer, graphic designer, email marketing agent & social media manager. Founder of Mega Grace Computer Intel, Lagos, Nigeria. Websites from ₦100,000."/>
-<link rel="icon" type="image/png" href="https://mega-grace.vercel.app/Logo.png">
+<title>Web Design & Development Lagos, Nigeria | Mega Grace Computer Intel — Websites From ₦100,000</title>
+<meta name="description" content="Mega Grace Computer Intel builds affordable, SEO-friendly business websites, online stores and church/ministry sites in Lagos, Nigeria — from ₦100,000. Founded by Ikezue Chibuike Daniel. Get a free quote on WhatsApp."/>
+<meta name="keywords" content="web design Lagos, website developer Nigeria, affordable website design Nigeria, church website design Nigeria, ecommerce website Nigeria, custom web development Lagos, best web design company in Nigeria, Ikezue Chibuike Daniel, Mega Grace Computer Intel"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="googlebot" content="index, follow"/>
+<meta name="author" content="Ikezue Chibuike Daniel, Mega Grace Computer Intel"/>
+<link rel="canonical" href="https://mega-grace.vercel.app/"/>
+<meta name="geo.region" content="NG-LA"/>
+<meta name="geo.placename" content="Lagos, Nigeria"/>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://mega-grace.vercel.app/Logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mega-grace.vercel.app/Logo.png">
+<link rel="shortcut icon" href="https://mega-grace.vercel.app/Logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://mega-grace.vercel.app/Logo.png">
+<meta name="apple-mobile-web-app-title" content="Mega Grace">
+<meta name="application-name" content="Mega Grace Computer Intel">
+<meta name="msapplication-TileImage" content="https://mega-grace.vercel.app/Logo.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn share previews) -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Mega Grace Computer Intel"/>
+<meta property="og:locale" content="en_NG"/>
+<meta property="og:title" content="Web Design & Development Lagos, Nigeria | Mega Grace Computer Intel"/>
+<meta property="og:description" content="Affordable, SEO-friendly business websites, online stores and church/ministry sites — built and hosted for Nigerian businesses. Websites from ₦100,000. Chat with us on WhatsApp for a free quote."/>
+<meta property="og:url" content="https://mega-grace.vercel.app/"/>
+<meta property="og:image" content="https://mega-grace.vercel.app/Logo.png"/>
+<meta property="og:image:width" content="512"/>
+<meta property="og:image:height" content="512"/>
+<meta property="og:image:alt" content="Mega Grace Computer Intel logo"/>
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@megagracedev"/>
+<meta name="twitter:title" content="Web Design & Development Lagos, Nigeria | Mega Grace Computer Intel"/>
+<meta name="twitter:description" content="Affordable, SEO-friendly business websites, online stores and church/ministry sites for Nigerian businesses. From ₦100,000."/>
+<meta name="twitter:image" content="https://mega-grace.vercel.app/Logo.png"/>
+<meta name="twitter:image:alt" content="Mega Grace Computer Intel logo"/>
+
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
 
 <!-- Runs first: marks JS as available, and defines the profile-photo fallback BEFORE the image can fail -->
@@ -15,7 +52,7 @@
   function photoFallback(img){
     var n = (parseInt(img.getAttribute('data-try'), 10) || 0) + 1;
     img.setAttribute('data-try', n);
-    var list = ['/Dan.png', 'https://mega-grace.vercel.app/MG2.png'];
+    var list = ['Dan.png', 'MG2.png'];
     if (n <= list.length) { img.src = list[n - 1]; return; }
     img.onerror = null;
     var box = img.parentElement;
@@ -29,13 +66,21 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Mega Grace Computer Intel",
-  "founder": "Ikezue Chibuike Daniel",
+  "url": "https://mega-grace.vercel.app/",
+  "founder": { "@type": "Person", "name": "Ikezue Chibuike Daniel" },
   "image": "https://mega-grace.vercel.app/Logo.png",
+  "logo": "https://mega-grace.vercel.app/Logo.png",
   "description": "Web development, e-commerce, graphic design, branding and digital marketing agency serving businesses, SMEs, and ministries across Nigeria.",
   "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
   "telephone": "+2349032473005",
   "priceRange": "₦100,000 - ₦5,000,000",
   "areaServed": "NG",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "sameAs": [
     "https://wa.me/2349032473005",
     "https://www.upwork.com/freelancers/~01d69b25daabcc0b5c",
@@ -389,7 +434,7 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#home" class="brand"><img src="https://mega-grace.vercel.app/Logo.png" alt="Mega Grace logo" onerror="this.style.display='none'"> ICD.DEV</a>
+    <a href="#home" class="brand"><img src="https://mega-grace.vercel.app/Logo.png" alt="Mega Grace logo" onerror="this.style.display='none'"> MG </a>
     <nav class="links">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
