@@ -125,6 +125,22 @@
   .cta-btn{background:var(--ink); color:#fff; font-size:11.5px; font-weight:700; letter-spacing:.03em; padding:11px 20px; border-radius:100px; text-transform:uppercase; transition:transform .2s, background .2s; white-space:nowrap; flex-shrink:0; border:none; cursor:pointer; font-family:'Inter',sans-serif;}
   .cta-btn:hover{transform:translateY(-2px); background:var(--pink);}
 
+  /* ---------- Profile / contact popup ---------- */
+  .profile-box{max-width:420px; text-align:center;}
+  .pm-photo{width:210px; height:210px; margin:0 auto 20px; border-radius:38px; overflow:hidden; border:4px solid #fff; box-shadow:0 0 0 3px rgba(229,51,95,.25), 0 24px 50px -18px rgba(18,19,26,.4); background:linear-gradient(135deg,var(--pink),var(--gold)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:54px; font-family:'Space Grotesk',sans-serif;}
+  .pm-photo img{width:100%; height:100%; object-fit:cover; object-position:center top;}
+  .profile-box h3{padding-right:0; font-size:22px; margin-bottom:6px;}
+  .pm-role{display:block; font-family:'JetBrains Mono'; font-size:11px; color:var(--pink); text-transform:uppercase; letter-spacing:.12em; margin-bottom:14px;}
+  .pm-bio{color:var(--muted); font-size:13.5px; line-height:1.65; margin-bottom:14px;}
+  .pm-tags{display:flex; flex-wrap:wrap; gap:7px; justify-content:center; margin-bottom:18px;}
+  .pm-tags span{font-size:10.5px; font-weight:600; background:var(--bg-alt); border:1px solid var(--line); padding:6px 11px; border-radius:100px;}
+  .pm-hint{font-family:'JetBrains Mono'; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--pink); font-weight:700; margin-bottom:10px;}
+  .pm-actions{display:flex; flex-direction:column; gap:10px;}
+  .pm-actions a{padding:15px 14px; border-radius:14px; font-weight:700; font-size:13px; text-align:center; transition:transform .2s;}
+  .pm-actions a:hover{transform:translateY(-2px);}
+  .pm-call{border:1.5px solid var(--ink); color:var(--ink);}
+  .pm-wa{background:var(--green); color:#fff;}
+
   /* ---------- Get A Quote modal ---------- */
   .modal-overlay{position:fixed; inset:0; z-index:300; background:rgba(18,19,26,.6); display:none; align-items:center; justify-content:center; padding:20px;}
   .modal-overlay.show{display:flex;}
@@ -166,6 +182,12 @@
   .founder{text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px;}
   .founder h4{font-size:15px; letter-spacing:0; margin-top:6px;}
   .f-role{font-family:'JetBrains Mono'; font-size:10.5px; color:var(--pink); text-transform:uppercase; letter-spacing:.1em; max-width:170px; line-height:1.5;}
+  .founder-btn{cursor:pointer; transition:transform .25s; -webkit-tap-highlight-color:transparent; border-radius:24px;}
+  .founder-btn:hover{transform:translateY(-5px);}
+  .founder-btn:focus-visible{outline:3px solid var(--pink); outline-offset:6px;}
+  .founder-btn:hover .who-photo{box-shadow:0 0 0 3px var(--pink), 0 30px 60px -20px rgba(18,19,26,.4);}
+  .click-tag{display:inline-flex; align-items:center; gap:6px; background:var(--pink); color:#fff; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:7px 13px; border-radius:100px; margin-top:2px; animation:tagPulse 2s infinite;}
+  @keyframes tagPulse{0%{box-shadow:0 0 0 0 rgba(229,51,95,.55);} 70%{box-shadow:0 0 0 10px rgba(229,51,95,0);} 100%{box-shadow:0 0 0 0 rgba(229,51,95,0);}}
   .who-tagline{font-size:12px; color:var(--muted); font-family:'JetBrains Mono'; margin:-8px 0 26px; animation:fadeUp .7s ease .15s both;}
   .hero h1{font-size:clamp(2rem, 4.4vw, 3.4rem); line-height:1.1; margin:14px 0 20px;}
   .hero h1 .accent{color:var(--pink);}
@@ -374,6 +396,9 @@
     .who-photo{width:138px; height:138px; border-radius:28px;}
     .founder h4{font-size:13px;}
     .f-role{font-size:9.5px; max-width:140px;}
+    .click-tag{font-size:9px; padding:6px 10px;}
+    .pm-photo{width:180px; height:180px;}
+    .profile-box{padding:26px;}
     .who-tagline{font-size:11px;}
     .hero p.bio{font-size:14.5px; margin-bottom:24px;}
     .hero-ctas{flex-direction:column; align-items:stretch;}
@@ -459,6 +484,22 @@
   </nav>
 </div>
 
+<div id="profile-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pm-name">
+  <div class="modal-box profile-box">
+    <button class="modal-close" onclick="closeProfile()" aria-label="Close">&times;</button>
+    <div class="pm-photo" id="pm-photo"><img id="pm-img" src="" alt=""></div>
+    <h3 id="pm-name"></h3>
+    <span class="pm-role" id="pm-role"></span>
+    <p class="pm-bio" id="pm-bio"></p>
+    <div class="pm-tags" id="pm-tags"></div>
+    <p class="pm-hint">👇 Click to contact</p>
+    <div class="pm-actions">
+      <a class="pm-call" id="pm-call" href="#"></a>
+      <a class="pm-wa" id="pm-wa" href="#" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
+</div>
+
 <div id="quote-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
   <div class="modal-box">
     <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close">&times;</button>
@@ -508,15 +549,17 @@
   <div class="wrap">
     <div class="hero-left">
       <div class="who-row">
-        <div class="founder">
+        <div class="founder founder-btn" role="button" tabindex="0" aria-label="View Ikezue Chibuike Daniel's profile and contact details" onclick="openProfile('daniel')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProfile('daniel');}">
           <div class="who-photo"><img src="Dan.png" alt="Ikezue Chibuike Daniel" width="160" height="160" decoding="async" onerror="photoFallback(this)"></div>
           <h4>IKEZUE CHIBUIKE DANIEL</h4>
           <span class="f-role">Founder &amp; Full Stack Developer</span>
+          <span class="click-tag">👆 Click to contact</span>
         </div>
-        <div class="founder">
+        <div class="founder founder-btn" role="button" tabindex="0" aria-label="View Victory Vibrant's profile and contact details" onclick="openProfile('victory')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProfile('victory');}">
           <div class="who-photo"><img src="images/victory.jpg" alt="Victory Vibrant" width="160" height="160" decoding="async" onerror="this.parentElement.textContent='VV'; this.parentElement.classList.add('who-fallback');"></div>
           <h4>VICTORY VIBRANT</h4>
           <span class="f-role">Co-Founder &amp; Client Relations</span>
+          <span class="click-tag">👆 Click to contact</span>
         </div>
       </div>
       <p class="who-tagline">Founders of Mega Grace Computer Intel · Web Design · Development · Graphics</p>
@@ -915,6 +958,67 @@
 <button id="chat-toggle" aria-label="Open chat" onclick="document.getElementById('chat-window').classList.toggle('show'); initChat();">💬</button>
 
 <script>
+  // ---- Founder profile / contact popup ----
+  const PEOPLE = {
+    daniel: {
+      name: "Ikezue Chibuike Daniel",
+      initials: "ICD",
+      imgs: ["Dan.png", "MG2.png"],
+      role: "Founder & Full Stack Developer",
+      bio: "Founder of Mega Grace Computer Intel. Designs and builds websites, online stores and brand identities for Nigerian businesses and ministries.",
+      tags: ["Web Design", "Web Development", "Graphic Design"],
+      callNum: "+2348057741110", callText: "0805 774 1110",
+      waNum: "2349032473005", waText: "0903 247 3005"
+    },
+    victory: {
+      name: "Victory Vibrant",
+      initials: "VV",
+      imgs: ["images/victory.jpg"],
+      role: "Co-Founder · Client Relations / Web Developer",
+      bio: "Co-founder of Mega Grace Computer Intel. Looks after clients from first enquiry to launch, and works on web development projects.",
+      tags: ["Client Relations", "Web Development"],
+      callNum: "+2348057740913", callText: "0805 774 0913",
+      waNum: "2348142226255", waText: "0814 222 6255"
+    }
+  };
+  function openProfile(key){
+    const p = PEOPLE[key]; if(!p) return;
+    const box = document.getElementById('pm-photo');
+    box.className = 'pm-photo';
+    box.innerHTML = '';
+    const img = document.createElement('img');
+    img.alt = p.name;
+    let tries = 0;
+    img.onerror = function(){
+      tries++;
+      if(tries < p.imgs.length){ img.src = p.imgs[tries]; }
+      else { img.onerror = null; box.textContent = p.initials; }
+    };
+    img.src = p.imgs[0];
+    box.appendChild(img);
+    document.getElementById('pm-name').textContent = p.name;
+    document.getElementById('pm-role').textContent = p.role;
+    document.getElementById('pm-bio').textContent = p.bio;
+    const tags = document.getElementById('pm-tags');
+    tags.innerHTML = '';
+    p.tags.forEach(function(t){ const s = document.createElement('span'); s.textContent = t; tags.appendChild(s); });
+    const call = document.getElementById('pm-call');
+    call.href = 'tel:' + p.callNum;
+    call.textContent = '📞 Call — ' + p.callText;
+    const wa = document.getElementById('pm-wa');
+    wa.href = 'https://wa.me/' + p.waNum + '?text=' + encodeURIComponent('Hello ' + p.name.split(' ')[0] + '! I found you on the Mega Grace website.');
+    wa.textContent = '💬 WhatsApp — ' + p.waText;
+    document.getElementById('profile-modal').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeProfile(){
+    document.getElementById('profile-modal').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('profile-modal').addEventListener('click', function(e){
+    if(e.target === this) closeProfile();
+  });
+
   // ---- Get A Quote modal ----
   function openQuoteModal(e){
     if(e) e.preventDefault();
@@ -929,7 +1033,7 @@
     if(e.target === this) closeQuoteModal();
   });
   document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeQuoteModal();
+    if(e.key === 'Escape'){ closeQuoteModal(); closeProfile(); }
   });
   document.getElementById('quote-form').onsubmit = function(e){
     e.preventDefault();
